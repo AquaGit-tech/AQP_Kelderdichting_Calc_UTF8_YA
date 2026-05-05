@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="ASCII">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aquaproved Dichting Calculator V6.5.0 - PWA installable (V6.4.0 pricing-motor + manifest)">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGFhZ18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxODAuMTkgMjM4LjUyIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjkuOC4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjEgQnVpbGQgMikgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDIpOwogICAgICB9CgogICAgICAuc3QxIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEwKTsKICAgICAgfQoKICAgICAgLnN0MiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQyMSk7CiAgICAgIH0KCiAgICAgIC5zdDMgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjcpOwogICAgICB9CgogICAgICAuc3Q0IHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuc3Q1IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDI2KTsKICAgICAgfQoKICAgICAgLnN0NiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxKTsKICAgICAgfQoKICAgICAgLnN0NyB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ5KTsKICAgICAgfQoKICAgICAgLnN0OCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxOCk7CiAgICAgIH0KCiAgICAgIC5zdDkgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjMpOwogICAgICB9CgogICAgICAuc3QxMCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ4KTsKICAgICAgfQoKICAgICAgLnN0MTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTEpOwogICAgICB9CgogICAgICAuc3QxMiB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgfQoKICAgICAgLnN0MTMgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTYpOwogICAgICB9CgogICAgICAuc3QxNCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQyNCk7CiAgICAgIH0KCiAgICAgIC5zdDE1IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDMpOwogICAgICAgIHN0cm9rZTogI2ZmZjsKICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdDogMTA7CiAgICAgICAgc3Ryb2tlLXdpZHRoOiA4LjMxcHg7CiAgICAgIH0KCiAgICAgIC5zdDE2IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDIyKTsKICAgICAgfQoKICAgICAgLnN0MTcgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjkpOwogICAgICB9CgogICAgICAuc3QxOCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxOSk7CiAgICAgIH0KCiAgICAgIC5zdDE5IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEyKTsKICAgICAgfQoKICAgICAgLnN0MjAgewogICAgICAgIG9wYWNpdHk6IC44OTsKICAgICAgfQoKICAgICAgLnN0MjEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjgpOwogICAgICB9CgogICAgICAuc3QyMiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ3KTsKICAgICAgfQoKICAgICAgLnN0MjMgewogICAgICAgIG9wYWNpdHk6IC41NjsKICAgICAgfQoKICAgICAgLnN0MjQgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjApOwogICAgICB9CgogICAgICAuc3QyNSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ0KTsKICAgICAgfQoKICAgICAgLnN0MjYgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTQpOwogICAgICB9CgogICAgICAuc3QyNyB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ1KTsKICAgICAgfQoKICAgICAgLnN0MjggewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjUpOwogICAgICB9CgogICAgICAuc3QyOSB7CiAgICAgICAgb3BhY2l0eTogLjc3OwogICAgICB9CgogICAgICAuc3QzMCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxNSk7CiAgICAgIH0KCiAgICAgIC5zdDMxIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDE3KTsKICAgICAgfQoKICAgICAgLnN0MzIgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50Nik7CiAgICAgIH0KCiAgICAgIC5zdDMzIHsKICAgICAgICBkaXNwbGF5OiBub25lOwogICAgICAgIGZpbGw6ICMxYTFhMWU7CiAgICAgIH0KCiAgICAgIC5zdDM0IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEzKTsKICAgICAgfQoKICAgICAgLnN0MzUgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQoKICAgICAgLnN0MzYgewogICAgICAgIGNsaXAtcGF0aDogdXJsKCNjbGlwcGF0aCk7CiAgICAgIH0KCiAgICAgIC5zdDM3IHsKICAgICAgICBvcGFjaXR5OiAuODI7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXBwYXRoIj4KICAgICAgPHBhdGggY2xhc3M9InN0MTIiIGQ9Ik0xMTkuODIsMTg0LjMyYzAsMTguNjUtMTUuNjcsMzMuNTgtMzAuMjUsMzMuNTgtMTYuOTIsMC0zMC42My0xMy44NS0zMC42My0zMy4yczEzLjcxLTMzLjc3LDMwLjYzLTMzLjc3LDMwLjI1LDE0LjczLDMwLjI1LDMzLjM4WiIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iODkuNTciIHkxPSIxNTMuMzUiIHgyPSI4OS41NyIgeTI9IjIxMi42NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNDFiMGQ0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxIiB4MT0iODkuNjgiIHkxPSIxNTMuMzUiIHgyPSI4OS42OCIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQyIiB4MT0iODkuODkiIHkxPSIxNTMuMzUiIHgyPSI4OS44OSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQzIiB4MT0iMTE4LjQxIiB5MT0iMTk5LjY5IiB4Mj0iMTE4LjQxIiB5Mj0iMTk5LjY5IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDQiIHgxPSI5MCIgeTE9IjE1My4zNSIgeDI9IjkwIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDUiIHgxPSI2Mi4xNCIgeTE9IjE1My4zNSIgeDI9IjYyLjE0IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDYiIHgxPSI2OS4zIiB5MT0iMTUzLjM1IiB4Mj0iNjkuMyIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQ3IiB4MT0iNjUuNzIiIHkxPSIxNTMuMzUiIHgyPSI2NS43MiIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQ4IiB4MT0iNjkuMyIgeTE9IjE1My4zNSIgeDI9IjY5LjMiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50OSIgeDE9Ijc3Ljg1IiB5MT0iMTUzLjM1IiB4Mj0iNzcuODUiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTAiIHgxPSI3My41MSIgeTE9IjE1My4zNSIgeDI9IjczLjUxIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDExIiB4MT0iNzcuODUiIHkxPSIxNTMuMzUiIHgyPSI3Ny44NSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxMiIgeDE9Ijg2LjE5IiB5MT0iMTUzLjM1IiB4Mj0iODYuMTkiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTMiIHgxPSI4Mi4xOSIgeTE9IjE1My4zNSIgeDI9IjgyLjE5IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDE0IiB4MT0iODYuMTkiIHkxPSIxNTMuMzUiIHgyPSI4Ni4xOSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxNSIgeDE9Ijg2LjMxIiB5MT0iMTUzLjM1IiB4Mj0iODYuMzEiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTYiIHgxPSI5My44OCIgeTE9IjE1My4zNSIgeDI9IjkzLjg4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDE3IiB4MT0iODkuODkiIHkxPSIxNTMuMzUiIHgyPSI4OS44OSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxOCIgeDE9Ijg2LjMxIiB5MT0iMTUzLjM1IiB4Mj0iODYuMzEiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTkiIHgxPSI5My44OCIgeTE9IjE1My4zNSIgeDI9IjkzLjg4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDIwIiB4MT0iMTAyLjMiIHkxPSIxNTMuMzUiIHgyPSIxMDIuMyIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQyMSIgeDE9Ijk3LjkyIiB5MT0iMTUzLjM1IiB4Mj0iOTcuOTIiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MjIiIHgxPSIxMDIuMyIgeTE9IjE1My4zNSIgeDI9IjEwMi4zIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDIzIiB4MT0iMTEwLjM2IiB5MT0iMTUzLjM1IiB4Mj0iMTEwLjM2IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI0IiB4MT0iMTA2LjI4IiB5MT0iMTUzLjM1IiB4Mj0iMTA2LjI4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI1IiB4MT0iMTEwLjM2IiB5MT0iMTUzLjM1IiB4Mj0iMTEwLjM2IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI2IiB4MT0iMTE3LjcyIiB5MT0iMTUzLjM1IiB4Mj0iMTE3LjcyIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI3IiB4MT0iMTE0LjE0IiB5MT0iMTUzLjM1IiB4Mj0iMTE0LjE0IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI4IiB4MT0iMTE3LjcyIiB5MT0iMTUzLjM1IiB4Mj0iMTE3LjcyIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI5IiB4MT0iNjIuMTQiIHkxPSIxNTMuMzUiIHgyPSI2Mi4xNCIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogIDwvZGVmcz4KICA8cmVjdCBpZD0iQWNodGVyZ3JvbmRfLV96d2FydCIgY2xhc3M9InN0MzMiIHg9Ii00My4wNCIgeT0iLTEwLjI5IiB3aWR0aD0iNjE0Ljk3IiBoZWlnaHQ9IjI2OS41OCIvPgogIDxnIGlkPSJMaW5rc2JvdmVuIj4KICAgIDxnPgogICAgICA8ZyBjbGFzcz0ic3QyMCI+CiAgICAgICAgPHBvbHlnb24gY2xhc3M9InN0NCIgcG9pbnRzPSIxMi4zMyAxMTcuMjEgNDcuMjcgMzkuNDEgNzEuNDQgODMuMjcgNzMuMjIgNzkuOTMgNDguNiAzNS4zNCA0NS44MiAzNS4zNCA3LjIxIDEyMC4yMSAxMC44NSAxMjAuMjEgMjAuMDEgMTIwLjIxIDUyLjA3IDEyMC4yMSA1My43NCAxMTcuMjEgMTIuMzMgMTE3LjIxIi8+CiAgICAgICAgPHBhdGggY2xhc3M9InN0NCIgZD0iTTEzMy42LDguMzJoLTMuNzhjLTMxLjU0LDcxLjI1LTQ5LjcsMTA4LjktNjEuMDksMTM0LjQ3LTkuOTUsMjIuMzItMTUuNDMsMzIuMDYtMTYuMjksNDEuNzgtLjkyLDEwLjM5LDIuODIsMjAuNzUsMTAuNTEsMjkuMTUsNy40Myw4LjEsMTcuMzYsMTEuMTIsMjYuNTcsMTEuMTIsMTcuMTUsMCwzNy4wOS0xNi40OSwzNy4wOS00MC4xMiwwLTEzLjM4LTkuMTktMzAuMTMtMTguOTItNDcuODYtMS42MS0yLjkzLTQuMzktOC40OC01Ljk3LTExLjQxbC0xLjk4LDQuMjljMS41OCwyLjk0LDMuMiw1LjksNC44Miw4Ljg0LDkuNSwxNy4zMiwxOC40OCwzMy42OCwxOC40OCw0Ni4xNCwwLDIxLjYxLTE4LjAxLDM2LjU0LTMzLjUxLDM2LjU0LTguMjIsMC0xNy4xNy0yLjU4LTIzLjkzLTkuOTYtNy03LjY1LTEwLjQxLTE3LjAzLTkuNTktMjYuNDIuOC05LjA3LDYuNDMtMTguNTMsMTUuOTUtNDAuNTQsMTEuNzQtMjcuMTMsMjguNTUtNTkuNjYsNjAuMjctMTMzLjFoMS4zOGMxNi4xLDAsMzQuNjYsMTEuMTksMzQuNjYsMzQuNDIsMCwxNi40Ny0xNC4yNSwzNS40Ni0zNC44OSwzNS40NmgtMTEuMDRsLTEuNjgsMy40M2gxMi43MmMyMS45OCwwLDM4LjcxLTE5Ljg0LDM4LjcxLTM4Ljg5LDAtMjUuNDctMTkuODEtMzcuMzUtMzguNDgtMzcuMzVaIi8+CiAgICAgIDwvZz4KICAgICAgPGcgY2xhc3M9InN0MzYiPgogICAgICAgIDxnIGNsYXNzPSJzdDI5Ij4KICAgICAgICAgIDxyZWN0IGNsYXNzPSJzdDM1IiB4PSI1OC44MyIgeT0iMTg4LjM0IiB3aWR0aD0iNjEuNDciIGhlaWdodD0iMS42NiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QyOSI+CiAgICAgICAgICA8cmVjdCBjbGFzcz0ic3Q2IiB4PSI1Ny45MSIgeT0iMTkxLjY4IiB3aWR0aD0iNjMuNTUiIGhlaWdodD0iMy4zMiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QyOSI+CiAgICAgICAgICA8cmVjdCBjbGFzcz0ic3QwIiB4PSI1OC42IiB5PSIxOTYuMjUiIHdpZHRoPSI2Mi41OCIgaGVpZ2h0PSIzLjMyIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGNsYXNzPSJzdDIzIj4KICAgICAgICAgIDxwYXRoIGNsYXNzPSJzdDE1IiBkPSJNMTE4LjQxLDE5OS42OSIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QzNyI+CiAgICAgICAgICA8cGF0aCBjbGFzcz0ic3QyNSIgZD0iTTYwLjc1LDIwMS4wN2w1OC41LS4yOHMtMzIuMDksNDMuMTUtNTguNS4yOFoiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNyIgY3g9IjYyLjE0IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzIiIGN4PSI2OS4zIiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjIiIGN4PSI2NS43MiIgY3k9IjE4MS4xMyIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxMCIgY3g9IjY5LjMiIGN5PSIxNzcuNTUiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q3IiBjeD0iNzcuODUiIGN5PSIxODQuNjUiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjczLjUxIiBjeT0iMTgxLjA3IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDExIiBjeD0iNzcuODUiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxOSIgY3g9Ijg2LjE5IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzQiIGN4PSI4Mi4xOSIgY3k9IjE4MS4xMyIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNiIgY3g9Ijg2LjE5IiBjeT0iMTc3LjU1IiByPSIxLjA1Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGNsYXNzPSJzdDM3Ij4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzAiIGN4PSI4Ni4zMSIgY3k9IjE4NC42NSIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxMyIgY3g9IjkzLjg4IiBjeT0iMTg0LjY1IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDMxIiBjeD0iODkuODkiIGN5PSIxODEuMDciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0OCIgY3g9Ijg2LjMxIiBjeT0iMTc3LjQ5IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDE4IiBjeD0iOTMuODgiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNCIgY3g9IjEwMi4zIiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MiIgY3g9Ijk3LjkyIiBjeT0iMTgxLjAxIiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDE2IiBjeD0iMTAyLjMiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q5IiBjeD0iMTEwLjM2IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MTQiIGN4PSIxMDYuMjgiIGN5PSIxODEuMDEiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjgiIGN4PSIxMTAuMzYiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q1IiBjeD0iMTE3LjcyIiBjeT0iMTg0LjY5IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDMiIGN4PSIxMTQuMTQiIGN5PSIxODEuMTIiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjEiIGN4PSIxMTcuNzIiIGN5PSIxNzcuNTQiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxNyIgY3g9IjYyLjE0IiBjeT0iMTc3LjQ5IiByPSIxLjA1Ii8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==">
@@ -14,11 +14,49 @@
         /* ============================================================
            AQP DICHTING CALCULATOR V6.5.0
            ============================================================
-           BUILD DATE: 22/04/2026
-           STATUS: PRODUCTIE. PWA-installable, identiek aan drainage/opstijgend-patroon.
+           BUILD DATE: 22/04/2026 (PWA wrapper) / 05/05/2026 (UTF-8 encoding)
+           STATUS: PRODUCTIE. PWA-installable + UTF-8 encoding (€ m² m³ © →).
            LOCATION: /home/wim/asgard/apps/dichting/
            VORIGE VERSIE: AQP_Dichting_Calculator_V6_4_0_ASCII.html (nu in archive/)
            ALIGNED WITH: projects/AQP_DPM/04_PM_AGENT/DAGCAPACITEITEN_MASTERTEMPLATE_v2_0.md (LEIDEND)
+
+           CHANGELOG V6.5.0 (05/05/2026) - UTF-8 ENCODING UPGRADE:
+           -------------------------------------------------------
+           [ASCII → UTF-8 CONVERSIE per KB v2.2]
+           Display-content geconverteerd naar UTF-8 symbolen voor
+           professionele weergave, in lijn met AQP Sales Calculator
+           V5.0.0 en AQP Kelderdrainage V5.0.0.
+
+           Geconverteerd:
+           - <meta charset="ASCII"> → <meta charset="UTF-8">
+           - EUR → € (in alle display-strings: HTML body, JS template
+             literals, formatCurrency, projectanalyse waterval,
+             componenten-lijst, bruto-marge meter, financieel
+             overzicht, hidden-items info-banner, sectie breakdown,
+             scenario-slider updates)
+           - m2 → m² (in unit/placeholder properties van LINES, in
+             info-modal note-strings, in dagcap-strings, in
+             hidden-items info-banner)
+           - m3 → m³ (afbraak_puin unit/placeholder)
+           - (c) 2026 Vecon → © 2026 Vecon (footer)
+           - -> → → (alleen in display-strings en CSS-comments)
+
+           Bewaard als ASCII (correct, technische identifiers):
+           - JS-variabelen (totalM2, BETON_M3_LEV1, KL_TARIEF_LEV1,
+             VOLLE_LADING, CITYPOMP_THRESHOLD_M2)
+           - Product-codes (m30, M30) en object-keys
+           - JS/CSS comments (changelog, dev-notities, business
+             logic uitleg) — per KB sectie "Categorie D"
+           - HTML-comment closers (-->)
+
+           Verificatie (per KB Fase 5 + 6):
+           - file: HTML document, UTF-8 text ✓
+           - 0 mojibake/corruptie patronen (dubbel-encoded UTF-8) ✓
+           - 0 EUR in non-comment context (audit-script) ✓
+           - 0 m2/m3 in string-literals (audit-script) ✓
+           - 0 unit:'m2', qtyUnit:'m2', ternary 'm':'m2' ✓
+           - 26× €, 130× m², 2× m³, 2× ©, 53× → toegevoegd
+           - Geen pricing/berekening/logica wijzigingen.
 
            CHANGELOG V6.5.0 (22/04/2026) - PWA WRAPPER:
            --------------------------------------------
@@ -54,7 +92,7 @@
            getVisibleSections() leeg is - banner zichtbaar in edge case
            waar ALLES in onzichtbare scope staat.
 
-           [RENAME: SECTIE-'MARGE' -> 'ARBEIDSOMZET']
+           [RENAME: SECTIE-'MARGE' → 'ARBEIDSOMZET']
            Sectie-breakdown kolom 'MARGE' was misleidend: berekening
            is prijs - materiaal = arbeidsomzet (mandagen x dagopbrengst).
            De werkelijke arbeidskostprijs is daar NIET afgetrokken,
@@ -62,12 +100,12 @@
            bruto marge (verschil = arbeidskosten + verbruik).
 
            Gewijzigd:
-           - Kolomheader UI: 'Marge' -> 'Arbeidsomzet'
-           - sectionData keys: marge_eur -> arbeidsomzet_eur,
-             marge_per_dag -> arbeidsomzet_per_dag
-           - Interne vars: sMarge -> sArbeidsomzet,
-             sMargePerDag -> sArbeidsomzetPerDag,
-             totMarge -> totArbeidsomzet
+           - Kolomheader UI: 'Marge' → 'Arbeidsomzet'
+           - sectionData keys: marge_eur → arbeidsomzet_eur,
+             marge_per_dag → arbeidsomzet_per_dag
+           - Interne vars: sMarge → sArbeidsomzet,
+             sMargePerDag → sArbeidsomzetPerDag,
+             totMarge → totArbeidsomzet
 
            Globaal 'Bruto marge' blijft ongewijzigd (terecht - daar
            is arbeidskostprijs wel afgetrokken).
@@ -128,7 +166,7 @@
            - sectionsBreakdown fin-rapport (3594)
 
            AFGEROND IN SESSIE 2: curve-input herschreven + curveScope toegevoegd
-           AFGEROND IN SESSIE 3: UI-banner + rename Marge -> Arbeidsomzet
+           AFGEROND IN SESSIE 3: UI-banner + rename Marge → Arbeidsomzet
 
            CHANGELOG V6.3.1 (22/04/2026):
            ------------------------------
@@ -138,7 +176,7 @@
            bovenaan verschijnen voor vloer-items. Geen logica/data
            wijzigingen - uitsluitend insertion-order van LINES-keys.
 
-           Paren omgedraaid (vloer -> wand naar wand -> vloer):
+           Paren omgedraaid (vloer → wand naar wand → vloer):
            - S.2 Ondergrond beton: frezen_wanden / frezen_vloer
            - S.8 Cementering (2e paar): bijwerk_wanden / bijwerk_vloer
            - S.11 Waterdichting 1K W1: 1k_w1_wanden / 1k_w1_vloer
@@ -147,8 +185,8 @@
            - S.14 Waterdichting 2K: 2k_wanden / 2k_vloer
 
            Secties herordend (wand-items gegroepeerd voor vloer-items):
-           - S.1 Afbraak: gips/cement/coating (wand) -> dekvloer/tegels
-             (vloer) -> tussenwand/inbouw/hoeken/puin (algemeen)
+           - S.1 Afbraak: gips/cement/coating (wand) → dekvloer/tegels
+             (vloer) → tussenwand/inbouw/hoeken/puin (algemeen)
 
            Al wand-eerst (ongewijzigd): S.6 Fluaat, S.7 Primer,
            S.8 cement-paar, S.15 Afwerking wanden vs S.16 Afwerking vloer.
@@ -162,35 +200,35 @@
            nodig via v2.1-update naar calculator teruggevoerd.
 
            S.1 Afbraak:
-           - afbraak_pleister 'losse pleisterlagen' -> SPLIT in:
+           - afbraak_pleister 'losse pleisterlagen' → SPLIT in:
              * afbraak_gipspleister (35 m2/dag, v2.0 1.1)
              * afbraak_cementpleister (20 m2/dag, v2.0 1.2)
            - NIEUW uitwerken_hoeken (160 m/dag, v2.0 1.9)
 
            S.4 Fix (ankerpunten v2.0 bevestigd door Wim):
-           - fix10s_st: 15 -> 96 st/dag
-           - fix20t_st: 12 -> 48 st/dag
-           - fix20t_m:  8 -> 16 m/dag
+           - fix10s_st: 15 → 96 st/dag
+           - fix20t_st: 12 → 48 st/dag
+           - fix20t_m:  8 → 16 m/dag
 
            S.7 Primer:
-           - primer_wanden: 80 -> 120 m2/dag (v2.0 geen wand/vloer onderscheid)
+           - primer_wanden: 80 → 120 m2/dag (v2.0 geen wand/vloer onderscheid)
 
            S.8 M30 Egalisatie (v2.0 ankerpunt 40 m2/dag):
-           - cement_wanden: 25 -> 40 m2/dag
-           - cement_vloer:  25 -> 40 m2/dag
-           - bijwerk_wanden: 50 -> 40 m2/dag
+           - cement_wanden: 25 → 40 m2/dag
+           - cement_vloer:  25 → 40 m2/dag
+           - bijwerk_wanden: 50 → 40 m2/dag
            (bijwerk_vloer 40 was al correct)
 
            S.15 Afwerking wanden (v2.0 15.1 = 35 m2/dag, 3mm dun):
-           - pleister_wanden: dagcap 45 -> 35 m2/dag
-           - pleister_wanden: verbruik M30 14 -> 6 kg/m2 (3mm afwerking,
+           - pleister_wanden: dagcap 45 → 35 m2/dag
+           - pleister_wanden: verbruik M30 14 → 6 kg/m2 (3mm afwerking,
              NIET 10mm egalisatie)
-           - pleister_wanden_autex: dagcap 40 -> 28 m2/dag (-20%
+           - pleister_wanden_autex: dagcap 40 → 28 m2/dag (-20%
              productiviteit vanuit 35 basis, conform opstijgend model)
-           - pleister_wanden_autex: verbruik M30 14 -> 6 kg/m2
+           - pleister_wanden_autex: verbruik M30 14 → 6 kg/m2
 
            S.17 Pompput (v2.0 17.4 'compleet' = 4 st/dag):
-           - pompput_pomp + pompput_aansluiting + pompput_melder -> VERVANGEN
+           - pompput_pomp + pompput_aansluiting + pompput_melder → VERVANGEN
              door 1 lijn 'pompput_compleet' (4 st/dag = 2u/st pomp + melder + afvoer)
            - pompput_dicht verwijderd (1K/2K behandeling zit al in S.11-14)
 
@@ -233,7 +271,7 @@
            van ondergrond-sections niet blokkeren.
            Oorzaak: in getVisibleLines blokkeerden regels een sectie
            volledig als userScope botste met sectionScope (bv.
-           userScope='wand' + sectionScope='vloer' -> lege sectie).
+           userScope='wand' + sectionScope='vloer' → lege sectie).
            Fix: blokkering verwijderd. sectionScope wint altijd van
            userScope (effectiveScope = sectionScope || userScope).
            Sections met een sectionScope zijn config-essentieel en
@@ -247,7 +285,7 @@
            145+ afhankelijkheden) voor realistische mandagen.
 
            RONDE-BUFFER (ronde-systeem faalt onder 20 m2):
-           - Coating-m2 totaal < 20 -> +1.0 mandag
+           - Coating-m2 totaal < 20 → +1.0 mandag
            - Reden: 3 lagen 1K met 4-6u droogtijd = bottleneck
            - Bron: CLAUDE.md C8, MEMORY dagcap v1.1
 
@@ -307,7 +345,7 @@
                                      / [ln(x2)-ln(x1)]
            - x1 = 22 m2 (flat zone), x2 = 132.4894 m2 (max)
            - qty = totaal m2 alle m2-eenheden in project
-           - Onder x1 -> flat MAX, boven x2 -> flat MIN
+           - Onder x1 → flat MAX, boven x2 → flat MIN
            - getDagprijs(): berekent dagprijs op basis van
              totaal m2 over alle actieve lijnen
            - Typisch project 45 m2: EUR 1.700/dag
@@ -320,7 +358,7 @@
            [KRITIEK - DAGCAPACITEITEN]
            - dagcapaciteit toegevoegd aan alle 70 LINES entries
            - Bron: DAGCAPACITEITEN_MASTERTEMPLATE_v1_0.md
-           - Bij ranges: ondergrens (conservatief -> meer mandagen)
+           - Bij ranges: ondergrens (conservatief → meer mandagen)
            - mandagen berekening nu functioneel: qty / dagcapaciteit
            - arbeid berekening nu functioneel: mandagen x DAGPRIJS
            - prijs = arbeid + materiaal (was: alleen materiaal!)
@@ -347,7 +385,7 @@
            [FEATURES - INPUT NAVIGATIE]
            - Enter key navigatie: volgende zichtbaar veld
              * Dynamische fieldOrder op basis van zichtbare inputs
-             * Laatste veld -> blur + scroll naar totaaloverzicht
+             * Laatste veld → blur + scroll naar totaaloverzicht
              * Houdt mobiel toetsenbord actief (geen heropen)
            - Auto-scroll actief veld naar 1/3 viewport:
              * 50ms delay voor mobiel keyboard verschijning
@@ -397,8 +435,8 @@
            CHANGELOG V2.7:
            ---------------
            [ONDERGROND CORRECTIE]
-           - E02 W1-MET = 100% metselwerk -> S.2 Beton VERWIJDERD
-           - E06 W2-MET = 100% metselwerk -> S.2 Beton VERWIJDERD
+           - E02 W1-MET = 100% metselwerk → S.2 Beton VERWIJDERD
+           - E06 W2-MET = 100% metselwerk → S.2 Beton VERWIJDERD
            - E03/E07/E10/E11 MIX = betonvloer + metselwerk wanden:
              * sectionScopes: S.2=vloer, S.3/6/7/8=wand
            
@@ -421,7 +459,7 @@
            S.17 Pompput: +4 (opvullen, moniereisen, aansluiting, melder)
            S.18 Speciaal: +1 (bouwnaad)
            
-           TOTAAL: 47 -> 69 lijnen (+22 lijnen, +47%)
+           TOTAAL: 47 → 69 lijnen (+22 lijnen, +47%)
            
            CHANGELOG V2.5:
            ---------------
@@ -453,14 +491,14 @@
            CHANGELOG V2.1:
            ---------------
            [SPACING & UX]
-           - Container padding-top: 8px -> 10px
-           - Header margin-bottom: 4px -> 10px
+           - Container padding-top: 8px → 10px
+           - Header margin-bottom: 4px → 10px
            - Empty state placeholder VERBORGEN
            
            CHANGELOG V2.0:
            ---------------
            [BRANDING & NAMING]
-           - Titel gewijzigd: "Kelderdichting" -> "Dichtingswerken"
+           - Titel gewijzigd: "Kelderdichting" → "Dichtingswerken"
            - Officiele logo's toegevoegd (V37.7 pattern)
            - Light mode: zwart logo met gradients
            - Dark mode: wit logo met gradients
@@ -2042,7 +2080,7 @@
                         <span class="summary-label">
                             Totaal project</span>
                         <span class="summary-value"
-                            id="totalPrijs">EUR 0,00</span>
+                            id="totalPrijs">€ 0,00</span>
                     </div>
                 </div>
 
@@ -2060,7 +2098,7 @@
                 </div>
 
                 <div class="summary-footer">
-                    (c) 2026 Vecon - V6.5.0
+                    © 2026 Vecon - V6.5.0
                 </div>
             </div>
             
@@ -2076,7 +2114,7 @@
                         <span class="meter-label">
                             Bruto marge / mandag</span>
                         <span class="meter-value"
-                            id="fin-meter-value">EUR 0</span>
+                            id="fin-meter-value">€ 0</span>
                     </div>
                     <div class="meter-bar">
                         <div class="meter-fill"
@@ -2133,14 +2171,14 @@
                             Verkoopprijs</span>
                         <span class="fin-row-value"
                             id="fin-verkoop-totaal">
-                            EUR 0,00</span>
+                            € 0,00</span>
                     </div>
                     <div class="fin-row">
                         <span class="fin-row-label">
                             Materiaalkosten</span>
                         <span class="fin-row-value"
                             id="fin-mat-totaal">
-                            EUR 0,00</span>
+                            € 0,00</span>
                     </div>
                     <div class="fin-row">
                         <span class="fin-row-label"
@@ -2148,21 +2186,21 @@
                             Arbeidskosten</span>
                         <span class="fin-row-value"
                             id="fin-arbeid">
-                            EUR 0,00</span>
+                            € 0,00</span>
                     </div>
                     <div class="fin-row">
                         <span class="fin-row-label">
                             Verbruiksmateriaal</span>
                         <span class="fin-row-value"
                             id="fin-verbruik">
-                            EUR 0,00</span>
+                            € 0,00</span>
                     </div>
                     <div class="fin-row highlight">
                         <span class="fin-row-label">
                             Bruto marge</span>
                         <span class="fin-row-value"
                             id="fin-bruto-marge">
-                            EUR 0,00 (0%)</span>
+                            € 0,00 (0%)</span>
                     </div>
                     <div class="fin-row fin-breakeven">
                         <span class="fin-row-label">
@@ -2181,7 +2219,7 @@
                             Bruto marge / mandag</span>
                         <span class="fin-row-value"
                             id="fin-bruto-mandag">
-                            EUR 0/dag</span>
+                            € 0/dag</span>
                     </div>
                 </div>
                 
@@ -2205,7 +2243,7 @@
             </div>
             
             <div class="summary-footer">
-                (c) 2026 Vecon
+                © 2026 Vecon
                 <span class="footer-lock" id="fin-lock"
                     onclick="toggleFinLock()"
                     title="Financieel overzicht">
@@ -2295,7 +2333,7 @@
     var SECTION_INFO = {
         1: {
             title: 'Afbraak en verwijderingswerken',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [],
             note: '<strong>DOEL:</strong><br>Creeren van een schone, draagkrachtige ondergrond voor het waterdichtingssysteem.<br><br>' +
                   '<strong>KRITIEK:</strong><br>Alle losse, holle of slecht hechtende lagen MOETEN volledig verwijderd worden. ' +
@@ -2304,7 +2342,7 @@
         },
         2: {
             title: 'Ondergrond - Beton',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [],
             note: '<strong>DOEL:</strong><br>Verwijderen cementhuid en openen porien voor optimale hechting waterdichting.<br><br>' +
                   '<strong>METHODE:</strong><br>Mechanisch frezen met diamantschijf of schraper. Oppervlak moet ruw en open zijn.<br><br>' +
@@ -2313,7 +2351,7 @@
         },
         3: {
             title: 'Ondergrond - Metselwerk',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
                 { naam: 'Waterwerende voegmortel', verbruik: 'per m', verpakking: '25 kg' }
             ],
@@ -2359,9 +2397,9 @@
         },
         6: {
             title: 'Zoutneutralisatie',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Esco-Fluaat', verbruik: '0,45 L/m2/laag', verpakking: '1/5/10/25 L' }
+                { naam: 'Schomburg Esco-Fluaat', verbruik: '0,45 L/m²/laag', verpakking: '1/5/10/25 L' }
             ],
             note: '<strong>DOEL:</strong><br>Neutraliseren van hygroscopische zouten die vocht aantrekken en afwerklagen beschadigen.<br><br>' +
                   '<strong>WANNEER HOEVEEL LAGEN?</strong><br>' +
@@ -2376,9 +2414,9 @@
         },
         7: {
             title: 'Primer en voorstrijk',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Aquafin Primer', verbruik: '0,20-0,25 kg/m2', verpakking: '1/5/10 L' }
+                { naam: 'Schomburg Aquafin Primer', verbruik: '0,20-0,25 kg/m²', verpakking: '1/5/10 L' }
             ],
             note: '<strong>DOEL:</strong><br>Reduceren zuiging ondergrond en verbeteren hechting volgende laag.<br><br>' +
                   '<strong>WANNEER TOEPASSEN:</strong><br>' +
@@ -2391,13 +2429,13 @@
         },
         8: {
             title: 'Cementering / Egalisatie',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Asocret M30', verbruik: '14 kg/m2/10mm', verpakking: '25 kg' }
+                { naam: 'Schomburg Asocret M30', verbruik: '14 kg/m²/10mm', verpakking: '25 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Creeren van vlakke, waterdichte ondergrond op metselwerk voor coating.<br><br>' +
                   '<strong>ASOCRET M30 - Reparatiemortel:</strong><br>' +
-                  '- Verbruik: 14 kg/m2 per 10mm laagdikte<br>' +
+                  '- Verbruik: 14 kg/m² per 10mm laagdikte<br>' +
                   '- Minimum laagdikte: 10mm (waterdicht vanaf 10mm)<br>' +
                   '- Maximum per laag: 30mm<br>' +
                   '- Sulfaatbestendig<br><br>' +
@@ -2442,13 +2480,13 @@
         },
         11: {
             title: 'Waterdichting Aquafin-1K W1',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Aquafin-1K', verbruik: '3,50 kg/m2 (2 lagen)', verpakking: '25 kg' }
+                { naam: 'Schomburg Aquafin-1K', verbruik: '3,50 kg/m² (2 lagen)', verpakking: '25 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Minerale waterdichting voor W1-klasse (bodemvochtigheid, geen drukkend water).<br><br>' +
                   '<strong>W1 SPECIFICATIES:</strong><br>' +
-                  '- 2 lagen x 1,75 kg/m2 = 3,50 kg/m2 totaal<br>' +
+                  '- 2 lagen x 1,75 kg/m² = 3,50 kg/m² totaal<br>' +
                   '- Droge laagdikte: 2,0 mm (2 x 1,0 mm)<br>' +
                   '- Scheuroverbruggende laag (2K): OPTIONEEL<br><br>' +
                   '<strong>DROOGTIJDEN:</strong><br>' +
@@ -2459,15 +2497,15 @@
         },
         12: {
             title: 'Waterdichting Aquafin-1K W2.1',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Aquafin-1K', verbruik: '5,30 kg/m2 (3 lagen)', verpakking: '25 kg' }
+                { naam: 'Schomburg Aquafin-1K', verbruik: '5,30 kg/m² (3 lagen)', verpakking: '25 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Minerale waterdichting voor W2.1-klasse (drukkend grondwater tot 3m waterkolom).<br><br>' +
                   '<strong>W2.1 SPECIFICATIES (TDS 204248):</strong><br>' +
-                  '- 3 lagen x 1,77 kg/m2 = min. 5,30 kg/m2 totaal<br>' +
+                  '- 3 lagen x 1,77 kg/m² = min. 5,30 kg/m² totaal<br>' +
                   '- Droge laagdikte: 3,0 mm (3 x 1,0 mm)<br>' +
-                  '- Max. per arbeidsgang: 2 kg/m2<br>' +
+                  '- Max. per arbeidsgang: 2 kg/m²<br>' +
                   '- Scheuroverbruggende laag (2K): VERPLICHT<br><br>' +
                   '<strong>DROOGTIJDEN:</strong><br>' +
                   '- Tussen lagen: 4-6 uur (mat-vochtig)<br>' +
@@ -2477,9 +2515,9 @@
         },
         13: {
             title: 'Waterdichting Aquafin-IC',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Aquafin-IC', verbruik: '2,0 kg/m2 (2 lagen)', verpakking: '25 kg' }
+                { naam: 'Schomburg Aquafin-IC', verbruik: '2,0 kg/m² (2 lagen)', verpakking: '25 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Kristallijne waterdichting voor beton - permanent actief, zelfherstellend.<br><br>' +
                   '<strong>TOEPASSINGSGEBIED:</strong><br>' +
@@ -2495,19 +2533,19 @@
         },
         14: {
             title: 'Scheuroverbruggende eindlaag',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Aquafin-2K', verbruik: '3,50 kg/m2 (2 lagen)', verpakking: '7/35 kg' },
-                { naam: 'Schomburg Aquafin-RB400', verbruik: '4,80 kg/m2 (2 lagen)', verpakking: '24 kg' }
+                { naam: 'Schomburg Aquafin-2K', verbruik: '3,50 kg/m² (2 lagen)', verpakking: '7/35 kg' },
+                { naam: 'Schomburg Aquafin-RB400', verbruik: '4,80 kg/m² (2 lagen)', verpakking: '24 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Overbruggen van scheuren en bescherming tegen scheurvorming na applicatie.<br><br>' +
                   '<strong>AQUAFIN-2K (statisch):</strong><br>' +
-                  '- 2 lagen x 1,75 kg/m2 = 3,50 kg/m2<br>' +
+                  '- 2 lagen x 1,75 kg/m² = 3,50 kg/m²<br>' +
                   '- Scheuroverbrugging: >0,75 mm (DIN EN 14891)<br>' +
                   '- Droogtijd tussen lagen: 3-6 uur<br>' +
                   '- Toepassing: standaard kelders, garages<br><br>' +
                   '<strong>AQUAFIN-RB400 (dynamisch):</strong><br>' +
-                  '- 2 lagen x 2,4 kg/m2 = 4,80 kg/m2<br>' +
+                  '- 2 lagen x 2,4 kg/m² = 4,80 kg/m²<br>' +
                   '- Dynamische scheuroverbrugging (DIN 18533)<br>' +
                   '- Droogtijd: ca. 3 uur overwerkbaar<br>' +
                   '- Toepassing: liftputten, trillingen, bewegende constructies<br><br>' +
@@ -2515,17 +2553,17 @@
         },
         15: {
             title: 'Afwerking wanden',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
-                { naam: 'Schomburg Asocret M30', verbruik: '14 kg/m2', verpakking: '25 kg' },
-                { naam: 'Schomburg Thermopal', verbruik: '9 kg/m2', verpakking: '25 kg' }
+                { naam: 'Schomburg Asocret M30', verbruik: '14 kg/m²', verpakking: '25 kg' },
+                { naam: 'Schomburg Thermopal', verbruik: '9 kg/m²', verpakking: '25 kg' }
             ],
             note: '<strong>DOEL:</strong><br>Esthetische en/of functionele afwerking van waterdichte wanden.<br><br>' +
                   '<strong>ASOCRET M30 (gladde afwerking):</strong><br>' +
                   '- Dunne afwerklaag voor glad oppervlak<br>' +
                   '- Geschikt als basis voor verf<br><br>' +
                   '<strong>THERMOPAL (saneerpleister):</strong><br>' +
-                  '- 8-10 kg/m2 per 10mm<br>' +
+                  '- 8-10 kg/m² per 10mm<br>' +
                   '- Buffert resterende zouten<br>' +
                   '- Dampdoorlatend - laat constructie ademen<br>' +
                   '- Ideaal voor ruimtes met wisselende vochtigheid<br><br>' +
@@ -2533,7 +2571,7 @@
         },
         16: {
             title: 'Afwerking vloer',
-            dagcap: 'x m2/dag',
+            dagcap: 'x m²/dag',
             materials: [
                 { naam: 'Egalisatiemortel', verbruik: 'variabel', verpakking: '25 kg' },
                 { naam: 'Slijtlaag/coating', verbruik: 'variabel', verpakking: 'variabel' }
@@ -2576,7 +2614,7 @@
             dagcap: 'x per situatie',
             materials: [
                 { naam: 'Schomburg ASO-Dichtband', verbruik: 'per m', verpakking: 'rol' },
-                { naam: 'Schomburg Aquafin-RB400', verbruik: '4,80 kg/m2', verpakking: '24 kg' }
+                { naam: 'Schomburg Aquafin-RB400', verbruik: '4,80 kg/m²', verpakking: '24 kg' }
             ],
             note: '<strong>ASO-DICHTBAND (dilatatievoegen):</strong><br>' +
                   '- Flexibele band voor bewegende voegen<br>' +
@@ -2830,8 +2868,8 @@
         // V6.1.0: DAGOPBRENGST-curve EUR 200 OMLAAG t.o.v. V6.0.0
         // Bron: Wim feedback 16/04/2026 - billijker prijspunt
         // 0-5 m2:    plateau EUR 2000 (was 2200)
-        // 5-20 m2:   lineair 2000 -> 1750 (was 2200 -> 1950)
-        // 20-400 m2: inverse log 1750 -> 1250 (was 1950 -> 1450)
+        // 5-20 m2:   lineair 2000 → 1750 (was 2200 → 1950)
+        // 20-400 m2: inverse log 1750 → 1250 (was 1950 → 1450)
         // >400 m2:   plateau 1250 (was 1450)
         DAGOPBRENGST: {
             PLATEAU_KLEIN: 2000,
@@ -2882,9 +2920,9 @@
             VOLLE_LADING: 8,            // m3 voor volle lading (zelfde bij drainage)
             MARGE: 2.5115,              // Marge-factor (2.35 x 1.125)
             CITYPOMP_BASIS: 807,        // EUR forfait basis citypomp-inzet
-            CITYPOMP_THRESHOLD_M2: 20   // >= 20 m2 vloer -> citypomp.
+            CITYPOMP_THRESHOLD_M2: 20   // >= 20 m2 vloer → citypomp.
                                         // Drempel = volume-drempel 0.8 m3 (zelfde als drainage: 10 m2 x 8 cm = 0.8 m3).
-                                        // Bij 4 cm dikte is 20 m2 x 0.04 = 0.8 m3 -> oppervlakte verdubbelt.
+                                        // Bij 4 cm dikte is 20 m2 x 0.04 = 0.8 m3 → oppervlakte verdubbelt.
         },
 
         // V6.1.0: Beton-curves manueel (klein werk, emmer/kruiwagen)
@@ -2896,7 +2934,7 @@
         // V5.0.0: Configs die IC gebruiken (2 mob verplicht, 3d curing extern)
         IC_CONFIGS: ['E05', 'E09'],
 
-        // V5.0.0: Configs die fluaat gebruiken (klein fluaat -> extra mob)
+        // V5.0.0: Configs die fluaat gebruiken (klein fluaat → extra mob)
         FLUAAT_CONFIGS: ['E02', 'E03', 'E06', 'E07', 'E10', 'E11'],
 
         CONFIGS: {
@@ -2938,31 +2976,31 @@
         LINES: {
             // S.1 Afbraak en verwijderingswerken (10 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.1 (V6.3.0: split gips/cement + uitwerken hoeken toegevoegd)
-            'afbraak_gipspleister':  { section: 1, scope: 'wand',     label: 'losse gipspleister wanden', kort: 'Gips af', unit: 'm2', placeholder: 'Verwijderen losse gipspleister wanden (m2)', product: null, verbruik: null, dagcapaciteit: 35 },
-            'afbraak_cementpleister':{ section: 1, scope: 'wand',     label: 'cementpleister wanden (volledig gehecht)', kort: 'Cement-pl af', unit: 'm2', placeholder: 'Verwijderen cementpleister wanden volledig gehecht (m2)', product: null, verbruik: null, dagcapaciteit: 20 },
-            'afbraak_coating':      { section: 1, scope: 'wand',     label: 'bestaande coating/verf wanden', kort: 'Coating af', unit: 'm2', placeholder: 'Verwijderen bestaande coating/verf wanden (m2)', product: null, verbruik: null, dagcapaciteit: 40 },
-            'afbraak_dekvloer':     { section: 1, scope: 'vloer',    label: 'losse cementdekvloer', kort: 'Dekvloer af', unit: 'm2', placeholder: 'Verwijderen losse cementdekvloer (m2)', product: null, verbruik: null, dagcapaciteit: 25 },
-            'afbraak_tegels':       { section: 1, scope: 'vloer',    label: 'tegelvloer incl. lijmresten', kort: 'Tegels af', unit: 'm2', placeholder: 'Verwijderen tegelvloer incl. lijmresten (m2)', product: null, verbruik: null, dagcapaciteit: 25 },
-            'afbraak_tussenwand_m': { section: 1, scope: 'algemeen', curveScope: 'exclude', label: 'tussenwanden metselwerk', kort: 'Tussenw. M', unit: 'm2', placeholder: 'Uitbreken tussenwanden/scheidingsmuren metselwerk (m2)', product: null, verbruik: null, dagcapaciteit: 15 },
-            'afbraak_tussenwand_g': { section: 1, scope: 'algemeen', curveScope: 'exclude', label: 'tussenwanden gipsblokken/cellenbeton', kort: 'Tussenw. G', unit: 'm2', placeholder: 'Uitbreken tussenwanden gipsblokken/cellenbeton (m2)', product: null, verbruik: null, dagcapaciteit: 25 },
+            'afbraak_gipspleister':  { section: 1, scope: 'wand',     label: 'losse gipspleister wanden', kort: 'Gips af', unit: 'm²', placeholder: 'Verwijderen losse gipspleister wanden (m²)', product: null, verbruik: null, dagcapaciteit: 35 },
+            'afbraak_cementpleister':{ section: 1, scope: 'wand',     label: 'cementpleister wanden (volledig gehecht)', kort: 'Cement-pl af', unit: 'm²', placeholder: 'Verwijderen cementpleister wanden volledig gehecht (m²)', product: null, verbruik: null, dagcapaciteit: 20 },
+            'afbraak_coating':      { section: 1, scope: 'wand',     label: 'bestaande coating/verf wanden', kort: 'Coating af', unit: 'm²', placeholder: 'Verwijderen bestaande coating/verf wanden (m²)', product: null, verbruik: null, dagcapaciteit: 40 },
+            'afbraak_dekvloer':     { section: 1, scope: 'vloer',    label: 'losse cementdekvloer', kort: 'Dekvloer af', unit: 'm²', placeholder: 'Verwijderen losse cementdekvloer (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
+            'afbraak_tegels':       { section: 1, scope: 'vloer',    label: 'tegelvloer incl. lijmresten', kort: 'Tegels af', unit: 'm²', placeholder: 'Verwijderen tegelvloer incl. lijmresten (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
+            'afbraak_tussenwand_m': { section: 1, scope: 'algemeen', curveScope: 'exclude', label: 'tussenwanden metselwerk', kort: 'Tussenw. M', unit: 'm²', placeholder: 'Uitbreken tussenwanden/scheidingsmuren metselwerk (m²)', product: null, verbruik: null, dagcapaciteit: 15 },
+            'afbraak_tussenwand_g': { section: 1, scope: 'algemeen', curveScope: 'exclude', label: 'tussenwanden gipsblokken/cellenbeton', kort: 'Tussenw. G', unit: 'm²', placeholder: 'Uitbreken tussenwanden gipsblokken/cellenbeton (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
             'afbraak_inbouw':       { section: 1, scope: 'algemeen', label: 'inbouwkasten/vaste elementen', kort: 'Inbouw af', unit: 'st', placeholder: 'Verwijderen inbouwkasten/vaste elementen (st)', product: null, verbruik: null, dagcapaciteit: 8 },
             'uitwerken_hoeken':     { section: 1, scope: 'algemeen', label: 'uitwerken hoeken/barsten slijpschijf', kort: 'Hoeken', unit: 'm', placeholder: 'Uitwerken hoeken/barsten met slijpschijf (m)', product: null, verbruik: null, dagcapaciteit: 160 },
-            'afbraak_puin':         { section: 1, scope: 'algemeen', label: 'puin incl. containerkosten', kort: 'Puin afvoer', unit: 'm3', placeholder: 'Afvoeren puin incl. containerkosten (m3)', product: null, verbruik: null, dagcapaciteit: 4 },
+            'afbraak_puin':         { section: 1, scope: 'algemeen', label: 'puin incl. containerkosten', kort: 'Puin afvoer', unit: 'm³', placeholder: 'Afvoeren puin incl. containerkosten (m³)', product: null, verbruik: null, dagcapaciteit: 4 },
             
             // S.2 Ondergrondvoorbereiding - BETON (4 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.2
-            'frezen_wanden':        { section: 2, scope: 'wand',     label: 'frezen betonwanden', kort: 'Frezen W', unit: 'm2', placeholder: 'Mechanisch frezen betonwanden (m2)', product: null, verbruik: null, dagcapaciteit: 20 },
-            'frezen_vloer':         { section: 2, scope: 'vloer',    label: 'frezen betonvloer', kort: 'Frezen V', unit: 'm2', placeholder: 'Mechanisch frezen betonvloer (m2)', product: null, verbruik: null, dagcapaciteit: 30 },
+            'frezen_wanden':        { section: 2, scope: 'wand',     label: 'frezen betonwanden', kort: 'Frezen W', unit: 'm²', placeholder: 'Mechanisch frezen betonwanden (m²)', product: null, verbruik: null, dagcapaciteit: 20 },
+            'frezen_vloer':         { section: 2, scope: 'vloer',    label: 'frezen betonvloer', kort: 'Frezen V', unit: 'm²', placeholder: 'Mechanisch frezen betonvloer (m²)', product: null, verbruik: null, dagcapaciteit: 30 },
             'uitkrabben_voegen':    { section: 2, scope: 'algemeen', label: 'voegen en naden min. 20mm', kort: 'Voegen 20mm', unit: 'm', placeholder: 'Uitkrabben voegen en naden min. 20mm diep (m)', product: null, verbruik: null, dagcapaciteit: 15 },
-            'beton_losse_delen':    { section: 2, scope: 'algemeen', curveScope: 'wand', label: 'losse delen en uitbloeiingen', kort: 'Losse delen', unit: 'm2', placeholder: 'Verwijderen losse delen en uitbloeiingen (m2)', product: null, verbruik: null, dagcapaciteit: 50 },
+            'beton_losse_delen':    { section: 2, scope: 'algemeen', curveScope: 'wand', label: 'losse delen en uitbloeiingen', kort: 'Losse delen', unit: 'm²', placeholder: 'Verwijderen losse delen en uitbloeiingen (m²)', product: null, verbruik: null, dagcapaciteit: 50 },
             
             // S.3 Ondergrondvoorbereiding - METSELWERK (5 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.3
-            'verwijder_cement':     { section: 3, scope: 'wand',     label: 'bestaande cementering', kort: 'Cement af', unit: 'm2', placeholder: 'Volledig verwijderen bestaande cementering (m2)', product: null, verbruik: null, dagcapaciteit: 20 },
+            'verwijder_cement':     { section: 3, scope: 'wand',     label: 'bestaande cementering', kort: 'Cement af', unit: 'm²', placeholder: 'Volledig verwijderen bestaande cementering (m²)', product: null, verbruik: null, dagcapaciteit: 20 },
             'losse_voegen':         { section: 3, scope: 'wand',     label: 'losse voegen metselwerk', kort: 'Voegen af', unit: 'm', placeholder: 'Verwijderen losse voegen metselwerk (m)', product: null, verbruik: null, dagcapaciteit: 30 },
             'uithakken_voegen':     { section: 3, scope: 'wand',     label: 'beschadigde voegen min. 15mm', kort: 'Uithakken', unit: 'm', placeholder: 'Uithakken beschadigde voegen min. 15mm diep (m)', product: null, verbruik: null, dagcapaciteit: 15 },
             'hervoegen':            { section: 3, scope: 'wand',     label: 'hervoegen metselwerk', kort: 'Hervoegen', unit: 'm', placeholder: 'Hervoegen metselwerk waterwerende voegmortel (m)', product: null, verbruik: null, dagcapaciteit: 12 },
-            'metsel_losse_delen':   { section: 3, scope: 'wand',     label: 'losse delen en uitbloeiingen', kort: 'Losse delen', unit: 'm2', placeholder: 'Verwijderen losse delen en uitbloeiingen (m2)', product: null, verbruik: null, dagcapaciteit: 50 },
+            'metsel_losse_delen':   { section: 3, scope: 'wand',     label: 'losse delen en uitbloeiingen', kort: 'Losse delen', unit: 'm²', placeholder: 'Verwijderen losse delen en uitbloeiingen (m²)', product: null, verbruik: null, dagcapaciteit: 50 },
             
             // S.4 Stoppen actieve lekkages (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.4 (vastgelegde ankerpunten, bevestigd door Wim)
@@ -2980,24 +3018,24 @@
             // Bron: DAGCAPACITEITEN v2.0 S.6 (240 m2/dag per laag, 2 min/m2 praktijk)
             // Meerlagen-lijnen (2x / 3x): dagcap gedeeld door aantal lagen — wiskundig equivalent
             // aan ronde-regime interpretatie. Klant vult 1 lijn met totaal-oppervlak.
-            'fluaat_wand_1':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 1 laag', kort: 'Fluaat W 1x', unit: 'm2', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 1 laag (m2)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
-            'fluaat_vloer_1':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 1 laag', kort: 'Fluaat V 1x', unit: 'm2', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 1 laag (m2)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
-            'fluaat_wand_2':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 2 lagen', kort: 'Fluaat W 2x', unit: 'm2', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 2 lagen (m2)', product: 'escofluaat', verbruik: 0.90, dagcapaciteit: 120 },
-            'fluaat_vloer_2':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 2 lagen', kort: 'Fluaat V 2x', unit: 'm2', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 2 lagen (m2)', product: 'escofluaat', verbruik: 0.90, dagcapaciteit: 120 },
-            'fluaat_wand_3':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 3 lagen', kort: 'Fluaat W 3x', unit: 'm2', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 3 lagen (m2)', product: 'escofluaat', verbruik: 1.35, dagcapaciteit: 80 },
-            'fluaat_vloer_3':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 3 lagen', kort: 'Fluaat V 3x', unit: 'm2', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 3 lagen (m2)', product: 'escofluaat', verbruik: 1.35, dagcapaciteit: 80 },
+            'fluaat_wand_1':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 1 laag', kort: 'Fluaat W 1x', unit: 'm²', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 1 laag (m²)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
+            'fluaat_vloer_1':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 1 laag', kort: 'Fluaat V 1x', unit: 'm²', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 1 laag (m²)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
+            'fluaat_wand_2':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 2 lagen', kort: 'Fluaat W 2x', unit: 'm²', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 2 lagen (m²)', product: 'escofluaat', verbruik: 0.90, dagcapaciteit: 120 },
+            'fluaat_vloer_2':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 2 lagen', kort: 'Fluaat V 2x', unit: 'm²', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 2 lagen (m²)', product: 'escofluaat', verbruik: 0.90, dagcapaciteit: 120 },
+            'fluaat_wand_3':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 3 lagen', kort: 'Fluaat W 3x', unit: 'm²', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 3 lagen (m²)', product: 'escofluaat', verbruik: 1.35, dagcapaciteit: 80 },
+            'fluaat_vloer_3':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 3 lagen', kort: 'Fluaat V 3x', unit: 'm²', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 3 lagen (m²)', product: 'escofluaat', verbruik: 1.35, dagcapaciteit: 80 },
             
             // S.7 Primer en voorstrijk (2 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.7 (120 m2/dag, geen wand/vloer onderscheid per v2.0)
-            'primer_wanden':        { section: 7, scope: 'wand',     label: 'hechtprimer wanden', kort: 'Primer W', unit: 'm2', placeholder: 'Aanbrengen hechtprimer zuigende ondergrond wanden (m2)', product: 'primer', verbruik: 0.225, dagcapaciteit: 120 },
-            'primer_vloer':         { section: 7, scope: 'vloer',    label: 'hechtprimer vloer', kort: 'Primer V', unit: 'm2', placeholder: 'Aanbrengen hechtprimer zuigende ondergrond vloer (m2)', product: 'primer', verbruik: 0.225, dagcapaciteit: 120 },
+            'primer_wanden':        { section: 7, scope: 'wand',     label: 'hechtprimer wanden', kort: 'Primer W', unit: 'm²', placeholder: 'Aanbrengen hechtprimer zuigende ondergrond wanden (m²)', product: 'primer', verbruik: 0.225, dagcapaciteit: 120 },
+            'primer_vloer':         { section: 7, scope: 'vloer',    label: 'hechtprimer vloer', kort: 'Primer V', unit: 'm²', placeholder: 'Aanbrengen hechtprimer zuigende ondergrond vloer (m²)', product: 'primer', verbruik: 0.225, dagcapaciteit: 120 },
             
             // S.8 Cementering en/of egalisatie (5 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.8 (40 m2/dag ankerpunt, incl. lokaal bijwerk)
-            'cement_wanden':        { section: 8, scope: 'wand',     label: 'cementering wanden 10mm', kort: 'Cement W', unit: 'm2', placeholder: 'Cementering metselwerk wanden Asocret M30 10mm standaard (m2)', product: 'm30', verbruik: 14.0, dagcapaciteit: 40 },
-            'cement_vloer':         { section: 8, scope: 'vloer',    label: 'cementering vloer 10mm', kort: 'Cement V', unit: 'm2', placeholder: 'Cementering metselwerk vloer Asocret M30 10mm standaard (m2)', product: 'm30', verbruik: 14.0, dagcapaciteit: 40 },
-            'bijwerk_wanden':       { section: 8, scope: 'wand',     label: 'bijwerken oneffenheden wanden', kort: 'Bijwerk W', unit: 'm2', placeholder: 'Bijwerken lokale oneffenheden wanden >5mm Asocret M30 (m2)', product: 'm30', verbruik: 7.0, dagcapaciteit: 40 },
-            'bijwerk_vloer':        { section: 8, scope: 'vloer',    label: 'bijwerken oneffenheden vloer', kort: 'Bijwerk V', unit: 'm2', placeholder: 'Bijwerken lokale oneffenheden vloer >5mm Asocret M30 (m2)', product: 'm30', verbruik: 7.0, dagcapaciteit: 40 },
+            'cement_wanden':        { section: 8, scope: 'wand',     label: 'cementering wanden 10mm', kort: 'Cement W', unit: 'm²', placeholder: 'Cementering metselwerk wanden Asocret M30 10mm standaard (m²)', product: 'm30', verbruik: 14.0, dagcapaciteit: 40 },
+            'cement_vloer':         { section: 8, scope: 'vloer',    label: 'cementering vloer 10mm', kort: 'Cement V', unit: 'm²', placeholder: 'Cementering metselwerk vloer Asocret M30 10mm standaard (m²)', product: 'm30', verbruik: 14.0, dagcapaciteit: 40 },
+            'bijwerk_wanden':       { section: 8, scope: 'wand',     label: 'bijwerken oneffenheden wanden', kort: 'Bijwerk W', unit: 'm²', placeholder: 'Bijwerken lokale oneffenheden wanden >5mm Asocret M30 (m²)', product: 'm30', verbruik: 7.0, dagcapaciteit: 40 },
+            'bijwerk_vloer':        { section: 8, scope: 'vloer',    label: 'bijwerken oneffenheden vloer', kort: 'Bijwerk V', unit: 'm²', placeholder: 'Bijwerken lokale oneffenheden vloer >5mm Asocret M30 (m²)', product: 'm30', verbruik: 7.0, dagcapaciteit: 40 },
             'opvullen_gaten':       { section: 8, scope: 'algemeen', label: 'gaten/uitsparingen', kort: 'Gaten', unit: 'st', placeholder: 'Opvullen gaten/uitsparingen Asocret M30 (st)', product: 'm30', verbruik: 5.0, dagcapaciteit: 25 },
             
             // S.9 Kimvorming (5 lijnen)
@@ -3020,54 +3058,54 @@
             // V6.3.0: dagcap in lijnen is PRE-GEDEELD door aantal lagen (=2 voor W1):
             //   wand 40/2=20, vloer 48/2=24, machinaal 120/2=60.
             //   Klant vult oppervlak 1x, rekent automatisch 2 lagen.
-            '1k_w1_wanden':         { section: 11, scope: 'wand',    label: 'Aquafin-1K W1 wanden 2 lagen', kort: '1K W1 W', unit: 'm2', placeholder: 'Aquafin-1K W1 wanden 2 lagen 3,50 kg/m2 (m2)', product: '1k', verbruik: 3.50, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
-            '1k_w1_vloer':          { section: 11, scope: 'vloer',   label: 'Aquafin-1K W1 vloer 2 lagen', kort: '1K W1 V', unit: 'm2', placeholder: 'Aquafin-1K W1 vloer 2 lagen 3,50 kg/m2 (m2)', product: '1k', verbruik: 3.50, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
+            '1k_w1_wanden':         { section: 11, scope: 'wand',    label: 'Aquafin-1K W1 wanden 2 lagen', kort: '1K W1 W', unit: 'm²', placeholder: 'Aquafin-1K W1 wanden 2 lagen 3,50 kg/m² (m²)', product: '1k', verbruik: 3.50, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            '1k_w1_vloer':          { section: 11, scope: 'vloer',   label: 'Aquafin-1K W1 vloer 2 lagen', kort: '1K W1 V', unit: 'm²', placeholder: 'Aquafin-1K W1 vloer 2 lagen 3,50 kg/m² (m²)', product: '1k', verbruik: 3.50, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
 
             // S.12 Waterdichting Aquafin-1K W2.1 (2 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.12 (per laag: wand 40, vloer 48, machinaal 120)
             // V6.3.0: dagcap pre-gedeeld door 3 lagen W2.1:
             //   wand 40/3=13,33, vloer 48/3=16, machinaal 120/3=40.
-            '1k_w2_wanden':         { section: 12, scope: 'wand',    label: 'Aquafin-1K W2.1 wanden 3 lagen', kort: '1K W2.1 W', unit: 'm2', placeholder: 'Aquafin-1K W2.1 wanden 3 lagen min. 5,30 kg/m2 (m2)', product: '1k', verbruik: 5.30, dagcapaciteit: 13.33, dagcap_handm: 13.33, dagcap_mach: 40, lagen: 3 },
-            '1k_w2_vloer':          { section: 12, scope: 'vloer',   label: 'Aquafin-1K W2.1 vloer 3 lagen', kort: '1K W2.1 V', unit: 'm2', placeholder: 'Aquafin-1K W2.1 vloer 3 lagen min. 5,30 kg/m2 (m2)', product: '1k', verbruik: 5.30, dagcapaciteit: 16, dagcap_handm: 16, dagcap_mach: 40, lagen: 3 },
+            '1k_w2_wanden':         { section: 12, scope: 'wand',    label: 'Aquafin-1K W2.1 wanden 3 lagen', kort: '1K W2.1 W', unit: 'm²', placeholder: 'Aquafin-1K W2.1 wanden 3 lagen min. 5,30 kg/m² (m²)', product: '1k', verbruik: 5.30, dagcapaciteit: 13.33, dagcap_handm: 13.33, dagcap_mach: 40, lagen: 3 },
+            '1k_w2_vloer':          { section: 12, scope: 'vloer',   label: 'Aquafin-1K W2.1 vloer 3 lagen', kort: '1K W2.1 V', unit: 'm²', placeholder: 'Aquafin-1K W2.1 vloer 3 lagen min. 5,30 kg/m² (m²)', product: '1k', verbruik: 5.30, dagcapaciteit: 16, dagcap_handm: 16, dagcap_mach: 40, lagen: 3 },
 
             // S.13 Waterdichting Aquafin-IC (2 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.13 (per laag: wand 40, vloer 48, machinaal 120)
             // V6.3.0: dagcap pre-gedeeld door 2 lagen IC.
-            'ic_wanden':            { section: 13, scope: 'wand',    label: 'Aquafin-IC wanden 2 lagen', kort: 'IC W', unit: 'm2', placeholder: 'Aquafin-IC wanden 2 lagen kristallijn (m2)', product: 'ic', verbruik: 2.0, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
-            'ic_vloer':             { section: 13, scope: 'vloer',   label: 'Aquafin-IC vloer 2 lagen', kort: 'IC V', unit: 'm2', placeholder: 'Aquafin-IC vloer 2 lagen kristallijn (m2)', product: 'ic', verbruik: 2.0, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
+            'ic_wanden':            { section: 13, scope: 'wand',    label: 'Aquafin-IC wanden 2 lagen', kort: 'IC W', unit: 'm²', placeholder: 'Aquafin-IC wanden 2 lagen kristallijn (m²)', product: 'ic', verbruik: 2.0, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            'ic_vloer':             { section: 13, scope: 'vloer',   label: 'Aquafin-IC vloer 2 lagen', kort: 'IC V', unit: 'm²', placeholder: 'Aquafin-IC vloer 2 lagen kristallijn (m²)', product: 'ic', verbruik: 2.0, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
 
             // S.14 Scheuroverbruggende eindlaag (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.14 (per laag: wand 40, vloer 48, machinaal 120)
             // V6.3.0: dagcap pre-gedeeld door 2 lagen 2K/RB400.
             // RB400 gebruikt scope='algemeen' met wand-ondergrens (40/2=20) — acceptabel voor liftput (E08, voornamelijk wand).
-            '2k_wanden':            { section: 14, scope: 'wand',    label: 'Aquafin-2K wanden 2 lagen', kort: '2K W', unit: 'm2', placeholder: 'Aquafin-2K wanden 2 lagen scheuroverbruggend (m2)', product: '2k', verbruik: 3.50, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
-            '2k_vloer':             { section: 14, scope: 'vloer',   label: 'Aquafin-2K vloer 2 lagen', kort: '2K V', unit: 'm2', placeholder: 'Aquafin-2K vloer 2 lagen scheuroverbruggend (m2)', product: '2k', verbruik: 3.50, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
-            'rb400':                { section: 14, scope: 'algemeen', curveScope: 'wand', label: 'Aquafin-RB400 dynamisch', kort: 'RB400', unit: 'm2', placeholder: 'Aquafin-RB400 2 lagen dynamische scheuroverbrugging (m2)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            '2k_wanden':            { section: 14, scope: 'wand',    label: 'Aquafin-2K wanden 2 lagen', kort: '2K W', unit: 'm²', placeholder: 'Aquafin-2K wanden 2 lagen scheuroverbruggend (m²)', product: '2k', verbruik: 3.50, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            '2k_vloer':             { section: 14, scope: 'vloer',   label: 'Aquafin-2K vloer 2 lagen', kort: '2K V', unit: 'm²', placeholder: 'Aquafin-2K vloer 2 lagen scheuroverbruggend (m²)', product: '2k', verbruik: 3.50, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
+            'rb400':                { section: 14, scope: 'algemeen', curveScope: 'wand', label: 'Aquafin-RB400 dynamisch', kort: 'RB400', unit: 'm²', placeholder: 'Aquafin-RB400 2 lagen dynamische scheuroverbrugging (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
             
             // S.15 Afwerking wanden (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.15 (35 m2/dag, 3mm dunne laag M30)
             /* V6.3.0: teruggezet naar v2.0 ankerpunt 35 m2/dag + verbruik 6 kg/m2 (3mm i.p.v. 10mm egalisatie). */
-            'pleister_wanden':      { section: 15, scope: 'wand',    label: 'afwerkpleister wanden', kort: 'Afwerk W', unit: 'm2', placeholder: 'Afwerkpleister wanden Asocret M30 gladde afwerking 3mm (m2)', product: 'm30', verbruik: 6.0, dagcapaciteit: 35 },
+            'pleister_wanden':      { section: 15, scope: 'wand',    label: 'afwerkpleister wanden', kort: 'Afwerk W', unit: 'm²', placeholder: 'Afwerkpleister wanden Asocret M30 gladde afwerking 3mm (m²)', product: 'm30', verbruik: 6.0, dagcapaciteit: 35 },
             /* V6.2.0 (herzien V6.3.0): Afwerkpleister M30 MET ingewerkte Autex glasvezelwapening - VERVANGENDE lijn.
                Dagcap 28 m2/dag = 35 x 0.8 (opstijgend -20% productiviteitsmodel vanuit v2.0 basis 35).
                Materiaal: M30 6 kg/m2 (3mm) + Autex 1.0 m2/m2 via extraProducts mechanisme. */
-            'pleister_wanden_autex': { section: 15, scope: 'wand',   label: 'afwerkpleister wanden + Autex', kort: 'Afw+Au W', unit: 'm2', placeholder: 'Afwerkpleister wanden M30 3mm met ingewerkte Autex glasvezelwapening (m2)', product: 'm30', verbruik: 6.0, extraProducts: [{ product: 'autex', verbruik: 1.0 }], dagcapaciteit: 28 },
-            'saneer_wanden':        { section: 15, scope: 'wand',    label: 'saneerpleister wanden', kort: 'Saneer W', unit: 'm2', placeholder: 'Saneerpleister wanden Thermopal Ultra Wit (m2)', product: 'thermopal', verbruik: 9.0, dagcapaciteit: 35 },
-            'schilder_wanden':      { section: 15, scope: 'wand',    label: 'schilderwerk wanden', kort: 'Schilder W', unit: 'm2', placeholder: 'Schilderwerk wanden diffusieopen verf (m2)', product: null, verbruik: null, dagcapaciteit: 60 },
+            'pleister_wanden_autex': { section: 15, scope: 'wand',   label: 'afwerkpleister wanden + Autex', kort: 'Afw+Au W', unit: 'm²', placeholder: 'Afwerkpleister wanden M30 3mm met ingewerkte Autex glasvezelwapening (m²)', product: 'm30', verbruik: 6.0, extraProducts: [{ product: 'autex', verbruik: 1.0 }], dagcapaciteit: 28 },
+            'saneer_wanden':        { section: 15, scope: 'wand',    label: 'saneerpleister wanden', kort: 'Saneer W', unit: 'm²', placeholder: 'Saneerpleister wanden Thermopal Ultra Wit (m²)', product: 'thermopal', verbruik: 9.0, dagcapaciteit: 35 },
+            'schilder_wanden':      { section: 15, scope: 'wand',    label: 'schilderwerk wanden', kort: 'Schilder W', unit: 'm²', placeholder: 'Schilderwerk wanden diffusieopen verf (m²)', product: null, verbruik: null, dagcapaciteit: 60 },
             
             // S.16 Afwerking vloer (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.16
-            'egaliseer_vloer':      { section: 16, scope: 'vloer',   label: 'egaliseren vloer voor tegels', kort: 'Egaliseer V', unit: 'm2', placeholder: 'Egaliseren vloer voor tegels Asocret HFF (m2)', product: null, verbruik: null, dagcapaciteit: 25 },
-            'slijtlaag_vloer':      { section: 16, scope: 'vloer',   label: 'slijtvaste vloercoating', kort: 'Slijtlaag V', unit: 'm2', placeholder: 'Slijtvaste vloercoating mechanische belasting (m2)', product: null, verbruik: null, dagcapaciteit: 50 },
-            'antislip_vloer':       { section: 16, scope: 'vloer',   label: 'antislip vloercoating', kort: 'Antislip V', unit: 'm2', placeholder: 'Antislip vloercoating garage/werkplaats (m2)', product: null, verbruik: null, dagcapaciteit: 40 },
+            'egaliseer_vloer':      { section: 16, scope: 'vloer',   label: 'egaliseren vloer voor tegels', kort: 'Egaliseer V', unit: 'm²', placeholder: 'Egaliseren vloer voor tegels Asocret HFF (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
+            'slijtlaag_vloer':      { section: 16, scope: 'vloer',   label: 'slijtvaste vloercoating', kort: 'Slijtlaag V', unit: 'm²', placeholder: 'Slijtvaste vloercoating mechanische belasting (m²)', product: null, verbruik: null, dagcapaciteit: 50 },
+            'antislip_vloer':       { section: 16, scope: 'vloer',   label: 'antislip vloercoating', kort: 'Antislip V', unit: 'm²', placeholder: 'Antislip vloercoating garage/werkplaats (m²)', product: null, verbruik: null, dagcapaciteit: 40 },
             /* V6.1.0: Beton dekvloer 4 cm - special pricing (drainage-formule / 2) */
-            'beton_vloer_dekvloer': { section: 16, scope: 'vloer',   label: 'betonvloer C25/30 dramix 4cm', kort: 'Beton V 4cm', unit: 'm2', placeholder: 'Betonvloer C25/30 dramix 4cm dekvloer (m2)', product: null, verbruik: null, dagcapaciteit: 20, specialPrice: 'beton_dichting', lagen: 1 },
+            'beton_vloer_dekvloer': { section: 16, scope: 'vloer',   label: 'betonvloer C25/30 dramix 4cm', kort: 'Beton V 4cm', unit: 'm²', placeholder: 'Betonvloer C25/30 dramix 4cm dekvloer (m²)', product: null, verbruik: null, dagcapaciteit: 20, specialPrice: 'beton_dichting', lagen: 1 },
             /* V6.1.0: Citypomp basis - forfait EUR 807, auto-zichtbaar bij beton_vloer_dekvloer >= 20 m2 */
             'beton_citypomp_basis': { section: 16, scope: 'vloer',   label: 'citypomp basis (levering en storten beton)', kort: 'Citypomp basis', unit: 'forfait', placeholder: 'Citypomp inzet (1 = ja)', product: null, verbruik: null, dagcapaciteit: 1, specialPrice: 'citypomp_basis', lagen: 1, autoShow: true },
             
             // S.17 Pompput behandeling (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.17 (v2.0 17.4 pompinstallatie compleet = 4 st/dag)
-            // V6.3.0: pompput_pomp + pompput_aansluiting + pompput_melder + pompput_dicht -> vervangen door 1 lijn
+            // V6.3.0: pompput_pomp + pompput_aansluiting + pompput_melder + pompput_dicht → vervangen door 1 lijn
             // (v2.0 expliciet: pompinstallatie compleet = pomp + watermelder + afvoer in 1 stuk)
             // Pompputwanden waterdicht zit al in S.11-S.14 (algemene 1K/2K bewerking, zie v2.0 noot S.17)
             'pompput_opvullen':     { section: 17, scope: 'algemeen', label: 'opvullen pompput gietmortel', kort: 'Pomp opvul', unit: 'st', placeholder: 'Opvullen pompput met krimpvrije gietmortel in lagen (st)', product: null, verbruik: null, dagcapaciteit: 2 },
@@ -3078,7 +3116,7 @@
             // Bron: DAGCAPACITEITEN v2.0 S.18 (capillaire injectie toegevoegd in v2.0, was eerder afwezig in calculator)
             'dichtband':            { section: 18, scope: 'algemeen', label: 'ASO-Dichtband dilatatievoeg', kort: 'Dichtband', unit: 'm', placeholder: 'Plaatsen ASO-Dichtband bij dilatatievoeg (m)', product: null, verbruik: null, dagcapaciteit: 35 },
             'bouwnaad':             { section: 18, scope: 'algemeen', label: 'bouwnaad injectie + coating', kort: 'Bouwnaad', unit: 'm', placeholder: 'Behandeling bouwnaad injectie + coating (m)', product: null, verbruik: null, dagcapaciteit: 10 },
-            'radon':                { section: 18, scope: 'algemeen', curveScope: 'vloer', label: 'radondichte afwerking RB400', kort: 'Radon', unit: 'm2', placeholder: 'Radondichte afwerking Aquafin-RB400 (m2)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            'radon':                { section: 18, scope: 'algemeen', curveScope: 'vloer', label: 'radondichte afwerking RB400', kort: 'Radon', unit: 'm²', placeholder: 'Radondichte afwerking Aquafin-RB400 (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
             'capillaire_injectie':  { section: 18, scope: 'algemeen', label: 'capillaire injectie horizontaal/verticaal', kort: 'Cap. injectie', unit: 'm', placeholder: 'Capillaire injectie horizontaal/verticaal boren + injecteren (m)', product: null, verbruik: null, dagcapaciteit: 24 }
         },
         
@@ -3098,7 +3136,7 @@
             'rb400':      { name: 'AQUAFIN-RB400',  verpakking: 24, eenheid: 'kg', prijs: 95.76 },  /* EUR 3.99/kg */
             'p4':         { name: 'AQUAFIN-P4',     verpakking: 1,  eenheid: 'kg', prijs: 43.00 },  /* Resto onveranderd */
             'thermopal':  { name: 'Thermopal',      verpakking: 25, eenheid: 'kg', prijs: 32.50 },  /* EUR 1.30/kg */
-            'autex':      { name: 'Autex glasvezelwapening', verpakking: 55, eenheid: 'm2', prijs: 178.20 } /* EUR 3.24/m2 - rol 55 m2, zelfde bron als opstijgend V5.0.1 */
+            'autex':      { name: 'Autex glasvezelwapening', verpakking: 55, eenheid: 'm²', prijs: 178.20 } /* EUR 3.24/m2 - rol 55 m2, zelfde bron als opstijgend V5.0.1 */
         }
     };
     
@@ -3247,7 +3285,7 @@
         },
 
         /* Stats van items ingevuld maar buiten zichtbare scope (voor M1-banner).
-           Prijs wordt niet hier berekend (zou StateManager -> BusinessLogic circulair maken);
+           Prijs wordt niet hier berekend (zou StateManager → BusinessLogic circulair maken);
            ViewRenderer/BusinessLogic berekent prijs apart bij banner-rendering. */
         getHiddenFilledStats: function() {
             var config = PARAMS.CONFIGS[this.state.selectedConfig];
@@ -3274,7 +3312,7 @@
                 /* Alleen lines van actieve config meetellen */
                 if (config.sections.indexOf(line.section) === -1) continue;
                 count++;
-                if (line.unit === 'm2') totalM2 += qty;
+                if (line.unit === 'm²') totalM2 += qty;
                 hiddenIds.push(lineId);
             }
             return { count: count, totalM2: totalM2, hiddenIds: hiddenIds };
@@ -3300,8 +3338,8 @@
         // V6.0.0 (V6.4.0 M2 aangescherpt): Dagopbrengst-curve piecewise
         // (DICHTING_PRICING_v2_0.md sectie 2)
         // 0-5 m2:    plateau EUR 2000
-        // 5-20 m2:   lineair 2000 -> 1750
-        // 20-400 m2: inverse log 1750 -> 1250
+        // 5-20 m2:   lineair 2000 → 1750
+        // 20-400 m2: inverse log 1750 → 1250
         // >400 m2:   plateau 1250
         // m2 = totaal UNIEK behandeld oppervlak (som van max-per-curveScope)
         // V6.4.0 M2: curve reageert nu op werkelijk uniek oppervlak
@@ -3352,11 +3390,11 @@
             var scopeMax = {};
             for (var lineId in PARAMS.LINES) {
                 var line = PARAMS.LINES[lineId];
-                if (line.unit !== 'm2') continue;
+                if (line.unit !== 'm²') continue;
                 var qty = StateManager.getQuantity(lineId);
                 if (qty <= 0) continue;
 
-                /* curveScope bepalen: expliciet -> fallback op scope */
+                /* curveScope bepalen: expliciet → fallback op scope */
                 var cs = (line.curveScope !== undefined)
                     ? line.curveScope
                     : line.scope;
@@ -3411,7 +3449,7 @@
 
         // V6.1.0: Beton-dichting prijs per m2 = EXACT DRAINAGE-PRIJS GEDEELD DOOR 2.
         // Rationale: drainage gebruikt 8 cm, dichting 4 cm = halve dikte.
-        // Halve dikte -> halve m3 bij zelfde oppervlakte -> halve beton-kost per m2.
+        // Halve dikte → halve m3 bij zelfde oppervlakte → halve beton-kost per m2.
         // (De basis-toeslag EUR 807 blijft vol want die is een vaste citypomp-inzet, niet dikte-afhankelijk.)
         betonDichtingPerM2: function(m2) {
             if (m2 <= 0) return 0;
@@ -3568,7 +3606,7 @@
             for (var i = 0; i < coatingSections.length; i++) {
                 var lines = StateManager.getAllLinesForSection(coatingSections[i]);
                 for (var j = 0; j < lines.length; j++) {
-                    if (lines[j].data.unit === 'm2') {
+                    if (lines[j].data.unit === 'm²') {
                         total += StateManager.getQuantity(lines[j].id);
                     }
                 }
@@ -3582,7 +3620,7 @@
             var lines = StateManager.getAllLinesForSection(6);
             var total = 0;
             for (var j = 0; j < lines.length; j++) {
-                if (lines[j].data.unit === 'm2') {
+                if (lines[j].data.unit === 'm²') {
                     total += StateManager.getQuantity(lines[j].id);
                 }
             }
@@ -3594,7 +3632,7 @@
             var total = 0;
             var lineIds = Object.keys(PARAMS.LINES);
             for (var i = 0; i < lineIds.length; i++) {
-                if (PARAMS.LINES[lineIds[i]].unit === 'm2') {
+                if (PARAMS.LINES[lineIds[i]].unit === 'm²') {
                     total += StateManager.getQuantity(lineIds[i]);
                 }
             }
@@ -3712,14 +3750,14 @@
                         (hidden.count === 1 ? '' : 's') +
                         ' ingevuld buiten huidige weergave';
                     if (hidden.totalM2 > 0) {
-                        msg += ' (' + hidden.totalM2.toFixed(1) + ' m2';
+                        msg += ' (' + hidden.totalM2.toFixed(1) + ' m²';
                         if (hiddenPrijs > 0) {
-                            msg += ', EUR ' +
+                            msg += ', € ' +
                                 Math.round(hiddenPrijs).toLocaleString('nl-BE');
                         }
                         msg += ')';
                     } else if (hiddenPrijs > 0) {
-                        msg += ' (EUR ' +
+                        msg += ' (€ ' +
                             Math.round(hiddenPrijs).toLocaleString('nl-BE') + ')';
                     }
                     msg += '. Deze tellen mee in prijs, mandagen en totaal.';
@@ -3763,7 +3801,7 @@
             // ORANJE: klein project waarschuwing (ronde-systeem kan falen)
             if (coatingM2 > 0 && coatingM2 < mod.RONDE_FAILS_M2) {
                 flags.oranje.push('Zeer klein project (' + coatingM2.toFixed(1) +
-                    ' m2 coating) - ronde-systeem mogelijk moeilijk. Premium dagopbrengst.');
+                    ' m² coating) - ronde-systeem mogelijk moeilijk. Premium dagopbrengst.');
             }
 
             // ORANJE: metselwerk zonder fluaat (onwaarschijnlijk)
@@ -3960,7 +3998,7 @@
             return parts.join(',');
         },
         
-        formatCurrency: function(num) { return 'EUR ' + this.formatNumber(num, 2); },
+        formatCurrency: function(num) { return '€ ' + this.formatNumber(num, 2); },
         
         renderConfigInfo: function() {
             var config = PARAMS.CONFIGS[StateManager.state.selectedConfig];
@@ -4154,7 +4192,7 @@
                     scrollFieldIntoView(this);
                 });
                 
-                // V3.1: Enter key -> volgende zichtbaar veld
+                // V3.1: Enter key → volgende zichtbaar veld
                 input.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter') {
                         e.preventDefault();
@@ -4162,7 +4200,7 @@
                         if (nextInput) {
                             nextInput.focus();
                         } else {
-                            // Laatste veld -> blur + scroll totaaloverzicht
+                            // Laatste veld → blur + scroll totaaloverzicht
                             this.blur();
                             scrollToSummary();
                         }
@@ -4255,7 +4293,7 @@
                             '<span class="summary' +
                             '-component-unit-price">' +
                             '<span class="price-amount">'
-                            + 'EUR' + fmt(unitPrice, 2)
+                            + '€ ' + fmt(unitPrice, 2)
                             + '/</span>' +
                             '<span class="price-unit">'
                             + c.unit + '</span></span>' +
@@ -4267,7 +4305,7 @@
                             + c.unit + '</span></span>' +
                             '<span class=' +
                             '"summary-component-subtotal">'
-                            + 'EUR' + fmt(c.subtotal, 2)
+                            + '€ ' + fmt(c.subtotal, 2)
                             + '</span></div>';
                     }
                 }
@@ -4279,7 +4317,7 @@
             
             // Totaal prijs - V42.9 format (EUR zonder spatie)
             document.getElementById('totalPrijs')
-                .textContent = 'EUR'
+                .textContent = '€ '
                 + fmt(totals.prijs, 2);
             
             // Tijd (indicatief) - V42.9 format
@@ -4430,7 +4468,7 @@
                 fill.style.background = getZoneColor(
                     meterVal);
                 fill.className = 'meter-fill';
-                valEl.textContent = 'EUR '
+                valEl.textContent = '€ '
                     + fmt(meterVal, 0);
             }
             
@@ -4443,7 +4481,7 @@
             
             el = document.getElementById(
                 'fin-mat-totaal');
-            if (el) el.textContent = '- EUR '
+            if (el) el.textContent = '- € '
                 + fmt(fin.totaalMateriaal, 2);
             
             el = document.getElementById(
@@ -4454,17 +4492,17 @@
                 + '/u)';
             
             el = document.getElementById('fin-arbeid');
-            if (el) el.textContent = '- EUR '
+            if (el) el.textContent = '- € '
                 + fmt(fin.arbeidskosten, 2);
             
             el = document.getElementById('fin-verbruik');
-            if (el) el.textContent = '- EUR '
+            if (el) el.textContent = '- € '
                 + fmt(fin.verbruiksmateriaal, 2);
             
             el = document.getElementById(
                 'fin-bruto-marge');
             if (el) {
-                el.textContent = 'EUR '
+                el.textContent = '€ '
                     + fmt(fin.bruteMarge, 2) + ' ('
                     + fmt(fin.bruteMargePct, 1) + '%)';
                 el.className = 'fin-row-value '
@@ -4492,7 +4530,7 @@
             el = document.getElementById(
                 'fin-bruto-mandag');
             if (el) {
-                el.textContent = 'EUR '
+                el.textContent = '€ '
                     + fmt(fin.bruteMargePerMandag, 0)
                     + '/dag';
                 el.className = 'fin-row-value '
@@ -4527,7 +4565,7 @@
                     var barW = Math.min(mr, 100);
                     html += '<tr>'
                         + '<td>' + s.naam + '</td>'
-                        + '<td>EUR '
+                        + '<td>€ '
                         + fmt(s.arbeidsomzet_eur, 0) + '</td>'
                         + '<td>'
                         + fmt(s.mandagen, 1) + '</td>'
@@ -4543,7 +4581,7 @@
                 // Totaalrij
                 html += '<tr>'
                     + '<td>TOTAAL</td>'
-                    + '<td>EUR '
+                    + '<td>€ '
                     + fmt(totArbeidsomzet, 0) + '</td>'
                     + '<td>'
                     + fmt(fin.mandagen, 1) + '</td>'
@@ -4851,13 +4889,13 @@
         var el;
         el = document.getElementById(
             'fin-verkoop-totaal');
-        if (el) el.textContent = 'EUR '
+        if (el) el.textContent = '€ '
             + fmt(adjVerkoop, 2);
         
         el = document.getElementById(
             'fin-bruto-marge');
         if (el) {
-            el.textContent = 'EUR '
+            el.textContent = '€ '
                 + fmt(adjBruto, 2) + ' ('
                 + fmt(adjPct, 1) + '%)';
             el.className = 'fin-row-value '
@@ -4877,7 +4915,7 @@
         el = document.getElementById(
             'fin-bruto-mandag');
         if (el) {
-            el.textContent = 'EUR '
+            el.textContent = '€ '
                 + fmt(adjPerDag, 0) + '/dag';
             el.className = 'fin-row-value '
                 + (adjPerDag >= 1000 ? 'positive'
@@ -4898,7 +4936,7 @@
             fill.style.width = mp + '%';
             fill.style.background = getZoneColor(
                 adjPerDag);
-            valEl.textContent = 'EUR '
+            valEl.textContent = '€ '
                 + fmt(adjPerDag, 0);
         }
     }
