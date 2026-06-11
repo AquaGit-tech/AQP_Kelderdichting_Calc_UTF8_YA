@@ -3,60 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aquaproved Dichting Calculator V6.5.0 - PWA installable (V6.4.0 pricing-motor + manifest)">
+    <meta name="description" content="Aquaproved Dichting Calculator V7.0.4 - curve vastlegbaar als nieuwe versie via tuning-UI (audit-trail behouden)">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGFhZ18xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxODAuMTkgMjM4LjUyIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjkuOC4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjEgQnVpbGQgMikgIC0tPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuc3QwIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDIpOwogICAgICB9CgogICAgICAuc3QxIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEwKTsKICAgICAgfQoKICAgICAgLnN0MiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQyMSk7CiAgICAgIH0KCiAgICAgIC5zdDMgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjcpOwogICAgICB9CgogICAgICAuc3Q0IHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuc3Q1IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDI2KTsKICAgICAgfQoKICAgICAgLnN0NiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxKTsKICAgICAgfQoKICAgICAgLnN0NyB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ5KTsKICAgICAgfQoKICAgICAgLnN0OCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxOCk7CiAgICAgIH0KCiAgICAgIC5zdDkgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjMpOwogICAgICB9CgogICAgICAuc3QxMCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ4KTsKICAgICAgfQoKICAgICAgLnN0MTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTEpOwogICAgICB9CgogICAgICAuc3QxMiB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgfQoKICAgICAgLnN0MTMgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTYpOwogICAgICB9CgogICAgICAuc3QxNCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQyNCk7CiAgICAgIH0KCiAgICAgIC5zdDE1IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDMpOwogICAgICAgIHN0cm9rZTogI2ZmZjsKICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdDogMTA7CiAgICAgICAgc3Ryb2tlLXdpZHRoOiA4LjMxcHg7CiAgICAgIH0KCiAgICAgIC5zdDE2IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDIyKTsKICAgICAgfQoKICAgICAgLnN0MTcgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjkpOwogICAgICB9CgogICAgICAuc3QxOCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxOSk7CiAgICAgIH0KCiAgICAgIC5zdDE5IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEyKTsKICAgICAgfQoKICAgICAgLnN0MjAgewogICAgICAgIG9wYWNpdHk6IC44OTsKICAgICAgfQoKICAgICAgLnN0MjEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjgpOwogICAgICB9CgogICAgICAuc3QyMiB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ3KTsKICAgICAgfQoKICAgICAgLnN0MjMgewogICAgICAgIG9wYWNpdHk6IC41NjsKICAgICAgfQoKICAgICAgLnN0MjQgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjApOwogICAgICB9CgogICAgICAuc3QyNSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ0KTsKICAgICAgfQoKICAgICAgLnN0MjYgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MTQpOwogICAgICB9CgogICAgICAuc3QyNyB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQ1KTsKICAgICAgfQoKICAgICAgLnN0MjggewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50MjUpOwogICAgICB9CgogICAgICAuc3QyOSB7CiAgICAgICAgb3BhY2l0eTogLjc3OwogICAgICB9CgogICAgICAuc3QzMCB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQxNSk7CiAgICAgIH0KCiAgICAgIC5zdDMxIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDE3KTsKICAgICAgfQoKICAgICAgLnN0MzIgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50Nik7CiAgICAgIH0KCiAgICAgIC5zdDMzIHsKICAgICAgICBkaXNwbGF5OiBub25lOwogICAgICAgIGZpbGw6ICMxYTFhMWU7CiAgICAgIH0KCiAgICAgIC5zdDM0IHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudDEzKTsKICAgICAgfQoKICAgICAgLnN0MzUgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQoKICAgICAgLnN0MzYgewogICAgICAgIGNsaXAtcGF0aDogdXJsKCNjbGlwcGF0aCk7CiAgICAgIH0KCiAgICAgIC5zdDM3IHsKICAgICAgICBvcGFjaXR5OiAuODI7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXBwYXRoIj4KICAgICAgPHBhdGggY2xhc3M9InN0MTIiIGQ9Ik0xMTkuODIsMTg0LjMyYzAsMTguNjUtMTUuNjcsMzMuNTgtMzAuMjUsMzMuNTgtMTYuOTIsMC0zMC42My0xMy44NS0zMC42My0zMy4yczEzLjcxLTMzLjc3LDMwLjYzLTMzLjc3LDMwLjI1LDE0LjczLDMwLjI1LDMzLjM4WiIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iODkuNTciIHkxPSIxNTMuMzUiIHgyPSI4OS41NyIgeTI9IjIxMi42NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNDFiMGQ0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxIiB4MT0iODkuNjgiIHkxPSIxNTMuMzUiIHgyPSI4OS42OCIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQyIiB4MT0iODkuODkiIHkxPSIxNTMuMzUiIHgyPSI4OS44OSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQzIiB4MT0iMTE4LjQxIiB5MT0iMTk5LjY5IiB4Mj0iMTE4LjQxIiB5Mj0iMTk5LjY5IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDQiIHgxPSI5MCIgeTE9IjE1My4zNSIgeDI9IjkwIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDUiIHgxPSI2Mi4xNCIgeTE9IjE1My4zNSIgeDI9IjYyLjE0IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDYiIHgxPSI2OS4zIiB5MT0iMTUzLjM1IiB4Mj0iNjkuMyIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQ3IiB4MT0iNjUuNzIiIHkxPSIxNTMuMzUiIHgyPSI2NS43MiIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQ4IiB4MT0iNjkuMyIgeTE9IjE1My4zNSIgeDI9IjY5LjMiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50OSIgeDE9Ijc3Ljg1IiB5MT0iMTUzLjM1IiB4Mj0iNzcuODUiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTAiIHgxPSI3My41MSIgeTE9IjE1My4zNSIgeDI9IjczLjUxIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDExIiB4MT0iNzcuODUiIHkxPSIxNTMuMzUiIHgyPSI3Ny44NSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxMiIgeDE9Ijg2LjE5IiB5MT0iMTUzLjM1IiB4Mj0iODYuMTkiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTMiIHgxPSI4Mi4xOSIgeTE9IjE1My4zNSIgeDI9IjgyLjE5IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDE0IiB4MT0iODYuMTkiIHkxPSIxNTMuMzUiIHgyPSI4Ni4xOSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxNSIgeDE9Ijg2LjMxIiB5MT0iMTUzLjM1IiB4Mj0iODYuMzEiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTYiIHgxPSI5My44OCIgeTE9IjE1My4zNSIgeDI9IjkzLjg4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDE3IiB4MT0iODkuODkiIHkxPSIxNTMuMzUiIHgyPSI4OS44OSIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQxOCIgeDE9Ijg2LjMxIiB5MT0iMTUzLjM1IiB4Mj0iODYuMzEiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MTkiIHgxPSI5My44OCIgeTE9IjE1My4zNSIgeDI9IjkzLjg4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDIwIiB4MT0iMTAyLjMiIHkxPSIxNTMuMzUiIHgyPSIxMDIuMyIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQyMSIgeDE9Ijk3LjkyIiB5MT0iMTUzLjM1IiB4Mj0iOTcuOTIiIHkyPSIyMTIuNjQiIHhsaW5rOmhyZWY9IiNsaW5lYXItZ3JhZGllbnQiLz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50MjIiIHgxPSIxMDIuMyIgeTE9IjE1My4zNSIgeDI9IjEwMi4zIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDIzIiB4MT0iMTEwLjM2IiB5MT0iMTUzLjM1IiB4Mj0iMTEwLjM2IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI0IiB4MT0iMTA2LjI4IiB5MT0iMTUzLjM1IiB4Mj0iMTA2LjI4IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI1IiB4MT0iMTEwLjM2IiB5MT0iMTUzLjM1IiB4Mj0iMTEwLjM2IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI2IiB4MT0iMTE3LjcyIiB5MT0iMTUzLjM1IiB4Mj0iMTE3LjcyIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI3IiB4MT0iMTE0LjE0IiB5MT0iMTUzLjM1IiB4Mj0iMTE0LjE0IiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI4IiB4MT0iMTE3LjcyIiB5MT0iMTUzLjM1IiB4Mj0iMTE3LjcyIiB5Mj0iMjEyLjY0IiB4bGluazpocmVmPSIjbGluZWFyLWdyYWRpZW50Ii8+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudDI5IiB4MT0iNjIuMTQiIHkxPSIxNTMuMzUiIHgyPSI2Mi4xNCIgeTI9IjIxMi42NCIgeGxpbms6aHJlZj0iI2xpbmVhci1ncmFkaWVudCIvPgogIDwvZGVmcz4KICA8cmVjdCBpZD0iQWNodGVyZ3JvbmRfLV96d2FydCIgY2xhc3M9InN0MzMiIHg9Ii00My4wNCIgeT0iLTEwLjI5IiB3aWR0aD0iNjE0Ljk3IiBoZWlnaHQ9IjI2OS41OCIvPgogIDxnIGlkPSJMaW5rc2JvdmVuIj4KICAgIDxnPgogICAgICA8ZyBjbGFzcz0ic3QyMCI+CiAgICAgICAgPHBvbHlnb24gY2xhc3M9InN0NCIgcG9pbnRzPSIxMi4zMyAxMTcuMjEgNDcuMjcgMzkuNDEgNzEuNDQgODMuMjcgNzMuMjIgNzkuOTMgNDguNiAzNS4zNCA0NS44MiAzNS4zNCA3LjIxIDEyMC4yMSAxMC44NSAxMjAuMjEgMjAuMDEgMTIwLjIxIDUyLjA3IDEyMC4yMSA1My43NCAxMTcuMjEgMTIuMzMgMTE3LjIxIi8+CiAgICAgICAgPHBhdGggY2xhc3M9InN0NCIgZD0iTTEzMy42LDguMzJoLTMuNzhjLTMxLjU0LDcxLjI1LTQ5LjcsMTA4LjktNjEuMDksMTM0LjQ3LTkuOTUsMjIuMzItMTUuNDMsMzIuMDYtMTYuMjksNDEuNzgtLjkyLDEwLjM5LDIuODIsMjAuNzUsMTAuNTEsMjkuMTUsNy40Myw4LjEsMTcuMzYsMTEuMTIsMjYuNTcsMTEuMTIsMTcuMTUsMCwzNy4wOS0xNi40OSwzNy4wOS00MC4xMiwwLTEzLjM4LTkuMTktMzAuMTMtMTguOTItNDcuODYtMS42MS0yLjkzLTQuMzktOC40OC01Ljk3LTExLjQxbC0xLjk4LDQuMjljMS41OCwyLjk0LDMuMiw1LjksNC44Miw4Ljg0LDkuNSwxNy4zMiwxOC40OCwzMy42OCwxOC40OCw0Ni4xNCwwLDIxLjYxLTE4LjAxLDM2LjU0LTMzLjUxLDM2LjU0LTguMjIsMC0xNy4xNy0yLjU4LTIzLjkzLTkuOTYtNy03LjY1LTEwLjQxLTE3LjAzLTkuNTktMjYuNDIuOC05LjA3LDYuNDMtMTguNTMsMTUuOTUtNDAuNTQsMTEuNzQtMjcuMTMsMjguNTUtNTkuNjYsNjAuMjctMTMzLjFoMS4zOGMxNi4xLDAsMzQuNjYsMTEuMTksMzQuNjYsMzQuNDIsMCwxNi40Ny0xNC4yNSwzNS40Ni0zNC44OSwzNS40NmgtMTEuMDRsLTEuNjgsMy40M2gxMi43MmMyMS45OCwwLDM4LjcxLTE5Ljg0LDM4LjcxLTM4Ljg5LDAtMjUuNDctMTkuODEtMzcuMzUtMzguNDgtMzcuMzVaIi8+CiAgICAgIDwvZz4KICAgICAgPGcgY2xhc3M9InN0MzYiPgogICAgICAgIDxnIGNsYXNzPSJzdDI5Ij4KICAgICAgICAgIDxyZWN0IGNsYXNzPSJzdDM1IiB4PSI1OC44MyIgeT0iMTg4LjM0IiB3aWR0aD0iNjEuNDciIGhlaWdodD0iMS42NiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QyOSI+CiAgICAgICAgICA8cmVjdCBjbGFzcz0ic3Q2IiB4PSI1Ny45MSIgeT0iMTkxLjY4IiB3aWR0aD0iNjMuNTUiIGhlaWdodD0iMy4zMiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QyOSI+CiAgICAgICAgICA8cmVjdCBjbGFzcz0ic3QwIiB4PSI1OC42IiB5PSIxOTYuMjUiIHdpZHRoPSI2Mi41OCIgaGVpZ2h0PSIzLjMyIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGNsYXNzPSJzdDIzIj4KICAgICAgICAgIDxwYXRoIGNsYXNzPSJzdDE1IiBkPSJNMTE4LjQxLDE5OS42OSIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGFzcz0ic3QzNyI+CiAgICAgICAgICA8cGF0aCBjbGFzcz0ic3QyNSIgZD0iTTYwLjc1LDIwMS4wN2w1OC41LS4yOHMtMzIuMDksNDMuMTUtNTguNS4yOFoiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNyIgY3g9IjYyLjE0IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzIiIGN4PSI2OS4zIiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjIiIGN4PSI2NS43MiIgY3k9IjE4MS4xMyIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxMCIgY3g9IjY5LjMiIGN5PSIxNzcuNTUiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q3IiBjeD0iNzcuODUiIGN5PSIxODQuNjUiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjczLjUxIiBjeT0iMTgxLjA3IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDExIiBjeD0iNzcuODUiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxOSIgY3g9Ijg2LjE5IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzQiIGN4PSI4Mi4xOSIgY3k9IjE4MS4xMyIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNiIgY3g9Ijg2LjE5IiBjeT0iMTc3LjU1IiByPSIxLjA1Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGNsYXNzPSJzdDM3Ij4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MzAiIGN4PSI4Ni4zMSIgY3k9IjE4NC42NSIgcj0iMS4wNSIvPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxMyIgY3g9IjkzLjg4IiBjeT0iMTg0LjY1IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDMxIiBjeD0iODkuODkiIGN5PSIxODEuMDciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0OCIgY3g9Ijg2LjMxIiBjeT0iMTc3LjQ5IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDE4IiBjeD0iOTMuODgiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QyNCIgY3g9IjEwMi4zIiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MiIgY3g9Ijk3LjkyIiBjeT0iMTgxLjAxIiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDE2IiBjeD0iMTAyLjMiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q5IiBjeD0iMTEwLjM2IiBjeT0iMTg0LjciIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MTQiIGN4PSIxMDYuMjgiIGN5PSIxODEuMDEiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjgiIGN4PSIxMTAuMzYiIGN5PSIxNzcuNDkiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xhc3M9InN0MzciPgogICAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3Q1IiBjeD0iMTE3LjcyIiBjeT0iMTg0LjY5IiByPSIxLjA1Ii8+CiAgICAgICAgICA8Y2lyY2xlIGNsYXNzPSJzdDMiIGN4PSIxMTQuMTQiIGN5PSIxODEuMTIiIHI9IjEuMDUiLz4KICAgICAgICAgIDxjaXJjbGUgY2xhc3M9InN0MjEiIGN4PSIxMTcuNzIiIGN5PSIxNzcuNTQiIHI9IjEuMDUiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGNpcmNsZSBjbGFzcz0ic3QxNyIgY3g9IjYyLjE0IiBjeT0iMTc3LjQ5IiByPSIxLjA1Ii8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
     <meta name="theme-color" content="#33b2d2">
-    <title>AQP Dichting Calculator V6.5.0</title>
+    <!-- V6.7.0: Plotly via CDN voor prijs-analyse-grafiek (achter PIN-slot).
+         Gegraceful gedegradeerd: bij geen internet blijft de offerte-tool 100% werken,
+         enkel het analyse-paneel toont dan een melding. -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+    <title>AQP Dichting Calculator V7.0.4</title>
 
     <style>
         /* ============================================================
-           AQP DICHTING CALCULATOR V6.5.0
+           AQP DICHTING CALCULATOR V7.0.4
            ============================================================
-           BUILD DATE: 22/04/2026 (PWA wrapper) / 05/05/2026 (UTF-8 encoding)
-           STATUS: PRODUCTIE. PWA-installable + UTF-8 encoding (€ m² m³ © →).
+           BUILD DATE: 11/06/2026
+           STATUS: TESTFASE. Blok-engine prijsmodel - browser-test vereist voor cutover.
            LOCATION: /home/wim/asgard/apps/dichting/
-           VORIGE VERSIE: AQP_Dichting_Calculator_V6_4_0_ASCII.html (nu in archive/)
-           ALIGNED WITH: projects/AQP_DPM/04_PM_AGENT/DAGCAPACITEITEN_MASTERTEMPLATE_v2_0.md (LEIDEND)
+           VORIGE VERSIE: AQP_Dichting_Calculator_V6_9_0_ASCII.html (blijft staan, rollback-anker)
+           ALIGNED WITH: DAGCAPACITEITEN v2.0 (dagcaps) + aqp_engine_v2_1 droogtijden-matrix + TDS-cures
 
-           CHANGELOG V6.5.0 (05/05/2026) - UTF-8 ENCODING UPGRADE:
-           -------------------------------------------------------
-           [ASCII → UTF-8 CONVERSIE per KB v2.2]
-           Display-content geconverteerd naar UTF-8 symbolen voor
-           professionele weergave, in lijn met AQP Sales Calculator
-           V5.0.0 en AQP Kelderdrainage V5.0.0.
+           CHANGELOG V7.0.4 (11/06/2026) - SPATIE TUSSEN GETAL EN EENHEID:
+           ----------------------------------------------------------------
+           - Summary componentenlijst: 'EUR22,65/st' -> 'EUR 22,65 /st' en
+             '30st' -> '30 st'. Spatie na valutasymbool in tekstnode;
+             spatie voor eenheid via CSS margin-left 0.3em op .price-unit
+             en .qty-unit (flex collapst losse tekstspaties op span-grens,
+             margin behoudt bovendien de kolomuitlijning min-width 22px).
+           - Slash verplaatst van price-amount naar price-unit span zodat
+             het gat VOOR de '/' valt: '22,65 /st' i.p.v. '22,65/ st'.
+           - totalPrijs: valutasymbool nu met spatie (V42.9 'zonder
+             spatie'-format vervallen); subtotalen idem.
+           - Versie-strings gebumpt naar V7.0.4 (title, banner, footer).
 
-           Geconverteerd:
-           - <meta charset="ASCII"> → <meta charset="UTF-8">
-           - EUR → € (in alle display-strings: HTML body, JS template
-             literals, formatCurrency, projectanalyse waterval,
-             componenten-lijst, bruto-marge meter, financieel
-             overzicht, hidden-items info-banner, sectie breakdown,
-             scenario-slider updates)
-           - m2 → m² (in unit/placeholder properties van LINES, in
-             info-modal note-strings, in dagcap-strings, in
-             hidden-items info-banner)
-           - m3 → m³ (afbraak_puin unit/placeholder)
-           - (c) 2026 Vecon → © 2026 Vecon (footer)
-           - -> → → (alleen in display-strings en CSS-comments)
+           CHANGELOG V7.0.3-UTF8 (11/06/2026) - ASCII NAAR UTF-8 CONVERSIE:
+           ----------------------------------------------------------------
+           - Volledige conversie volgens ASCII_NAAR_UTF8_CONVERSIE_KB_V2_2:
+             EUR -> Euro-symbool, m2 -> m-kwadraat, m3 -> m-kubiek,
+             (c) -> copyright-symbool, pijlen en >=-tekens in display.
+           - Scope: HTML-tekst, labels, placeholders, JS string literals
+             (incl. unit-waarden + bijhorende === vergelijkingen consistent).
+           - NIET geconverteerd (conform KB Categorie D): dev-comments,
+             changelog, CSS, technische identifiers (perm2, M2_LO/M2_HI,
+             storage keys, JS-variabelen m2/m3 in betonfuncties).
+           - Charset meta: ASCII -> UTF-8. Versienummer ongewijzigd op
+             expliciete instructie Wim (zelfde V7.0.3, enkel encoding).
+           - Aandachtspunt: 'Leg vast als versie' genereert nog bestandsnaam
+             met suffix _ASCII.html (regel ~5803) - inhoud is nu UTF-8.
 
-           Bewaard als ASCII (correct, technische identifiers):
-           - JS-variabelen (totalM2, BETON_M3_LEV1, KL_TARIEF_LEV1,
-             VOLLE_LADING, CITYPOMP_THRESHOLD_M2)
-           - Product-codes (m30, M30) en object-keys
-           - JS/CSS comments (changelog, dev-notities, business
-             logic uitleg) — per KB sectie "Categorie D"
-           - HTML-comment closers (-->)
+           CHANGELOG V7.0.3 (11/06/2026) - DUBBEL GROOT-TARIEF (regime-afhankelijk):
+           ----------------------------------------------------------------
+           - F400 gesplitst: HANDMATIG 1.050 / MACHINAAL 1.150 (F0 1.650
+             gedeeld). Machinale lijnen dragen de pomp/efficientie-premie;
+             handmatige lijnen en alle niet-coating-werk (prep/kim/afwerking)
+             rekenen tegen het hand-tarief. Gemengde dossiers blenden via de
+             causale komst-toewijzing per lijn.
+           - Effect Galgenberg-klasse: auto-mix (1K-mach/2K-hand) EUR 42.596
+             lijstprijs; volledig machinaal EUR 35.709 = -7,6% onder Solusio.
+             De regime-keuze is daarmee het tender-instrument: competitief
+             bieden = machinale uitvoering committeren (2K/RB400-testrun is
+             de poortwachter!).
+           - Herijk-knop: lost F0 (micro-anker) + F400_HAND (groot-anker,
+             auto-mix doel 42.596) op; F400_MACH = beleidsveld dat blijft
+             staan. Tuning-UI: twee F400-velden. Vastleggen schrijft beide.
+           - Gewogen dagprijs (hand/mach-mix) als model-referentie voor de
+             marge-meter en het financieel overzicht.
 
-           Verificatie (per KB Fase 5 + 6):
-           - file: HTML document, UTF-8 text ✓
-           - 0 mojibake/corruptie patronen (dubbel-encoded UTF-8) ✓
-           - 0 EUR in non-comment context (audit-script) ✓
-           - 0 m2/m3 in string-literals (audit-script) ✓
-           - 0 unit:'m2', qtyUnit:'m2', ternary 'm':'m2' ✓
-           - 26× €, 130× m², 2× m³, 2× ©, 53× → toegevoegd
-           - Geen pricing/berekening/logica wijzigingen.
+           CHANGELOG V7.0.2 (11/06/2026) - PRIJSBELEID WIM:
+           ----------------------------------------------------------------
+           - Curve: F0 1.650 / F400 1.150 (beslissing Wim 11/06). Micro +4%,
+             mid naar opstijgend-pariteit (marge/md >= 875 tot ~240 m2),
+             groot-segment bewust boven Solusio-referentie (+14,5% op
+             Galgenberg-klasse). TERUGVALPAD: bij uitblijvende verkoop
+             F400 stapsgewijs -50 en herijken; win/verlies per groot dossier
+             registreren (nacalculatie).
+           - Ankerdoelen mee: micro 3.697 / groot 44.261 (herijk-knop
+             reproduceert nu het beleid i.p.v. het terug te draaien).
+           - Marge-meter MODEL-RELATIEF: kleur = afwijking van curve-verwachting
+             (curve - loonkost) i.p.v. vaste V6-eurozones; toont model-waarde.
+           - Marge-vloer-vlag (MODEL_CONFIG.MARGE_VLOER = 875): dossiers
+             eronder krijgen achter het PIN-slot een bewuste-keuze-melding.
+
+           CHANGELOG V7.0.1 (11/06/2026) - UI-HERWERKING (model identiek V7.0.0):
+           ----------------------------------------------------------------
+           - Mandagen-sectie (totaal + dagstructuur + per-lijn) achter het
+             PIN-slot: verkoper/klant ziet alleen prijzen, geen md-opbouw.
+           - Regime per lijn als volwaardig selectievak NAAST het invulveld,
+             zelfde stijl als de projectconfiguratie-selects (select-wrapper,
+             placeholder-active bij auto). Mobiel: select zakt onder het veld.
+           - Globale regime-select uit de projectconfiguratie verwijderd
+             (regime is een per-lijn beslissing geworden).
+           - Geen enkele wijziging aan engine, curve, data of berekening.
+
+           CHANGELOG V7.0.0 (11/06/2026) - BLOK-ENGINE PRIJSMODEL:
+           ----------------------------------------------------------------
+           [FUNDAMENTELE OMBOUW: BEZETTING I.P.V. WERKINHOUD]
+           mandagen = werk_md + werfdagen x K(0,3) uit dag/blok-simulatie van
+           de cure-keten (BlokEngine). VERKOOP = mandagen x dagopbrengst(uniek
+           m2) + materiaal. Vervangt de V6.6.0-V6.8.0 mandagen-floor volledig.
+
+           - Curve: vlak F0=1580,24 (0-20 m2) -> inverse log -> F400=826,88
+             (>=400). OPGELOST uit twee echte ankers: offerte 19900 -> EUR
+             3.550 totaal en offerte 19668 Galgenberg -> EUR 36.964 totaal.
+             Klein-werk-premie zit nu in de blok-telling, niet in het tarief.
+           - Komst-overhead CAUSAAL per lijn toegewezen (elke werfdag-K naar
+             de lijnen die die dag werken): een lijn verandert nooit van prijs
+             doordat een ANDERE lijn van regime wisselt (les offerte 19979).
+           - Regime PER LIJN vrij togglebaar (1K/IC/2K/RB400 elk handmatig en
+             machinaal); auto-default per lijn-m2 (>=20 machinaal) behalve
+             2K/RB400 (default handmatig - TZI-43 experimenteel, potlife 15').
+             Globale select = bulk-setter. Ploeggrootte volgt C13 (<20 m2 = 1 man).
+           - Cure-matrix uit engine v2.1 + TDS: fluaat 24u, M30->coating
+             overnight 12u, 1K gap 4u + 24u curing, IC wet-on-tacky + 72u +
+             bevochtigingsbezoek dag+1 (0,3 md), 2K/RB400 gap 3u + 6u voor
+             afwerking, hervoegen NA fluaat. Seizoensfactor instelbaar.
+           - Materiaal: ceil per PRODUCT (pooling over de offerte, inkoop-
+             realiteit) i.p.v. ceil per lijn. Materiaal-gaten gedicht:
+             container 490/m3, dompelpomp 450/st, HFF 12,60/m2, doorvoer
+             25/st, capillaire injectie 10/m.
+           - Configs: S.8 terug in E01/E04/E05/E08/E09 (excl. cementering-
+             lijnen, conform CONFIGURATIES v3.0), S.15 terug in E10/E11
+             (excl. Thermopal), E01 + 2K-optie, E08 excl. 2K (RB400).
+             excludeLines-mechanisme toegevoegd.
+           - Nieuwe lijnen: droogleggen (S.1, norm kalibreren), rb400 gesplitst
+             in wand/vloer (curveScope-fix offerte 19979), saneer_fs33
+             (aanbevolen per DAGCAP v2.0 15.2).
+           - Fundament: autosave/restore van offerte-state (localStorage),
+             tuning-leak gefixt (lock = reset naar vastgelegde versie),
+             Infinity/NaN-guards, citypomp-fantoommandag gefixt, dode code
+             verwijderd, versie-bump dekt nu ook meta-description,
+             herijk-op-ankers-knop in tuning-UI, service worker (sw.js,
+             offline in kelders), MODEL_CONFIG vervangt CURVE_CONFIG.
+           - Node-regressie (echte HTML-functies): ankers exact; 19900
+             5 dgn/7 blk/2,11 md en Galgenberg 18 dgn/32 blk identiek aan
+             canoniek Python-model (v7_regressie_model.py); 19986 -1,5%
+             (verklaard: echte citypomp-formule in groot-anker).
+
+           CHANGELOG V6.9.0 (04/06/2026) - CURVE VASTLEGGEN ALS VERSIE:
+           ----------------------------------------------------------------
+           [AUTONOME CURVE-VERSIONERING MET BEHOUD AUDIT-TRAIL]
+           Wim kan nu zelf de prijscurve tunen (achter PIN-slot) EN vastleggen
+           als een nieuwe versie, zonder op PCA te wachten. Respecteert de
+           versioning-discipline: elke vastlegging = een nieuw HTML-bestand met
+           een vaste curve = elke offerte traceerbaar naar een versie.
+
+           Mechaniek:
+           - Curve + floor staan in een afgebakend CURVE_CONFIG blok
+             (===CURVE-CONFIG-START=== / ===CURVE-CONFIG-END===).
+             PARAMS.DAGOPBRENGST + MANDAGEN.MIN_MD_PER_BEZOEK lezen hieruit.
+           - Tuning-UI (V6.7.0) past de waarden live aan in het geheugen.
+           - Knop "Leg vast als versie" (achter PIN-slot): genereert een
+             VOLLEDIG nieuw HTML-bestand via fetch(self), vervangt enkel het
+             CURVE_CONFIG blok met de getunede waarden + nieuwe versie-stempel
+             + datum, bumpt de versie-strings, en downloadt het. Wim verplaatst
+             het bestand naar apps/dichting/. Oude versie blijft onaangeroerd.
+           - Browser kan niet naar schijf schrijven -> download + handmatige
+             plaatsing is bewust (1 stap, behoudt controle).
+           - fetch(self) werkt op gehoste URL (PWA). Op lokaal file:// kan het
+             geblokkeerd zijn -> dan toont de knop een duidelijke melding.
+           - Audit-anker: actieve curve-versie + datum staat zichtbaar in de
+             analyse-kaart (_curveVersie / _vastgelegd uit CURVE_CONFIG).
+
+           GEEN wijziging aan prijslogica t.o.v. V6.8.0. Basis-curve identiek
+           (CURVE_CONFIG = V6.8.0-waarden). Floor uniform per-lijn (V6.8.0),
+           prijs-analyse achter slot (V6.7.0): volledig behouden.
+
+           CHANGELOG V6.8.0 (04/06/2026) - FLOOR UNIFORM PER-LIJN VERDEELD:
+           ----------------------------------------------------------------
+           [STRUCTUREEL: floor in de lijnprijzen i.p.v. globale klomp]
+           De offerte wordt LIJN PER LIJN opgesteld (klant ziet per lijn een
+           Stukprijs; verkoper kopieert die naar Teamleader). V6.6.0/V6.7.0
+           plaatsten de mandagen-floor als GLOBALE klomp onder het totaal,
+           waardoor de som van de lijnen NIET overeenkwam met het eindtotaal.
+
+           V6.8.0 verdeelt de floor UNIFORM over de arbeidspoot van elke lijn:
+             floor_factor = mandagen_floor / mandagen_werk   (>= 1)
+             lijn-arbeid_nieuw = lijn-arbeid x floor_factor
+             materiaal blijft ongemoeid
+           Som van de (geflooorde) lijnen = geflooord totaal. Lijn-per-lijn
+           klopt nu.
+
+           Offerte 19900 (E06): EINDTOTAAL IDENTIEK aan V6.6.0/V6.7.0
+           (EUR 3.333), maar nu zit de floor in de lijnprijzen:
+             1K W2.1 wanden  EUR 160/m2 -> EUR 379/m2
+             2K wanden       EUR 157/m2 -> EUR 303/m2
+             Afbraak         EUR  57/m2 -> EUR 140/m2
+           (floor_factor 2,47 op arbeid; materiaal gelijk)
+
+           Toegevoegd:
+           - BusinessLogic.getFloorFactor()
+           - calculateLine + calculateBetonLine: arbeid x floor_factor
+           - calculateTotal: globale extra-arbeid VERWIJDERD (zat dubbel)
+
+           Totaal-niveau (financieel overzicht, KPI) ONGEWIJZIGD t.o.v.
+           V6.6.0/V6.7.0. Alleen de per-lijn en per-sectie verdeling verandert.
+           Prijs-analyse (grafiek + curve-tuning achter PIN-slot) uit V6.7.0
+           blijft volledig behouden.
+
+           CHANGELOG V6.7.0 (04/06/2026) - PRIJS-ANALYSE ACHTER PIN-SLOT:
+           ----------------------------------------------------------------
+           [VISUALIZER GEINTEGREERD - INTERN, ACHTER BESTAAND SLOTJE]
+           De standalone visualizer (apps/dichting/visualizer/) is nu
+           ingebouwd als "Prijs-analyse" kaart, ACHTER hetzelfde PIN-slot
+           als het Financieel Overzicht. Verkopers (JP/Pieter/Yannick)
+           zien het niet; alleen Wim na PIN-unlock.
+
+           Bevat:
+           - Grafiek prijs vs projectgrootte (m2), met het HUIDIGE project
+             als rood punt op de curve (gebruikt ECHTE ingevulde quantities,
+             geschaald - geen uniforme-aanname meer zoals standalone).
+           - V6.6.0 vs V6.5.0 ghost-curve (met/zonder mandagen-floor).
+           - Curve-tuning: 8 parameters (PLATEAU_KLEIN, OVERGANG_*,
+             LINEAIR_EIND, LOG_EIND*, PLATEAU_GROOT, MIN_MD_PER_BEZOEK)
+             live aanpasbaar. Wijzigt PARAMS in geheugen + hertekent.
+             NIET persistent - reset-knop herstelt V6.7.0-defaults.
+
+           Plotly via CDN (graceful: geen internet = analyse-paneel toont
+           melding, offerte-tool blijft volledig werken).
+
+           GEEN wijziging aan prijslogica t.o.v. V6.6.0. De curve-tuning
+           past PARAMS runtime aan voor analyse; default-build = V6.6.0
+           identiek. Permanente curve-wijziging vereist nieuwe versie.
+
+           CHANGELOG V6.6.0 (28/05/2026) - MANDAGEN-FLOOR VOOR KLEIN WERK:
+           ----------------------------------------------------------------
+           [STRUCTURELE FIX: cure-fragmentatie ondertelling]
+           V6.5.0 berekening mandagen = som(qty/dagcap) meet effectief werk
+           maar negeert fysieke werkdag-bezetting. Bij klein werk (4 m2) met
+           5 werfbezoeken wegens product-cure-tijden (fluaat 24u, kim 24u,
+           1K W2.1 laag 3 24u, 2K) factureert V6.5.0 slechts 0,61 mandag
+           terwijl team 5 fysieke werkdagen kwijt is.
+
+           Voorbeeld offerte 19900: V6.5.0 = EUR 1.563 (te laag).
+           V6.6.0 = EUR 3.333 (marktconform, paritair met Belgische
+           concurrenten Solusio EUR 3.000-4.000 minimum).
+
+           Toegevoegd:
+           - PARAMS.MANDAGEN.MIN_MD_PER_BEZOEK = 0.3 (kalibreerbaar)
+           - PARAMS.MANDAGEN.BEZOEKEN_PER_SECTION (cure-chemie map)
+           - BusinessLogic.getBezoekenCount() - auto-afgeleid uit actieve
+             sections
+           - calculateModifiers() past floor toe: max(werk, bezoeken x
+             MIN_MD_PER_BEZOEK)
+           - UI audit-trail in totaaloverzicht toont basis vs floor
+
+           Floor activeert alleen waar mandagen_werk < floor. Bij >= 25 m2
+           uniek werk is impact 0 (huidige formule wint). Grote werven
+           onaangetast.
+
+           Backward-compatible: V6.5.0 blijft als fallback beschikbaar.
 
            CHANGELOG V6.5.0 (22/04/2026) - PWA WRAPPER:
            --------------------------------------------
@@ -92,7 +288,7 @@
            getVisibleSections() leeg is - banner zichtbaar in edge case
            waar ALLES in onzichtbare scope staat.
 
-           [RENAME: SECTIE-'MARGE' → 'ARBEIDSOMZET']
+           [RENAME: SECTIE-'MARGE' -> 'ARBEIDSOMZET']
            Sectie-breakdown kolom 'MARGE' was misleidend: berekening
            is prijs - materiaal = arbeidsomzet (mandagen x dagopbrengst).
            De werkelijke arbeidskostprijs is daar NIET afgetrokken,
@@ -100,12 +296,12 @@
            bruto marge (verschil = arbeidskosten + verbruik).
 
            Gewijzigd:
-           - Kolomheader UI: 'Marge' → 'Arbeidsomzet'
-           - sectionData keys: marge_eur → arbeidsomzet_eur,
-             marge_per_dag → arbeidsomzet_per_dag
-           - Interne vars: sMarge → sArbeidsomzet,
-             sMargePerDag → sArbeidsomzetPerDag,
-             totMarge → totArbeidsomzet
+           - Kolomheader UI: 'Marge' -> 'Arbeidsomzet'
+           - sectionData keys: marge_eur -> arbeidsomzet_eur,
+             marge_per_dag -> arbeidsomzet_per_dag
+           - Interne vars: sMarge -> sArbeidsomzet,
+             sMargePerDag -> sArbeidsomzetPerDag,
+             totMarge -> totArbeidsomzet
 
            Globaal 'Bruto marge' blijft ongewijzigd (terecht - daar
            is arbeidskostprijs wel afgetrokken).
@@ -166,7 +362,7 @@
            - sectionsBreakdown fin-rapport (3594)
 
            AFGEROND IN SESSIE 2: curve-input herschreven + curveScope toegevoegd
-           AFGEROND IN SESSIE 3: UI-banner + rename Marge → Arbeidsomzet
+           AFGEROND IN SESSIE 3: UI-banner + rename Marge -> Arbeidsomzet
 
            CHANGELOG V6.3.1 (22/04/2026):
            ------------------------------
@@ -176,7 +372,7 @@
            bovenaan verschijnen voor vloer-items. Geen logica/data
            wijzigingen - uitsluitend insertion-order van LINES-keys.
 
-           Paren omgedraaid (vloer → wand naar wand → vloer):
+           Paren omgedraaid (vloer -> wand naar wand -> vloer):
            - S.2 Ondergrond beton: frezen_wanden / frezen_vloer
            - S.8 Cementering (2e paar): bijwerk_wanden / bijwerk_vloer
            - S.11 Waterdichting 1K W1: 1k_w1_wanden / 1k_w1_vloer
@@ -185,8 +381,8 @@
            - S.14 Waterdichting 2K: 2k_wanden / 2k_vloer
 
            Secties herordend (wand-items gegroepeerd voor vloer-items):
-           - S.1 Afbraak: gips/cement/coating (wand) → dekvloer/tegels
-             (vloer) → tussenwand/inbouw/hoeken/puin (algemeen)
+           - S.1 Afbraak: gips/cement/coating (wand) -> dekvloer/tegels
+             (vloer) -> tussenwand/inbouw/hoeken/puin (algemeen)
 
            Al wand-eerst (ongewijzigd): S.6 Fluaat, S.7 Primer,
            S.8 cement-paar, S.15 Afwerking wanden vs S.16 Afwerking vloer.
@@ -200,35 +396,35 @@
            nodig via v2.1-update naar calculator teruggevoerd.
 
            S.1 Afbraak:
-           - afbraak_pleister 'losse pleisterlagen' → SPLIT in:
+           - afbraak_pleister 'losse pleisterlagen' -> SPLIT in:
              * afbraak_gipspleister (35 m2/dag, v2.0 1.1)
              * afbraak_cementpleister (20 m2/dag, v2.0 1.2)
            - NIEUW uitwerken_hoeken (160 m/dag, v2.0 1.9)
 
            S.4 Fix (ankerpunten v2.0 bevestigd door Wim):
-           - fix10s_st: 15 → 96 st/dag
-           - fix20t_st: 12 → 48 st/dag
-           - fix20t_m:  8 → 16 m/dag
+           - fix10s_st: 15 -> 96 st/dag
+           - fix20t_st: 12 -> 48 st/dag
+           - fix20t_m:  8 -> 16 m/dag
 
            S.7 Primer:
-           - primer_wanden: 80 → 120 m2/dag (v2.0 geen wand/vloer onderscheid)
+           - primer_wanden: 80 -> 120 m2/dag (v2.0 geen wand/vloer onderscheid)
 
            S.8 M30 Egalisatie (v2.0 ankerpunt 40 m2/dag):
-           - cement_wanden: 25 → 40 m2/dag
-           - cement_vloer:  25 → 40 m2/dag
-           - bijwerk_wanden: 50 → 40 m2/dag
+           - cement_wanden: 25 -> 40 m2/dag
+           - cement_vloer:  25 -> 40 m2/dag
+           - bijwerk_wanden: 50 -> 40 m2/dag
            (bijwerk_vloer 40 was al correct)
 
            S.15 Afwerking wanden (v2.0 15.1 = 35 m2/dag, 3mm dun):
-           - pleister_wanden: dagcap 45 → 35 m2/dag
-           - pleister_wanden: verbruik M30 14 → 6 kg/m2 (3mm afwerking,
+           - pleister_wanden: dagcap 45 -> 35 m2/dag
+           - pleister_wanden: verbruik M30 14 -> 6 kg/m2 (3mm afwerking,
              NIET 10mm egalisatie)
-           - pleister_wanden_autex: dagcap 40 → 28 m2/dag (-20%
+           - pleister_wanden_autex: dagcap 40 -> 28 m2/dag (-20%
              productiviteit vanuit 35 basis, conform opstijgend model)
-           - pleister_wanden_autex: verbruik M30 14 → 6 kg/m2
+           - pleister_wanden_autex: verbruik M30 14 -> 6 kg/m2
 
            S.17 Pompput (v2.0 17.4 'compleet' = 4 st/dag):
-           - pompput_pomp + pompput_aansluiting + pompput_melder → VERVANGEN
+           - pompput_pomp + pompput_aansluiting + pompput_melder -> VERVANGEN
              door 1 lijn 'pompput_compleet' (4 st/dag = 2u/st pomp + melder + afvoer)
            - pompput_dicht verwijderd (1K/2K behandeling zit al in S.11-14)
 
@@ -271,7 +467,7 @@
            van ondergrond-sections niet blokkeren.
            Oorzaak: in getVisibleLines blokkeerden regels een sectie
            volledig als userScope botste met sectionScope (bv.
-           userScope='wand' + sectionScope='vloer' → lege sectie).
+           userScope='wand' + sectionScope='vloer' -> lege sectie).
            Fix: blokkering verwijderd. sectionScope wint altijd van
            userScope (effectiveScope = sectionScope || userScope).
            Sections met een sectionScope zijn config-essentieel en
@@ -285,7 +481,7 @@
            145+ afhankelijkheden) voor realistische mandagen.
 
            RONDE-BUFFER (ronde-systeem faalt onder 20 m2):
-           - Coating-m2 totaal < 20 → +1.0 mandag
+           - Coating-m2 totaal < 20 -> +1.0 mandag
            - Reden: 3 lagen 1K met 4-6u droogtijd = bottleneck
            - Bron: CLAUDE.md C8, MEMORY dagcap v1.1
 
@@ -345,7 +541,7 @@
                                      / [ln(x2)-ln(x1)]
            - x1 = 22 m2 (flat zone), x2 = 132.4894 m2 (max)
            - qty = totaal m2 alle m2-eenheden in project
-           - Onder x1 → flat MAX, boven x2 → flat MIN
+           - Onder x1 -> flat MAX, boven x2 -> flat MIN
            - getDagprijs(): berekent dagprijs op basis van
              totaal m2 over alle actieve lijnen
            - Typisch project 45 m2: EUR 1.700/dag
@@ -358,7 +554,7 @@
            [KRITIEK - DAGCAPACITEITEN]
            - dagcapaciteit toegevoegd aan alle 70 LINES entries
            - Bron: DAGCAPACITEITEN_MASTERTEMPLATE_v1_0.md
-           - Bij ranges: ondergrens (conservatief → meer mandagen)
+           - Bij ranges: ondergrens (conservatief -> meer mandagen)
            - mandagen berekening nu functioneel: qty / dagcapaciteit
            - arbeid berekening nu functioneel: mandagen x DAGPRIJS
            - prijs = arbeid + materiaal (was: alleen materiaal!)
@@ -385,7 +581,7 @@
            [FEATURES - INPUT NAVIGATIE]
            - Enter key navigatie: volgende zichtbaar veld
              * Dynamische fieldOrder op basis van zichtbare inputs
-             * Laatste veld → blur + scroll naar totaaloverzicht
+             * Laatste veld -> blur + scroll naar totaaloverzicht
              * Houdt mobiel toetsenbord actief (geen heropen)
            - Auto-scroll actief veld naar 1/3 viewport:
              * 50ms delay voor mobiel keyboard verschijning
@@ -435,8 +631,8 @@
            CHANGELOG V2.7:
            ---------------
            [ONDERGROND CORRECTIE]
-           - E02 W1-MET = 100% metselwerk → S.2 Beton VERWIJDERD
-           - E06 W2-MET = 100% metselwerk → S.2 Beton VERWIJDERD
+           - E02 W1-MET = 100% metselwerk -> S.2 Beton VERWIJDERD
+           - E06 W2-MET = 100% metselwerk -> S.2 Beton VERWIJDERD
            - E03/E07/E10/E11 MIX = betonvloer + metselwerk wanden:
              * sectionScopes: S.2=vloer, S.3/6/7/8=wand
            
@@ -459,7 +655,7 @@
            S.17 Pompput: +4 (opvullen, moniereisen, aansluiting, melder)
            S.18 Speciaal: +1 (bouwnaad)
            
-           TOTAAL: 47 → 69 lijnen (+22 lijnen, +47%)
+           TOTAAL: 47 -> 69 lijnen (+22 lijnen, +47%)
            
            CHANGELOG V2.5:
            ---------------
@@ -491,14 +687,14 @@
            CHANGELOG V2.1:
            ---------------
            [SPACING & UX]
-           - Container padding-top: 8px → 10px
-           - Header margin-bottom: 4px → 10px
+           - Container padding-top: 8px -> 10px
+           - Header margin-bottom: 4px -> 10px
            - Empty state placeholder VERBORGEN
            
            CHANGELOG V2.0:
            ---------------
            [BRANDING & NAMING]
-           - Titel gewijzigd: "Kelderdichting" → "Dichtingswerken"
+           - Titel gewijzigd: "Kelderdichting" -> "Dichtingswerken"
            - Officiele logo's toegevoegd (V37.7 pattern)
            - Light mode: zwart logo met gradients
            - Dark mode: wit logo met gradients
@@ -994,6 +1190,7 @@
         .summary-component-unit-price .price-unit {
             text-align: left;
             min-width: 22px;
+            margin-left: 0.3em; /* V7.0.4: visuele spatie getal-eenheid */
         }
         .summary-component-qty {
             font-weight: 700;
@@ -1010,6 +1207,7 @@
         .summary-component-qty .qty-unit {
             text-align: left;
             min-width: 22px;
+            margin-left: 0.3em; /* V7.0.4: visuele spatie getal-eenheid */
         }
         .summary-component-subtotal {
             font-weight: 700;
@@ -1059,6 +1257,10 @@
            PIN LOCK SYSTEM - V3.0
            ============================================================ */
         .financial-card.locked {
+            display: none !important;
+        }
+        /* V6.7.0: analyse-card deelt lock-gedrag met financieel overzicht */
+        .analyse-card.locked {
             display: none !important;
         }
         .footer-lock {
@@ -1353,6 +1555,137 @@
         .fin-breakeven .fin-row-value {
             font-weight: 500;
         }
+
+        /* ============================================================
+           V6.7.0: PRIJS-ANALYSE CARD (achter PIN-slot)
+           ============================================================ */
+        .analyse-card {
+            background: var(--card-bg);
+            border: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 8px;
+            box-shadow: var(--card-shadow);
+        }
+        .analyse-title {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .analyse-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .analyse-chart {
+            width: 100%;
+            height: 320px;
+        }
+        .analyse-fallback {
+            padding: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            background: var(--input-bg);
+            border-radius: 8px;
+        }
+        .analyse-controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        .analyse-radio, .analyse-check {
+            cursor: pointer;
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--text);
+        }
+        .analyse-reset {
+            float: right;
+            font-size: 11px;
+            padding: 3px 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--input-bg);
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+        .analyse-reset:hover { color: var(--primary); }
+        .analyse-params {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .ap-field label {
+            display: block;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+        .ap-field input {
+            width: 100%;
+            padding: 6px 8px;
+            font-size: 13px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--input-bg);
+            color: var(--text);
+        }
+        .ap-field input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        .analyse-warn {
+            margin-top: 10px;
+            padding: 8px 10px;
+            font-size: 11px;
+            color: #9a3412;
+            background: #fff7ed;
+            border-left: 3px solid #f59e0b;
+            border-radius: 4px;
+        }
+        /* V6.9.0: Leg vast als versie */
+        .analyse-vastleg {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 2px solid var(--primary);
+        }
+        .analyse-active-curve {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .vastleg-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .vastleg-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .vastleg-btn:hover { background: var(--primary-dark, #2890ad); }
+        .vastleg-status {
+            margin-top: 8px;
+            font-size: 11px;
+            min-height: 14px;
+        }
+        .vastleg-status.ok { color: #15803d; }
+        .vastleg-status.err { color: #b91c1c; }
         /* Scenario slider */
         .scenario-section {
             padding: 8px 0 4px 0;
@@ -1677,6 +2010,23 @@
         body.dark-mode .validation-banner.info { color: #7eb8e0; }
 
         /* === V5.0.0: MANDAGEN BREAKDOWN === */
+        /* V7.0.1: regime-select NAAST het invulveld, zelfde stijl als de
+           projectconfiguratie-selects (select-wrapper). Evenwichtige rij. */
+        .line-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        .line-row > .input-wrapper:first-child { flex: 1 1 auto; min-width: 0; }
+        .line-row > .regime-wrapper { flex: 0 0 192px; }
+        .regime-wrapper select.regime-select { width: 100%; }
+        @media (max-width: 560px) {
+            .line-row { flex-wrap: wrap; }
+            .line-row > .regime-wrapper { flex: 1 1 100%; }
+        }
+        /* PIN-slot op mandagen-sectie (V7.0.1) */
+        #mandagenSection.locked { display: none; }
+
         .mandagen-breakdown {
             display: none;
             flex-direction: column;
@@ -2030,15 +2380,7 @@
                             <option value="beide">Wanden + Vloeren</option>
                         </select>
                     </div>
-                    <!-- V6.0.0: Regime override (auto / handmatig / machinaal) -->
-                    <div class="input-wrapper select-wrapper" style="flex: 1;">
-                        <label for="regimeSelect" class="sr-only">Regime override</label>
-                        <select id="regimeSelect" class="placeholder-active">
-                            <option value="auto" selected>Regime (auto)</option>
-                            <option value="handm">Handmatig (forceer)</option>
-                            <option value="mach">Machinaal (forceer)</option>
-                        </select>
-                    </div>
+                    <!-- V7.0.1: globale regime-select verwijderd - regime wordt per lijn gekozen -->
                 </div>
                 <div class="config-info" id="configInfo">
                     <div class="config-info-meta" id="configInfoMeta"></div>
@@ -2084,8 +2426,8 @@
                     </div>
                 </div>
 
-                <!-- Tijd (mandagen) -->
-                <div class="summary-section">
+                <!-- Tijd (mandagen) - V7.0.1: achter PIN-slot (interne info) -->
+                <div class="summary-section locked" id="mandagenSection">
                     <div class="summary-row summary-time">
                         <span class="summary-label">
                             Mandagen (totaal)</span>
@@ -2098,7 +2440,7 @@
                 </div>
 
                 <div class="summary-footer">
-                    © 2026 Vecon - V6.5.0
+                    © 2026 Vecon - V7.0.4
                 </div>
             </div>
             
@@ -2241,7 +2583,127 @@
                     </table>
                 </div>
             </div>
-            
+
+            <!-- V6.7.0: PRIJS-ANALYSE - INTERN, ACHTER PIN-SLOT (samen met Financieel Overzicht) -->
+            <div class="analyse-card locked" id="card-analyse">
+                <div class="analyse-title">Prijs-analyse</div>
+                <div class="analyse-subtitle">
+                    Het huidige project (rood punt) op de prijscurve. Pas de
+                    curve-parameters aan om scenario's te toetsen. Niet persistent.
+                </div>
+
+                <!-- Grafiek -->
+                <div id="analyse-chart" class="analyse-chart"></div>
+                <div id="analyse-chart-fallback" class="analyse-fallback"
+                    style="display:none;">
+                    Grafiek vereist internetverbinding (Plotly).
+                    De offerte-tool werkt verder normaal.
+                </div>
+
+                <!-- Grafiek-keuze -->
+                <div class="analyse-controls-row">
+                    <label class="analyse-radio">
+                        <input type="radio" name="analyseMetric"
+                            value="prijs" checked> Totaalprijs
+                    </label>
+                    <label class="analyse-radio">
+                        <input type="radio" name="analyseMetric"
+                            value="perm2"> Prijs / m²
+                    </label>
+                    <label class="analyse-radio">
+                        <input type="radio" name="analyseMetric"
+                            value="mandagen"> Mandagen
+                    </label>
+                </div>
+                <div class="analyse-controls-row">
+                    <label class="analyse-check">
+                        <input type="checkbox" id="analyseShowV65" checked>
+                        ghost zonder komst-overhead (K=0)
+                    </label>
+                    <label class="analyse-check">
+                        <input type="checkbox" id="analyseShowDefault">
+                        actieve-versie referentie
+                    </label>
+                </div>
+
+                <!-- V7.0.0: Model-tuning (blok-engine) -->
+                <div class="analyse-subtitle" style="margin-top:12px;">
+                    Model-parameters (blok-engine)
+                    <button class="analyse-reset" id="analyseReset"
+                        title="Herstel vastgelegde versie">herstel</button>
+                </div>
+                <div class="analyse-params">
+                    <div class="ap-field">
+                        <label>F0 - tarief klein werk (€/md, 0-20 m²)</label>
+                        <input type="number" id="apF0" step="10">
+                    </div>
+                    <div class="ap-field">
+                        <label>F400 handmatig (€/md, ≥400 m²)</label>
+                        <input type="number" id="apF400h" step="10">
+                    </div>
+                    <div class="ap-field">
+                        <label>F400 machinaal (€/md, ≥400 m²)</label>
+                        <input type="number" id="apF400m" step="10">
+                    </div>
+                    <div class="ap-field">
+                        <label>vlak tot (m²)</label>
+                        <input type="number" id="apM2Lo" step="1" min="1">
+                    </div>
+                    <div class="ap-field">
+                        <label>plateau vanaf (m²)</label>
+                        <input type="number" id="apM2Hi" step="10" min="50">
+                    </div>
+                    <div class="ap-field">
+                        <label>K - komst-overhead (md per werfdag)</label>
+                        <input type="number" id="apKKomst" step="0.05"
+                            min="0" max="1">
+                    </div>
+                    <div class="ap-field">
+                        <label>seizoensfactor droogtijden (1 / 1.15 / 1.35)</label>
+                        <input type="number" id="apSeizoen" step="0.05"
+                            min="1" max="1.5">
+                    </div>
+                </div>
+                <button class="vastleg-btn" id="herijkBtn" style="margin-top:8px;"
+                    title="Lost F0/F400 opnieuw op zodat de twee anker-offertes exact hun doelprijs houden (gebruik na wijziging van K of seizoen)">
+                    Herijk curve op ankers (19900 / Galgenberg)</button>
+                <div class="analyse-warn" id="analyse-tuning-warn"
+                    style="display:none;">
+                    Curve gewijzigd t.o.v. de actieve versie. Dit beinvloedt de
+                    getoonde prijzen tijdens deze sessie. Herstel of herlaad de
+                    pagina voor de actieve curve.
+                </div>
+
+                <!-- V6.9.0: Leg vast als versie -->
+                <div class="analyse-vastleg">
+                    <div class="analyse-subtitle" style="margin-top:4px;">
+                        Vastleggen als nieuwe versie</div>
+                    <div class="analyse-active-curve" id="analyse-active-curve">
+                        Actieve curve: -</div>
+                    <div class="vastleg-row">
+                        <div class="ap-field" style="flex:1;">
+                            <label>Nieuwe versie-naam</label>
+                            <input type="text" id="vastlegVersie"
+                                placeholder="V7.0.1">
+                        </div>
+                        <div class="ap-field" style="flex:2;">
+                            <label>Notitie (waarom)</label>
+                            <input type="text" id="vastlegNotitie"
+                                placeholder="bv. K 0,3 → 0,35 na nacalculatie 8 werven">
+                        </div>
+                    </div>
+                    <button class="vastleg-btn" id="vastlegBtn">
+                        Leg vast + download nieuw bestand</button>
+                    <div class="vastleg-status" id="vastlegStatus"></div>
+                    <div class="analyse-subtitle" style="margin-top:6px;
+                        font-size:10px; opacity:0.7;">
+                        Genereert een nieuw HTML-bestand met deze curve erin.
+                        Plaats het in apps/dichting/. De huidige versie blijft
+                        onaangeroerd (rollback-anker).
+                    </div>
+                </div>
+            </div>
+
             <div class="summary-footer">
                 © 2026 Vecon
                 <span class="footer-lock" id="fin-lock"
@@ -2835,9 +3297,18 @@
     /**
      * Zone color for bruto marge/mandag meter
      */
-    var getZoneColor = function(val) {
-        /* V6.5.0: zones gealigneerd op realistische bruto marge/md range.
-           Max theoretisch ~EUR 1640 (plateau klein - arbeidskost). */
+    var getZoneColor = function(val, modelVal) {
+        /* V7.0.2: zones MODEL-RELATIEF - de curve bepaalt per projectgrootte de
+           verwachte marge/md (curve - arbeidskost); de kleur toont de afwijking
+           daarvan. Vaste euro-zones (V6) sloegen nergens meer op onder de
+           schaal-afhankelijke V7-curve. Fallback op oude zones zonder model. */
+        if (modelVal && modelVal > 0) {
+            var ratio = val / modelVal;
+            if (ratio >= 0.97) return 'var(--zone-excellent)';
+            if (ratio >= 0.85) return 'var(--zone-good)';
+            if (ratio >= 0.70) return 'var(--zone-warning)';
+            return 'var(--zone-danger)';
+        }
         if (val >= 1300) return 'var(--zone-excellent)';
         if (val >= 950)  return 'var(--zone-good)';
         if (val >= 700)  return 'var(--zone-warning)';
@@ -2858,34 +3329,73 @@
             .replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     };
     
-    /* ============================================================
-       V3.0: LAST FINANCIAL RESULT STORAGE
-       ============================================================ */
-    var lastFinResult = null;
-    
+    /* ===MODEL-CONFIG-START===
+       V7.0.0: AFGEBAKEND MODEL-CONFIG BLOK - bron van waarheid voor het
+       blok-engine prijsmodel: curve (F0/F400), komst-overhead K, cure-matrix,
+       seizoensfactor en de twee kalibratie-ankers. "Leg vast als versie"
+       (achter PIN-slot) vervangt UITSLUITEND dit blok in een nieuw HTML-bestand.
+       NIET handmatig editen tenzij je weet wat je doet - gebruik de tuning-UI.
+       Elke versie = een vast model = traceerbare offerte. */
+    var MODEL_CONFIG = {
+        // dagopbrengst-curve: vlak F0 (0-M2_LO), inverse log F0->F400 (M2_LO-M2_HI), plateau F400
+        F0: 1650,
+        /* V7.0.3: regime-afhankelijk groot-werk-tarief (Wim 11/06).
+           Machinale mandagen dragen de pomp/efficientie-premie; handmatige
+           lijnen en alle niet-coating-werk rekenen tegen het hand-tarief. */
+        F400_HAND: 1050,
+        F400_MACH: 1150,
+        M2_LO: 20,
+        M2_HI: 400,
+        // komst-overhead: md per ploeg-werfdag (rit + opstellen + opruimen ~2,4u)
+        K_KOMST: 0.3,
+        // seizoensfactor op droogtijden: 1.0 lente/zomer, 1.15 herfst, 1.35 winter (C4)
+        SEIZOEN: 1.0,
+        // cure-matrix (uren, TDS + engine aqp_engine_v2_1) - x SEIZOEN bij gebruik
+        CURE: {
+            FLUAAT: 24,        // Esco-Fluaat -> volgende stap (TDS 204146, hard)
+            P4: 24,            // PU-injectie cure
+            M30_COAT: 12,      // primer/kim/M30 -> coating: overnight praktijk (TDS-min 3)
+            COAT1_NA: 24,      // 1K laatste laag -> 2K/afwerking (TDS 204248)
+            IC_NA: 72,         // IC curing 3 kalenderdagen (TDS 204220) + bevochtigingsbezoek dag+1
+            COAT2_NA: 6,       // 2K/RB400 -> afwerking (engine v2.1)
+            GAP_1K: 4,         // 1K tussen lagen (TDS 4-6u)
+            GAP_IC: 0,         // IC wet-on-tacky (F1 KRITIEK)
+            GAP_2K: 3          // 2K/RB400 tussen lagen (TDS 3-6u)
+        },
+        // kalibratie-ankers voor "herijk op ankers" (vaste doelprijzen, echte offertes)
+        ANKERS: {
+            micro: { naam: 'offerte 19900 (6 m² E06) - beleidsdoel Wim 11/06', doel: 3697 },
+            groot: { naam: 'offerte 19668 Galgenberg (172 m²), auto-regime 1K-mach/2K-hand - beleidsdoel Wim 11/06 (Solusio-ref 38.644)', doel: 42596 }
+        },
+        /* marge-vloer (EUR bruto marge per mandag) - dossiers eronder krijgen
+           een bewuste-keuze-vlag in het financieel overzicht. Terugvalpad Wim:
+           bij uitblijvende verkoop F400 stapsgewijs -50 en herijken. */
+        MARGE_VLOER: 875,
+        _modelVersie: "V7.0.3",
+        _vastgelegd: "2026-06-11 (V7.0.3: dubbel groot-tarief F400 hand 1050 / mach 1150, F0 1650 gedeeld; herijk lost F0+F400_HAND op, F400_MACH = beleidsveld; terugvalpad -50/stap per tarief)"
+    };
+    /* ===MODEL-CONFIG-END=== */
+
     var PARAMS = {
 
-        // V6.1.0: DAGOPBRENGST-curve EUR 200 OMLAAG t.o.v. V6.0.0
-        // Bron: Wim feedback 16/04/2026 - billijker prijspunt
-        // 0-5 m2:    plateau EUR 2000 (was 2200)
-        // 5-20 m2:   lineair 2000 → 1750 (was 2200 → 1950)
-        // 20-400 m2: inverse log 1750 → 1250 (was 1950 → 1450)
-        // >400 m2:   plateau 1250 (was 1450)
+        // V7.0.0: DAGOPBRENGST-curve uit MODEL_CONFIG (vastlegbaar via tuning-UI)
+        // 0-M2_LO:      vlak F0 (klein-werk-premie zit in de blok-telling, niet in het tarief)
+        // M2_LO-M2_HI:  inverse log F0 -> F400
+        // > M2_HI:      plateau F400
         DAGOPBRENGST: {
-            PLATEAU_KLEIN: 2000,
-            OVERGANG_START: 5,
-            OVERGANG_EIND: 20,
-            LINEAIR_EIND: 1750,
-            LOG_EIND_M2: 400,
-            LOG_EIND: 1250,
-            PLATEAU_GROOT: 1250
+            F0: MODEL_CONFIG.F0,
+            F400_HAND: MODEL_CONFIG.F400_HAND,
+            F400_MACH: MODEL_CONFIG.F400_MACH,
+            M2_LO: MODEL_CONFIG.M2_LO,
+            M2_HI: MODEL_CONFIG.M2_HI
         },
 
-        // V6.0.0: Mandagen-opslag (uit DICHTING_PRICING_v2_0.md sectie 3)
-        // mandagen = Som(qty/dagcap) + werfoverhead + (werven-1) x mob_toeslag
+        // V7.0.0: blok-engine parameters (vervangt V6.6.0-V6.8.0 mandagen-floor volledig)
+        // mandagen = werk_md + werfdagen x K_KOMST, uit dag/blok-simulatie van de cure-keten
         MANDAGEN: {
-            WERFOVERHEAD_MD: 1.0,
-            MOB_TOESLAG_MD: 0.5
+            K_KOMST: MODEL_CONFIG.K_KOMST,
+            SEIZOEN: MODEL_CONFIG.SEIZOEN,
+            CURE: MODEL_CONFIG.CURE
         },
 
         // V3.0: KPI TARGETS (financieel overzicht)
@@ -2920,9 +3430,9 @@
             VOLLE_LADING: 8,            // m3 voor volle lading (zelfde bij drainage)
             MARGE: 2.5115,              // Marge-factor (2.35 x 1.125)
             CITYPOMP_BASIS: 807,        // EUR forfait basis citypomp-inzet
-            CITYPOMP_THRESHOLD_M2: 20   // >= 20 m2 vloer → citypomp.
+            CITYPOMP_THRESHOLD_M2: 20   // >= 20 m2 vloer -> citypomp.
                                         // Drempel = volume-drempel 0.8 m3 (zelfde als drainage: 10 m2 x 8 cm = 0.8 m3).
-                                        // Bij 4 cm dikte is 20 m2 x 0.04 = 0.8 m3 → oppervlakte verdubbelt.
+                                        // Bij 4 cm dikte is 20 m2 x 0.04 = 0.8 m3 -> oppervlakte verdubbelt.
         },
 
         // V6.1.0: Beton-curves manueel (klein werk, emmer/kruiwagen)
@@ -2934,21 +3444,21 @@
         // V5.0.0: Configs die IC gebruiken (2 mob verplicht, 3d curing extern)
         IC_CONFIGS: ['E05', 'E09'],
 
-        // V5.0.0: Configs die fluaat gebruiken (klein fluaat → extra mob)
+        // V5.0.0: Configs die fluaat gebruiken (klein fluaat -> extra mob)
         FLUAAT_CONFIGS: ['E02', 'E03', 'E06', 'E07', 'E10', 'E11'],
 
         CONFIGS: {
-            E01: { code: 'E01', name: 'W1-BET', title: 'Kelder W1 Bodemvocht - Beton', type: 'Kelder', wKlasse: 'W1', ondergrond: 'Beton', systeem: '1K 2 lagen', sections: [1, 2, 4, 5, 9, 10, 11, 15, 16, 17, 18] },
+            E01: { code: 'E01', name: 'W1-BET', title: 'Kelder W1 Bodemvocht - Beton', type: 'Kelder', wKlasse: 'W1', ondergrond: 'Beton', systeem: '1K 2 lagen', sections: [1, 2, 4, 5, 8, 9, 10, 11, 14, 15, 16, 17, 18], excludeLines: ['cement_wanden', 'cement_vloer'] },
             E02: { code: 'E02', name: 'W1-MET', title: 'Kelder W1 Bodemvocht - Metselwerk', type: 'Kelder', wKlasse: 'W1', ondergrond: 'Metselwerk', systeem: '1K 2 lagen + 2K', sections: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18] },
             E03: { code: 'E03', name: 'W1-MIX', title: 'Kelder W1 Bodemvocht - Mix', type: 'Kelder', wKlasse: 'W1', ondergrond: 'Mix', systeem: '1K 2 lagen + 2K', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' } },
-            E04: { code: 'E04', name: 'W2-BET-1K', title: 'Kelder W2.1 - Beton - 1K', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: '1K 3 lagen + 2K', sections: [1, 2, 4, 5, 9, 10, 12, 14, 15, 16, 17, 18] },
-            E05: { code: 'E05', name: 'W2-BET-IC', title: 'Kelder W2.1 - Beton - IC', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: 'IC 2 lagen', sections: [1, 2, 4, 5, 9, 10, 13, 17, 18] },
+            E04: { code: 'E04', name: 'W2-BET-1K', title: 'Kelder W2.1 - Beton - 1K', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: '1K 3 lagen + 2K', sections: [1, 2, 4, 5, 8, 9, 10, 12, 14, 15, 16, 17, 18], excludeLines: ['cement_wanden', 'cement_vloer'] },
+            E05: { code: 'E05', name: 'W2-BET-IC', title: 'Kelder W2.1 - Beton - IC', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: 'IC 2 lagen', sections: [1, 2, 4, 5, 8, 9, 10, 13, 17, 18], excludeLines: ['cement_wanden', 'cement_vloer'] },
             E06: { code: 'E06', name: 'W2-MET', title: 'Kelder W2.1 - Metselwerk', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Metselwerk', systeem: '1K 3 lagen + 2K', sections: [1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 17, 18] },
             E07: { code: 'E07', name: 'W2-MIX', title: 'Kelder W2.1 - Mix', type: 'Kelder', wKlasse: 'W2.1', ondergrond: 'Mix', systeem: '1K 3 lagen + 2K', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' } },
-            E08: { code: 'E08', name: 'LIFT-1K', title: 'Liftput W2.1 - 1K', type: 'Liftput', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: '1K 3 lagen + RB400', sections: [1, 2, 4, 5, 9, 10, 12, 14, 17, 18] },
-            E09: { code: 'E09', name: 'LIFT-IC', title: 'Liftput W2.1 - IC', type: 'Liftput', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: 'IC 2 lagen', sections: [1, 2, 4, 5, 9, 10, 13, 17, 18] },
-            E10: { code: 'E10', name: 'GAR-W1', title: 'Garage W1 - met slijtlaag', type: 'Garage', wKlasse: 'W1', ondergrond: 'Mix', systeem: '1K 2 lagen + slijtlaag', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' } },
-            E11: { code: 'E11', name: 'GAR-W2', title: 'Garage W2.1 - met slijtlaag', type: 'Garage', wKlasse: 'W2.1', ondergrond: 'Mix', systeem: '1K 3 lagen + slijtlaag', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' } },
+            E08: { code: 'E08', name: 'LIFT-1K', title: 'Liftput W2.1 - 1K', type: 'Liftput', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: '1K 3 lagen + RB400', sections: [1, 2, 4, 5, 8, 9, 10, 12, 14, 17, 18], excludeLines: ['cement_wanden', 'cement_vloer', '2k_wanden', '2k_vloer'] },
+            E09: { code: 'E09', name: 'LIFT-IC', title: 'Liftput W2.1 - IC', type: 'Liftput', wKlasse: 'W2.1', ondergrond: 'Beton', systeem: 'IC 2 lagen', sections: [1, 2, 4, 5, 8, 9, 10, 13, 17, 18], excludeLines: ['cement_wanden', 'cement_vloer'] },
+            E10: { code: 'E10', name: 'GAR-W1', title: 'Garage W1 - met slijtlaag', type: 'Garage', wKlasse: 'W1', ondergrond: 'Mix', systeem: '1K 2 lagen + slijtlaag', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' }, excludeLines: ['saneer_wanden'] },
+            E11: { code: 'E11', name: 'GAR-W2', title: 'Garage W2.1 - met slijtlaag', type: 'Garage', wKlasse: 'W2.1', ondergrond: 'Mix', systeem: '1K 3 lagen + slijtlaag', sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 17, 18], sectionScopes: { 2: 'vloer', 3: 'wand', 6: 'wand', 7: 'wand', 8: 'wand' }, excludeLines: ['saneer_wanden'] },
             E12: { code: 'E12', name: 'W2.2-SPEC', title: 'Kelder W2.2 Hoge waterdruk', type: 'Kelder', wKlasse: 'W2.2', ondergrond: 'n.v.t.', systeem: 'PM', sections: [] }
         },
         
@@ -2985,7 +3495,11 @@
             'afbraak_tussenwand_g': { section: 1, scope: 'algemeen', curveScope: 'exclude', label: 'tussenwanden gipsblokken/cellenbeton', kort: 'Tussenw. G', unit: 'm²', placeholder: 'Uitbreken tussenwanden gipsblokken/cellenbeton (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
             'afbraak_inbouw':       { section: 1, scope: 'algemeen', label: 'inbouwkasten/vaste elementen', kort: 'Inbouw af', unit: 'st', placeholder: 'Verwijderen inbouwkasten/vaste elementen (st)', product: null, verbruik: null, dagcapaciteit: 8 },
             'uitwerken_hoeken':     { section: 1, scope: 'algemeen', label: 'uitwerken hoeken/barsten slijpschijf', kort: 'Hoeken', unit: 'm', placeholder: 'Uitwerken hoeken/barsten met slijpschijf (m)', product: null, verbruik: null, dagcapaciteit: 160 },
-            'afbraak_puin':         { section: 1, scope: 'algemeen', label: 'puin incl. containerkosten', kort: 'Puin afvoer', unit: 'm³', placeholder: 'Afvoeren puin incl. containerkosten (m³)', product: null, verbruik: null, dagcapaciteit: 4 },
+            /* V7.0.0: containerkost EUR 490/m3 nu echt gerekend (label beloofde het al - PRICING v2.2 par. 4) */
+            'afbraak_puin':         { section: 1, scope: 'algemeen', label: 'puin incl. containerkosten', kort: 'Puin afvoer', unit: 'm³', placeholder: 'Afvoeren puin incl. containerkosten (m³)', product: 'container', verbruik: 1.0, dagcapaciteit: 4 },
+            /* V7.0.0: droogleggen toegevoegd - stond op echte offertes (19668) maar bestond in geen enkele versie.
+               Dagcap 100 m2/dag = praktijk-schatting (norm kalibreren via nacalculatie). Geen behandeld oppervlak. */
+            'droogleggen':          { section: 1, scope: 'vloer',    curveScope: 'exclude', label: 'droogleggen kelder en opkuis', kort: 'Droogleg', unit: 'm²', placeholder: 'Droogleggen kelder en opkuis (m²)', product: null, verbruik: null, dagcapaciteit: 100 },
             
             // S.2 Ondergrondvoorbereiding - BETON (4 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.2
@@ -3016,7 +3530,7 @@
             
             // S.6 Zoutneutralisatie (6 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.6 (240 m2/dag per laag, 2 min/m2 praktijk)
-            // Meerlagen-lijnen (2x / 3x): dagcap gedeeld door aantal lagen — wiskundig equivalent
+            // Meerlagen-lijnen (2x / 3x): dagcap gedeeld door aantal lagen - wiskundig equivalent
             // aan ronde-regime interpretatie. Klant vult 1 lijn met totaal-oppervlak.
             'fluaat_wand_1':        { section: 6, scope: 'wand',     label: 'zoutneutralisatie wanden 1 laag', kort: 'Fluaat W 1x', unit: 'm²', placeholder: 'Zoutneutralisatie wanden Esco-Fluaat 1 laag (m²)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
             'fluaat_vloer_1':       { section: 6, scope: 'vloer',    label: 'zoutneutralisatie vloer 1 laag', kort: 'Fluaat V 1x', unit: 'm²', placeholder: 'Zoutneutralisatie vloer Esco-Fluaat 1 laag (m²)', product: 'escofluaat', verbruik: 0.45, dagcapaciteit: 240 },
@@ -3048,10 +3562,11 @@
             
             // S.10 Afdichting doorvoeringen (4 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.10
-            'doorvoer_klein':       { section: 10, scope: 'overgang', label: 'leidingdoorvoer klein manchet', kort: 'Doorv. klein', unit: 'st', placeholder: 'Waterdicht afwerken leidingdoorvoer klein manchet (st)', product: null, verbruik: null, dagcapaciteit: 10 },
-            'doorvoer_groot':       { section: 10, scope: 'overgang', label: 'leidingdoorvoer groot manchet', kort: 'Doorv. groot', unit: 'st', placeholder: 'Waterdicht afwerken leidingdoorvoer groot manchet (st)', product: null, verbruik: null, dagcapaciteit: 6 },
-            'doorvoer_kabel':       { section: 10, scope: 'overgang', label: 'kabeldoorvoer', kort: 'Doorv. kabel', unit: 'st', placeholder: 'Waterdicht afwerken kabeldoorvoer (st)', product: null, verbruik: null, dagcapaciteit: 18 },
-            'doorvoer_raam':        { section: 10, scope: 'overgang', label: 'raamdoorvoer/lichtschacht', kort: 'Doorv. raam', unit: 'st', placeholder: 'Waterdicht afwerken raamdoorvoer/lichtschacht (st)', product: null, verbruik: null, dagcapaciteit: 3 },
+            /* V7.0.0: doorvoer-materiaal EUR 25/st toegevoegd (GunGrade + Fix 20-T, DICHTING_PRICING v2.2 par. 4) */
+            'doorvoer_klein':       { section: 10, scope: 'overgang', label: 'leidingdoorvoer klein manchet', kort: 'Doorv. klein', unit: 'st', placeholder: 'Waterdicht afwerken leidingdoorvoer klein manchet (st)', product: 'doorvoermat', verbruik: 1.0, dagcapaciteit: 10 },
+            'doorvoer_groot':       { section: 10, scope: 'overgang', label: 'leidingdoorvoer groot manchet', kort: 'Doorv. groot', unit: 'st', placeholder: 'Waterdicht afwerken leidingdoorvoer groot manchet (st)', product: 'doorvoermat', verbruik: 1.0, dagcapaciteit: 6 },
+            'doorvoer_kabel':       { section: 10, scope: 'overgang', label: 'kabeldoorvoer', kort: 'Doorv. kabel', unit: 'st', placeholder: 'Waterdicht afwerken kabeldoorvoer (st)', product: 'doorvoermat', verbruik: 1.0, dagcapaciteit: 18 },
+            'doorvoer_raam':        { section: 10, scope: 'overgang', label: 'raamdoorvoer/lichtschacht', kort: 'Doorv. raam', unit: 'st', placeholder: 'Waterdicht afwerken raamdoorvoer/lichtschacht (st)', product: 'doorvoermat', verbruik: 1.0, dagcapaciteit: 3 },
             
             // S.11 Waterdichting Aquafin-1K W1 (2 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.11 (per laag: wand 40, vloer 48, machinaal 120)
@@ -3077,10 +3592,13 @@
             // S.14 Scheuroverbruggende eindlaag (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.14 (per laag: wand 40, vloer 48, machinaal 120)
             // V6.3.0: dagcap pre-gedeeld door 2 lagen 2K/RB400.
-            // RB400 gebruikt scope='algemeen' met wand-ondergrens (40/2=20) — acceptabel voor liftput (E08, voornamelijk wand).
+            // RB400 gebruikt scope='algemeen' met wand-ondergrens (40/2=20) - acceptabel voor liftput (E08, voornamelijk wand).
             '2k_wanden':            { section: 14, scope: 'wand',    label: 'Aquafin-2K wanden 2 lagen', kort: '2K W', unit: 'm²', placeholder: 'Aquafin-2K wanden 2 lagen scheuroverbruggend (m²)', product: '2k', verbruik: 3.50, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
             '2k_vloer':             { section: 14, scope: 'vloer',   label: 'Aquafin-2K vloer 2 lagen', kort: '2K V', unit: 'm²', placeholder: 'Aquafin-2K vloer 2 lagen scheuroverbruggend (m²)', product: '2k', verbruik: 3.50, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
-            'rb400':                { section: 14, scope: 'algemeen', curveScope: 'wand', label: 'Aquafin-RB400 dynamisch', kort: 'RB400', unit: 'm²', placeholder: 'Aquafin-RB400 2 lagen dynamische scheuroverbrugging (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            /* V7.0.0: rb400 gesplitst in wand/vloer (was scope algemeen + curveScope wand -
+               vloerverdichting zoals offerte 19979 telde dan fout in uniek m2) */
+            'rb400_wanden':         { section: 14, scope: 'wand',    label: 'Aquafin-RB400 wanden 2 lagen', kort: 'RB400 W', unit: 'm²', placeholder: 'Aquafin-RB400 wanden 2 lagen dynamische scheuroverbrugging (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
+            'rb400_vloer':          { section: 14, scope: 'vloer',   label: 'Aquafin-RB400 vloer 2 lagen', kort: 'RB400 V', unit: 'm²', placeholder: 'Aquafin-RB400 vloerverdichting 2 lagen (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 24, dagcap_handm: 24, dagcap_mach: 60, lagen: 2 },
             
             // S.15 Afwerking wanden (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.15 (35 m2/dag, 3mm dunne laag M30)
@@ -3091,11 +3609,14 @@
                Materiaal: M30 6 kg/m2 (3mm) + Autex 1.0 m2/m2 via extraProducts mechanisme. */
             'pleister_wanden_autex': { section: 15, scope: 'wand',   label: 'afwerkpleister wanden + Autex', kort: 'Afw+Au W', unit: 'm²', placeholder: 'Afwerkpleister wanden M30 3mm met ingewerkte Autex glasvezelwapening (m²)', product: 'm30', verbruik: 6.0, extraProducts: [{ product: 'autex', verbruik: 1.0 }], dagcapaciteit: 28 },
             'saneer_wanden':        { section: 15, scope: 'wand',    label: 'saneerpleister wanden', kort: 'Saneer W', unit: 'm²', placeholder: 'Saneerpleister wanden Thermopal Ultra Wit (m²)', product: 'thermopal', verbruik: 9.0, dagcapaciteit: 35 },
+            /* V7.0.0: THERMOPAL-FS33 fijnpleister 1-3mm - aanbevolen per DAGCAPACITEITEN v2.0 par. 15.2
+               (Ultra Wit vereist min. 20mm zoutbuffer - hier onnodig). Resto-prijs nog niet gekend -> arbeid-only. */
+            'saneer_fs33':          { section: 15, scope: 'wand',    label: 'fijnpleister FS33 (aanbevolen, 1-3mm)', kort: 'FS33 W', unit: 'm²', placeholder: 'Fijnpleister Thermopal-FS33 dunlaag 1-3mm - aanbevolen (m²)', product: null, verbruik: null, dagcapaciteit: 35 },
             'schilder_wanden':      { section: 15, scope: 'wand',    label: 'schilderwerk wanden', kort: 'Schilder W', unit: 'm²', placeholder: 'Schilderwerk wanden diffusieopen verf (m²)', product: null, verbruik: null, dagcapaciteit: 60 },
             
             // S.16 Afwerking vloer (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.16
-            'egaliseer_vloer':      { section: 16, scope: 'vloer',   label: 'egaliseren vloer voor tegels', kort: 'Egaliseer V', unit: 'm²', placeholder: 'Egaliseren vloer voor tegels Asocret HFF (m²)', product: null, verbruik: null, dagcapaciteit: 25 },
+            'egaliseer_vloer':      { section: 16, scope: 'vloer',   label: 'egaliseren vloer voor tegels', kort: 'Egaliseer V', unit: 'm²', placeholder: 'Egaliseren vloer voor tegels Asocret HFF (m²)', product: 'hff', verbruik: 7.0, dagcapaciteit: 25 },
             'slijtlaag_vloer':      { section: 16, scope: 'vloer',   label: 'slijtvaste vloercoating', kort: 'Slijtlaag V', unit: 'm²', placeholder: 'Slijtvaste vloercoating mechanische belasting (m²)', product: null, verbruik: null, dagcapaciteit: 50 },
             'antislip_vloer':       { section: 16, scope: 'vloer',   label: 'antislip vloercoating', kort: 'Antislip V', unit: 'm²', placeholder: 'Antislip vloercoating garage/werkplaats (m²)', product: null, verbruik: null, dagcapaciteit: 40 },
             /* V6.1.0: Beton dekvloer 4 cm - special pricing (drainage-formule / 2) */
@@ -3105,19 +3626,19 @@
             
             // S.17 Pompput behandeling (3 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.17 (v2.0 17.4 pompinstallatie compleet = 4 st/dag)
-            // V6.3.0: pompput_pomp + pompput_aansluiting + pompput_melder + pompput_dicht → vervangen door 1 lijn
+            // V6.3.0: pompput_pomp + pompput_aansluiting + pompput_melder + pompput_dicht -> vervangen door 1 lijn
             // (v2.0 expliciet: pompinstallatie compleet = pomp + watermelder + afvoer in 1 stuk)
             // Pompputwanden waterdicht zit al in S.11-S.14 (algemene 1K/2K bewerking, zie v2.0 noot S.17)
             'pompput_opvullen':     { section: 17, scope: 'algemeen', label: 'opvullen pompput gietmortel', kort: 'Pomp opvul', unit: 'st', placeholder: 'Opvullen pompput met krimpvrije gietmortel in lagen (st)', product: null, verbruik: null, dagcapaciteit: 2 },
             'pompput_moniereisen':  { section: 17, scope: 'algemeen', label: 'moniereisen inboren', kort: 'Monier', unit: 'st', placeholder: 'Moniereisen inboren voor structurele verbinding (st)', product: null, verbruik: null, dagcapaciteit: 20 },
-            'pompput_compleet':     { section: 17, scope: 'algemeen', label: 'pompinstallatie compleet', kort: 'Pomp compl', unit: 'st', placeholder: 'Pompinstallatie compleet (pomp + watermelder + afvoer, 2u/st)', product: null, verbruik: null, dagcapaciteit: 4 },
+            'pompput_compleet':     { section: 17, scope: 'algemeen', label: 'pompinstallatie compleet', kort: 'Pomp compl', unit: 'st', placeholder: 'Pompinstallatie compleet (pomp + watermelder + afvoer, 2u/st)', product: 'dompelpomp', verbruik: 1.0, dagcapaciteit: 4 },
             
             // S.18 Speciale toepassingen (4 lijnen)
             // Bron: DAGCAPACITEITEN v2.0 S.18 (capillaire injectie toegevoegd in v2.0, was eerder afwezig in calculator)
             'dichtband':            { section: 18, scope: 'algemeen', label: 'ASO-Dichtband dilatatievoeg', kort: 'Dichtband', unit: 'm', placeholder: 'Plaatsen ASO-Dichtband bij dilatatievoeg (m)', product: null, verbruik: null, dagcapaciteit: 35 },
             'bouwnaad':             { section: 18, scope: 'algemeen', label: 'bouwnaad injectie + coating', kort: 'Bouwnaad', unit: 'm', placeholder: 'Behandeling bouwnaad injectie + coating (m)', product: null, verbruik: null, dagcapaciteit: 10 },
             'radon':                { section: 18, scope: 'algemeen', curveScope: 'vloer', label: 'radondichte afwerking RB400', kort: 'Radon', unit: 'm²', placeholder: 'Radondichte afwerking Aquafin-RB400 (m²)', product: 'rb400', verbruik: 4.80, dagcapaciteit: 20, dagcap_handm: 20, dagcap_mach: 60, lagen: 2 },
-            'capillaire_injectie':  { section: 18, scope: 'algemeen', label: 'capillaire injectie horizontaal/verticaal', kort: 'Cap. injectie', unit: 'm', placeholder: 'Capillaire injectie horizontaal/verticaal boren + injecteren (m)', product: null, verbruik: null, dagcapaciteit: 24 }
+            'capillaire_injectie':  { section: 18, scope: 'algemeen', label: 'capillaire injectie horizontaal/verticaal', kort: 'Cap. injectie', unit: 'm', placeholder: 'Capillaire injectie horizontaal/verticaal boren + injecteren (m)', product: 'capinject', verbruik: 1.0, dagcapaciteit: 24 }
         },
         
         // V6.0.0: PRODUCTS - PURE RESTO INKOOPPRIJZEN (geen retail marge)
@@ -3135,6 +3656,12 @@
             '2k':         { name: 'AQUAFIN-2K/M+',  verpakking: 35, eenheid: 'kg', prijs: 116.20 }, /* EUR 3.32/kg */
             'rb400':      { name: 'AQUAFIN-RB400',  verpakking: 24, eenheid: 'kg', prijs: 95.76 },  /* EUR 3.99/kg */
             'p4':         { name: 'AQUAFIN-P4',     verpakking: 1,  eenheid: 'kg', prijs: 43.00 },  /* Resto onveranderd */
+            /* V7.0.0: materiaal-gaten gedicht (DICHTING_PRICING v2.2 par. 4 + PM-brein D) */
+            'hff':        { name: 'Asocret HFF',    verpakking: 25, eenheid: 'kg', prijs: 45.00 },  /* EUR 1.80/kg, 7 kg/m2 = 12.60/m2 */
+            'container':  { name: 'Puinafvoer container', verpakking: 1, eenheid: 'm³', prijs: 490.00 }, /* forfait per m3 */
+            'doorvoermat':{ name: 'Doorvoer-materiaal (GunGrade+Fix20T)', verpakking: 1, eenheid: 'st', prijs: 25.00 },
+            'capinject':  { name: 'Injectiecreme capillair', verpakking: 1, eenheid: 'm', prijs: 10.00 },
+            'dompelpomp': { name: 'Dompelpomp + watermelder + afvoer', verpakking: 1, eenheid: 'st', prijs: 450.00 },
             'thermopal':  { name: 'Thermopal',      verpakking: 25, eenheid: 'kg', prijs: 32.50 },  /* EUR 1.30/kg */
             'autex':      { name: 'Autex glasvezelwapening', verpakking: 55, eenheid: 'm²', prijs: 178.20 } /* EUR 3.24/m2 - rol 55 m2, zelfde bron als opstijgend V5.0.1 */
         }
@@ -3147,42 +3674,74 @@
         state: {
             selectedConfig: null,
             selectedScope: 'wand',
-            aantalWerven: 1,              // V6.0.0: aantal werven (voor mob-toeslag)
-            regimeOverride: 'auto',       // V6.0.0: 'auto' | 'handm' | 'mach' (override coating dagcap)
-            /* Legacy fields - behouden voor backwards-compat, geen UI */
-            selectedSeason: 'voorjaar',
-            selectedTeam: 2,
+            /* V7.0.0: regime PER LIJN: lineId -> 'auto' | 'handm' | 'mach'.
+               Vrij togglebaar (Wim 11/06). Auto-default per lijn: zie BusinessLogic.resolveRegime. */
+            regimes: {},
             quantities: {},
-            expandedSections: {}
+            expandedSections: {},
+            /* V7.0.0: versieteller voor engine-cache-invalidatie */
+            _version: 0
+        },
+
+        /* V7.0.0: AUTOSAVE - quantities/config/regimes overleven reload/tab-kill op de werf */
+        STORAGE_KEY: 'aqp_dicht_v7_state',
+        bump: function() {
+            this.state._version++;
+            this.persist();
+        },
+        persist: function() {
+            if (this._mute) return; /* V7.0.0: geen autosave tijdens analyse-sweeps */
+            try {
+                localStorage.setItem(this.STORAGE_KEY, JSON.stringify({
+                    selectedConfig: this.state.selectedConfig,
+                    selectedScope: this.state.selectedScope,
+                    quantities: this.state.quantities,
+                    regimes: this.state.regimes
+                }));
+            } catch (e) { /* private mode / quota: stil falen, tool blijft werken */ }
+        },
+        restore: function() {
+            try {
+                var raw = localStorage.getItem(this.STORAGE_KEY);
+                if (!raw) return false;
+                var saved = JSON.parse(raw);
+                if (!saved || !saved.selectedConfig || !PARAMS.CONFIGS[saved.selectedConfig]) return false;
+                this.state.selectedConfig = saved.selectedConfig;
+                this.state.selectedScope = saved.selectedScope || 'wand';
+                this.state.quantities = saved.quantities || {};
+                this.state.regimes = saved.regimes || {};
+                this.state._version++;
+                return true;
+            } catch (e) { return false; }
         },
 
         setConfig: function(configId) {
             this.state.selectedConfig = configId;
             this.state.quantities = {};
+            this.state.regimes = {};
             this.state.expandedSections = {};
+            this.bump();
         },
 
         setScope: function(scope) { this.state.selectedScope = scope; },
 
-        // V5.0.0: seizoen setter
-        setSeason: function(season) {
-            if (PARAMS.SEASON_FACTORS[season]) {
-                this.state.selectedSeason = season;
-            }
+        /* V7.0.0: regime-setter per lijn (vervangt globale regimeOverride) */
+        setRegime: function(lineId, mode) {
+            if (mode === 'auto') { delete this.state.regimes[lineId]; }
+            else if (mode === 'handm' || mode === 'mach') { this.state.regimes[lineId] = mode; }
+            this.bump();
+        },
+        getRegime: function(lineId) {
+            return this.state.regimes[lineId] || 'auto';
         },
 
-        // V5.0.0: team setter
-        setTeam: function(team) {
-            var t = parseInt(team, 10);
-            if (t === 1 || t === 2) {
-                this.state.selectedTeam = t;
-            }
-        },
-        
         setQuantity: function(lineId, value) {
             var num = parseFloat(String(value).replace(',', '.'));
-            if (isNaN(num) || num < 0) { delete this.state.quantities[lineId]; }
+            /* V7.0.0: Infinity/absurde input geweerd (was open gat sinds V6.5.0) */
+            if (isNaN(num) || !isFinite(num) || num < 0) { delete this.state.quantities[lineId]; }
+            else if (num > 99999) { this.state.quantities[lineId] = 99999; }
             else { this.state.quantities[lineId] = num; }
+            this.bump();
         },
         
         getQuantity: function(lineId) {
@@ -3231,6 +3790,8 @@
             for (var lineId in PARAMS.LINES) {
                 var line = PARAMS.LINES[lineId];
                 if (line.section !== sectionId) continue;
+                /* V7.0.0: lijn-exclusies per config (CONFIGURATIES v3.0-getrouwheid) */
+                if (config && config.excludeLines && config.excludeLines.indexOf(lineId) !== -1) continue;
                 if (line.scope === 'algemeen' || line.scope === 'overgang') { lines.push({ id: lineId, data: line }); }
                 else if (effectiveScope === 'beide') { lines.push({ id: lineId, data: line }); }
                 else if (effectiveScope === 'vloer' && line.scope === 'vloer') { lines.push({ id: lineId, data: line }); }
@@ -3252,12 +3813,15 @@
            UI-rendering blijft expliciet op getVisibleLines/getVisibleSections.
            ============================================================ */
 
-        /* Alle lines van een sectie, onafhankelijk van selectedScope. */
+        /* Alle lines van een sectie, onafhankelijk van selectedScope.
+           V7.0.0: respecteert excludeLines van de actieve config. */
         getAllLinesForSection: function(sectionId) {
+            var config = PARAMS.CONFIGS[this.state.selectedConfig];
             var lines = [];
             for (var lineId in PARAMS.LINES) {
                 var line = PARAMS.LINES[lineId];
                 if (line.section !== sectionId) continue;
+                if (config && config.excludeLines && config.excludeLines.indexOf(lineId) !== -1) continue;
                 lines.push({ id: lineId, data: line });
             }
             return lines;
@@ -3285,7 +3849,7 @@
         },
 
         /* Stats van items ingevuld maar buiten zichtbare scope (voor M1-banner).
-           Prijs wordt niet hier berekend (zou StateManager → BusinessLogic circulair maken);
+           Prijs wordt niet hier berekend (zou StateManager -> BusinessLogic circulair maken);
            ViewRenderer/BusinessLogic berekent prijs apart bij banner-rendering. */
         getHiddenFilledStats: function() {
             var config = PARAMS.CONFIGS[this.state.selectedConfig];
@@ -3321,49 +3885,101 @@
         reset: function() {
             this.state.selectedConfig = null;
             this.state.selectedScope = 'wand';
-            this.state.regimeOverride = 'auto';
-            this.state.aantalWerven = 1;
-            this.state.selectedSeason = 'voorjaar';
-            this.state.selectedTeam = 2;
+            this.state.regimes = {};
             this.state.quantities = {};
             this.state.expandedSections = {};
+            this.state._version++;
+            try { localStorage.removeItem(this.STORAGE_KEY); } catch (e) {}
         }
     };
-    
+
+    /* ============================================================
+       ===BLOK-ENGINE-START===
+       V7.0.0 BLOK-ENGINE - dag/blok-simulatie van de cure-keten.
+       PURE functies (geen DOM, geen StateManager) zodat dit blok 1-op-1
+       extraheerbaar is voor node-regressietests tegen het Python-model
+       (v7_regressie_model.py). Tijdas: dag = 24u, werkvenster [0,8)
+       (= 07:00-15:00), blokken [0,4) en [4,8). Gap-semantiek: wachttijd
+       tussen lagen telt vanaf laag-START (cascade-criterium, monotoon).
+       ============================================================ */
+    var BlokEngine = {
+        nextWork: function(tt) {
+            var day = Math.floor(tt / 24);
+            var rem = tt - day * 24;
+            if (rem < 0) return day * 24;
+            if (rem >= 8) return (day + 1) * 24;
+            return tt;
+        },
+
+        /* fases: [{ key, uren (ploeg-elapsed per laag), crew, lagen, gap, cure }]
+           Return: { dagCount, blokCount, werkUren (man/ploeg-mix),
+                     dagen: { dagNr: { faseKey: elapsedUren } } } */
+        simulate: function(fases) {
+            var t = 0, werkUren = 0;
+            var dagen = {}, blokken = {};
+            for (var f = 0; f < fases.length; f++) {
+                var fase = fases[f];
+                var lagen = fase.lagen || 1;
+                var gap = fase.gap || 0;
+                var cure = fase.cure || 0;
+                var crew = fase.crew || 1;
+                if (fase.uren <= 0) continue;
+                for (var i = 0; i < lagen; i++) {
+                    t = this.nextWork(t);
+                    var laagStart = t;
+                    var rest = fase.uren;
+                    while (rest > 1e-9) {
+                        t = this.nextWork(t);
+                        var day = Math.floor(t / 24);
+                        var rem = t - day * 24;
+                        var doe = Math.min(rest, 8 - rem);
+                        if (!dagen[day]) dagen[day] = {};
+                        dagen[day][fase.key] = (dagen[day][fase.key] || 0) + doe;
+                        if (rem < 4) blokken[day + '_0'] = 1;
+                        if (rem + doe > 4) blokken[day + '_1'] = 1;
+                        t += doe; rest -= doe;
+                    }
+                    werkUren += fase.uren * crew;
+                    if (i < lagen - 1) t = Math.max(t, laagStart + gap);
+                }
+                t += cure;
+            }
+            return {
+                dagCount: Object.keys(dagen).length,
+                blokCount: Object.keys(blokken).length,
+                werkUren: werkUren,
+                dagen: dagen
+            };
+        }
+    };
+    /* ===BLOK-ENGINE-END=== */
+
     /* ============================================================
        BUSINESS LOGIC
        ============================================================ */
     var BusinessLogic = {
         
-        // V6.0.0 (V6.4.0 M2 aangescherpt): Dagopbrengst-curve piecewise
-        // (DICHTING_PRICING_v2_0.md sectie 2)
-        // 0-5 m2:    plateau EUR 2000
-        // 5-20 m2:   lineair 2000 → 1750
-        // 20-400 m2: inverse log 1750 → 1250
-        // >400 m2:   plateau 1250
-        // m2 = totaal UNIEK behandeld oppervlak (som van max-per-curveScope)
-        // V6.4.0 M2: curve reageert nu op werkelijk uniek oppervlak
-        // (coating + prep + afwerking), niet alleen coating zoals V6.3.x.
-        getDagopbrengst: function() {
+        // V7.0.0: Dagopbrengst-curve - vlak F0 tot M2_LO, inverse log F0 -> F400, plateau F400.
+        // De klein-werk-premie van V6 (2000->1750 segment) is VERVALLEN: die compensatie
+        // zit nu in de blok-telling zelf (komsten + aangebroken dagen). De curve is
+        // daarmee zuiver een volumekorting, opgelost uit de twee echte ankers
+        // (19900 -> EUR 3.550 | Galgenberg 19668 -> EUR 36.964).
+        // m2 = totaal UNIEK behandeld oppervlak (som van max-per-curveScope, V6.4.0 M2).
+        getDagopbrengst: function(regime) {
             var totalM2 = this.getTotaalBehandeldM2();
             var d = PARAMS.DAGOPBRENGST;
-            if (totalM2 <= 0) return d.PLATEAU_KLEIN;
-            if (totalM2 <= d.OVERGANG_START) return d.PLATEAU_KLEIN;
-            if (totalM2 <= d.OVERGANG_EIND) {
-                return d.PLATEAU_KLEIN -
-                    (d.PLATEAU_KLEIN - d.LINEAIR_EIND) *
-                    (totalM2 - d.OVERGANG_START) /
-                    (d.OVERGANG_EIND - d.OVERGANG_START);
-            }
-            if (totalM2 >= d.LOG_EIND_M2) return d.PLATEAU_GROOT;
-            var ratio = Math.log(totalM2 / d.OVERGANG_EIND) /
-                        Math.log(d.LOG_EIND_M2 / d.OVERGANG_EIND);
-            return d.LINEAIR_EIND - (d.LINEAIR_EIND - d.LOG_EIND) * ratio;
+            /* V7.0.3: machinale lijnen -> F400_MACH; handmatig + niet-coating -> F400_HAND */
+            var f400 = (regime === 'mach') ? d.F400_MACH : d.F400_HAND;
+            if (totalM2 <= d.M2_LO) return d.F0;
+            if (totalM2 >= d.M2_HI) return f400;
+            var ratio = Math.log(totalM2 / d.M2_LO) /
+                        Math.log(d.M2_HI / d.M2_LO);
+            return d.F0 - (d.F0 - f400) * ratio;
         },
 
         // V6.0.0: Backwards-compatibility alias
         getDagprijs: function() {
-            return this.getDagopbrengst();
+            return this.getDagopbrengst('handm');
         },
 
         // V6.4.0 M2: Totaal uniek behandeld oppervlak - max per scope, dan sommeren
@@ -3394,7 +4010,7 @@
                 var qty = StateManager.getQuantity(lineId);
                 if (qty <= 0) continue;
 
-                /* curveScope bepalen: expliciet → fallback op scope */
+                /* curveScope bepalen: expliciet -> fallback op scope */
                 var cs = (line.curveScope !== undefined)
                     ? line.curveScope
                     : line.scope;
@@ -3412,28 +4028,42 @@
             return totaal;
         },
         
-        // V6.0.0: Bepaal effectieve dagcap voor coating-lijnen.
-        // Coating-lijnen hebben dagcap_handm + dagcap_mach.
-        // Niet-coating lijnen gebruiken gewone dagcapaciteit.
-        // Switch via override (auto/handm/mach) of automatisch op 20 m2 totaal coating.
-        getEffectiveDagcap: function(line) {
+        // V7.0.0: Regime PER LIJN (Wim 11/06). Vrij togglebaar via regime-chip.
+        // Auto-default = f(lijn-m2, product-status):
+        //   - 1K / IC: machinaal vanaf MACHINAAL_THRESHOLD_M2 (bewezen praktijk, TZI-43)
+        //   - 2K / RB400: ALTIJD handmatig als default (machinaal = experimenteel,
+        //     potlife 15 min, continue flow vereist - wel vrij omzetbaar)
+        // De default kijkt naar het oppervlak van de LIJN zelf, niet het project:
+        // de pomp loont per product-cyclus (opstelling + reiniging per product).
+        resolveRegime: function(lineId) {
+            var line = PARAMS.LINES[lineId];
+            if (!line || !line.dagcap_handm || !line.dagcap_mach) return null;
+            var ovr = StateManager.getRegime(lineId);
+            if (ovr === 'handm' || ovr === 'mach') return ovr;
+            var experimenteel = (line.product === '2k' || line.product === 'rb400');
+            if (experimenteel) return 'handm';
+            var qty = StateManager.getQuantity(lineId);
+            return qty >= PARAMS.MODIFIERS.MACHINAAL_THRESHOLD_M2 ? 'mach' : 'handm';
+        },
+
+        // V7.0.0: effectieve dagcap volgt het per-lijn regime.
+        getEffectiveDagcap: function(line, lineId) {
             /* V6.1.0: Beton-dekvloer - dagcap via vaste drempel 20 m2 (= 0.8 m3 bij 4 cm) */
             if (line.specialPrice === 'beton_dichting') {
                 var qty = StateManager.getQuantity('beton_vloer_dekvloer') || 0;
                 return this.isBetonCitypomp(qty) ? 20 : 2;
             }
             if (!line.dagcap_handm || !line.dagcap_mach) {
-                /* Niet-coating: enkele dagcap */
                 return line.dagcapaciteit;
             }
-            var override = StateManager.state.regimeOverride || 'auto';
-            if (override === 'handm') return line.dagcap_handm;
-            if (override === 'mach')  return line.dagcap_mach;
-            /* Auto: switch op 20 m2 totaal coating drempel */
-            var totaalCoating = this.getTotalCoatingM2();
-            return totaalCoating >= PARAMS.MODIFIERS.MACHINAAL_THRESHOLD_M2
-                ? line.dagcap_mach
-                : line.dagcap_handm;
+            var regime = this.resolveRegime(lineId || this._lineIdFor(line));
+            return regime === 'mach' ? line.dagcap_mach : line.dagcap_handm;
+        },
+
+        /* Hulpfunctie: lineId terugvinden als alleen het line-object gegeven is */
+        _lineIdFor: function(line) {
+            for (var id in PARAMS.LINES) { if (PARAMS.LINES[id] === line) return id; }
+            return null;
         },
 
         // V6.1.0: Beton-citypomp trigger - VASTE drempel op VOLUME (0.8 m3).
@@ -3449,7 +4079,7 @@
 
         // V6.1.0: Beton-dichting prijs per m2 = EXACT DRAINAGE-PRIJS GEDEELD DOOR 2.
         // Rationale: drainage gebruikt 8 cm, dichting 4 cm = halve dikte.
-        // Halve dikte → halve m3 bij zelfde oppervlakte → halve beton-kost per m2.
+        // Halve dikte -> halve m3 bij zelfde oppervlakte -> halve beton-kost per m2.
         // (De basis-toeslag EUR 807 blijft vol want die is een vaste citypomp-inzet, niet dikte-afhankelijk.)
         betonDichtingPerM2: function(m2) {
             if (m2 <= 0) return 0;
@@ -3478,64 +4108,308 @@
             return Math.ceil((c.max - ratio * (c.max - c.min)) * 2) / 2;
         },
 
-        // V6.0.0/V6.1.0: Bepaal regime label voor display
-        getRegimeLabel: function(line) {
-            /* V6.1.0: Beton-dekvloer = manueel of citypomp op 10 m2 drempel */
+        // V7.0.0: regime-label per lijn (auto-resolved of geforceerd)
+        getRegimeLabel: function(line, lineId) {
+            /* V6.1.0: Beton-dekvloer = manueel of citypomp op vaste drempel */
             if (line.specialPrice === 'beton_dichting') {
                 var qty = StateManager.getQuantity('beton_vloer_dekvloer') || 0;
                 if (qty <= 0) return null;
                 return this.isBetonCitypomp(qty) ? 'citypomp' : 'manueel';
             }
             if (!line.dagcap_handm || !line.dagcap_mach) return null;
-            var override = StateManager.state.regimeOverride || 'auto';
-            if (override === 'handm') return 'handm (forc.)';
-            if (override === 'mach')  return 'mach (forc.)';
-            var totaalCoating = this.getTotalCoatingM2();
-            return totaalCoating >= PARAMS.MODIFIERS.MACHINAAL_THRESHOLD_M2 ? 'mach' : 'handm';
+            var id = lineId || this._lineIdFor(line);
+            var ovr = StateManager.getRegime(id);
+            var resolved = this.resolveRegime(id);
+            if (ovr === 'auto') return resolved + ' (auto)';
+            return resolved + ' (gekozen)';
         },
 
+        /* ========================================================
+           V7.0.0 ENGINE-KOPPELING
+           buildFases() zet de ingevulde lijnen om in de cure-keten;
+           getEngineResult() draait BlokEngine.simulate en verdeelt de
+           komst-overhead CAUSAAL: elke werfdag kost K_KOMST md en die
+           gaat naar de lijnen die DIE dag werken (naar rato uren).
+           Zo verandert een lijn nooit van prijs doordat een ANDERE
+           lijn van regime wisselt (les offerte 19979).
+           ======================================================== */
+        CREW: 2,  /* vaste ploeg-aanname voor elapsed-tijd (manueel werk) */
+
+        buildFases: function() {
+            var S = PARAMS.MANDAGEN.SEIZOEN || 1.0;
+            var C = PARAMS.MANDAGEN.CURE;
+            var self = this;
+            var fases = [];
+            var faseLines = {};   /* faseKey -> [lineIds] */
+            var perLine = {};     /* lineId -> { werkMd, faseKey } */
+            /* V7.0.0: ploeggrootte volgt C13 - micro-werven (<20 m2 coating) draaien
+               met 1 man (2 man = ronde-falen/overkill), grotere werven met de ploeg. */
+            var crew = this.getTotalCoatingM2() >= PARAMS.MODIFIERS.MACHINAAL_THRESHOLD_M2
+                ? this.CREW : 1;
+
+            var secs = StateManager.getAllSectionsForConfig();
+            var present = {};
+            for (var i = 0; i < secs.length; i++) { present[secs[i].id] = true; }
+
+            function lijnenVan(sectieIds, filterFn) {
+                var out = [];
+                for (var s = 0; s < sectieIds.length; s++) {
+                    if (!present[sectieIds[s]]) continue;
+                    var ls = StateManager.getAllLinesForSection(sectieIds[s]);
+                    for (var j = 0; j < ls.length; j++) {
+                        if (StateManager.getQuantity(ls[j].id) <= 0) continue;
+                        if (ls[j].data.specialPrice === 'citypomp_basis') continue; /* forfait: geen arbeid/dag */
+                        if (filterFn && !filterFn(ls[j].id, ls[j].data)) continue;
+                        out.push(ls[j]);
+                    }
+                }
+                return out;
+            }
+
+            /* niet-coating fase: elapsed = som manuren / CREW; werkMd = qty/dagcap */
+            function maakFase(key, items, opts) {
+                if (!items.length) return null;
+                var elapsed = 0;
+                faseLines[key] = [];
+                for (var k = 0; k < items.length; k++) {
+                    var id = items[k].id, data = items[k].data;
+                    var qty = StateManager.getQuantity(id);
+                    var dagcap = self.getEffectiveDagcap(data, id);
+                    if (!dagcap || dagcap <= 0) continue;
+                    var werkMd = qty / dagcap;
+                    elapsed += (werkMd * 8) / crew;
+                    perLine[id] = { werkMd: werkMd, faseKey: key };
+                    faseLines[key].push(id);
+                }
+                if (!faseLines[key].length) return null;
+                var f = { key: key, uren: elapsed, crew: crew, lagen: 1, gap: 0, cure: (opts && opts.cure) || 0 };
+                fases.push(f);
+                return f;
+            }
+
+            /* coating-fase: per laag elapsed; regime per lijn (hand: manuren/CREW, mach: ploeguren) */
+            function maakCoatFase(key, items, gap, cure) {
+                if (!items.length) return null;
+                var perLaagElapsed = 0, lagen = 1;
+                faseLines[key] = [];
+                for (var k = 0; k < items.length; k++) {
+                    var id = items[k].id, data = items[k].data;
+                    var qty = StateManager.getQuantity(id);
+                    var nLagen = data.lagen || 1;
+                    if (nLagen > lagen) lagen = nLagen;
+                    var regime = self.resolveRegime(id) || 'handm';
+                    var werkMd, laagUren;
+                    if (regime === 'mach') {
+                        werkMd = qty / data.dagcap_mach;                 /* ploeg-md */
+                        laagUren = (werkMd * 8) / nLagen;                /* ploeg-elapsed per laag */
+                    } else {
+                        werkMd = qty / data.dagcap_handm;                /* man-md */
+                        laagUren = (werkMd * 8) / nLagen / crew;         /* ploeg-elapsed per laag */
+                    }
+                    perLaagElapsed += laagUren;
+                    perLine[id] = { werkMd: werkMd, faseKey: key };
+                    faseLines[key].push(id);
+                }
+                if (!faseLines[key].length) return null;
+                var f = { key: key, uren: perLaagElapsed, crew: 1, lagen: lagen, gap: gap, cure: cure };
+                fases.push(f);
+                return f;
+            }
+
+            /* 1. prep: afbraak/beton-prep/metselwerk-prep (excl. hervoegen) + fix-lekpunten */
+            maakFase('prep', lijnenVan([1, 2, 3, 4], function(id) { return id !== 'hervoegen'; }), { cure: 0 });
+            /* 2. capillaire injectie (vooraan, zoals offerte 19979) */
+            maakFase('injectie', lijnenVan([18], function(id) { return id === 'capillaire_injectie'; }), { cure: 0 });
+            /* 3. P4-scheurinjectie: PU-cure 24u */
+            maakFase('p4', lijnenVan([5]), { cure: C.P4 * S });
+            /* 4. fluaat: 24u HARD (TDS 204146) */
+            maakFase('fluaat', lijnenVan([6]), { cure: C.FLUAAT * S });
+            /* 5. tussenlaag: hervoegen (NA fluaat - ESCO-FLUAT TDS) + primer + M30 + kim + doorvoer.
+                  Overnight voor coating alleen als er coating volgt. */
+            var coatVolgt = lijnenVan([11, 12, 13, 14]).length > 0 ||
+                            lijnenVan([18], function(id) { return id === 'radon'; }).length > 0;
+            var hervoeg = lijnenVan([3], function(id) { return id === 'hervoegen'; });
+            var tussen = lijnenVan([7, 8, 9, 10]).concat(hervoeg);
+            maakFase('tussen', tussen, { cure: coatVolgt ? C.M30_COAT * S : 0 });
+            /* 6. coating laag 1: 1K W1 / 1K W2.1 / IC */
+            maakCoatFase('coat11', lijnenVan([11]), C.GAP_1K * S, C.COAT1_NA * S);
+            maakCoatFase('coat12', lijnenVan([12]), C.GAP_1K * S, C.COAT1_NA * S);
+            var icFase = maakCoatFase('coat13', lijnenVan([13]), C.GAP_IC, 24 * S);
+            if (icFase) {
+                /* IC: TDS 204220 - eerste bevochtiging dag+1 (betaald bezoek),
+                   daarna rest van 72u curing (klant-instructie). */
+                var icLines = faseLines['coat13'].slice();
+                fases.push({ key: 'icbev', uren: 0.5, crew: 1, lagen: 1, gap: 0, cure: (C.IC_NA - 24) * S });
+                faseLines['icbev'] = icLines;
+            }
+            /* 7. coating laag 2: 2K / RB400 / radon (elk eigen fase - eigen regime/cure-positie) */
+            var c2k = maakCoatFase('coat2k', lijnenVan([14], function(id, d) { return d.product === '2k'; }), C.GAP_2K * S, 0);
+            var crb = maakCoatFase('coatrb', lijnenVan([14], function(id, d) { return d.product === 'rb400'; }), C.GAP_2K * S, 0);
+            var crad = maakCoatFase('coatradon', lijnenVan([18], function(id) { return id === 'radon'; }), C.GAP_2K * S, 0);
+            /* cure 6u voor afwerking op de laatste coat2-fase, alleen als afwerking volgt */
+            var afwerkVolgt = lijnenVan([15, 16]).length > 0;
+            var laatsteC2 = crad || crb || c2k;
+            if (laatsteC2 && afwerkVolgt) { laatsteC2.cure = C.COAT2_NA * S; }
+            /* 8. afwerking wanden / vloer (incl. beton-dekvloer arbeid) */
+            maakFase('afwerkw', lijnenVan([15]), { cure: 0 });
+            maakFase('afwerkv', lijnenVan([16]), { cure: 0 });
+            /* 9. pompput + overige speciale toepassingen */
+            maakFase('rest', lijnenVan([17]).concat(
+                lijnenVan([18], function(id) { return id !== 'capillaire_injectie' && id !== 'radon'; })
+            ), { cure: 0 });
+
+            return { fases: fases, faseLines: faseLines, perLine: perLine };
+        },
+
+        _engineCache: { version: -1, result: null },
+
+        getEngineResult: function() {
+            var v = StateManager.state._version;
+            if (this._engineCache.version === v && this._engineCache.result) {
+                return this._engineCache.result;
+            }
+            var built = this.buildFases();
+            var sim = BlokEngine.simulate(built.fases);
+            var K = PARAMS.MANDAGEN.K_KOMST;
+            var perLine = built.perLine;
+
+            /* causale komst-toewijzing: K per werfdag -> fases naar rato uren die dag
+               -> binnen fase naar lijnen naar rato werkMd (gelijk verdeeld bij som 0) */
+            for (var id in perLine) { perLine[id].komstMd = 0; }
+            var mdKomst = sim.dagCount * K;
+            for (var day in sim.dagen) {
+                var fasesVanDag = sim.dagen[day];
+                var totUren = 0, fk;
+                for (fk in fasesVanDag) { totUren += fasesVanDag[fk]; }
+                if (totUren <= 0) continue;
+                for (fk in fasesVanDag) {
+                    var deelK = K * (fasesVanDag[fk] / totUren);
+                    var ids = built.faseLines[fk] || [];
+                    if (!ids.length) continue;
+                    var somWerk = 0, n;
+                    for (n = 0; n < ids.length; n++) { somWerk += perLine[ids[n]].werkMd; }
+                    for (n = 0; n < ids.length; n++) {
+                        var aandeel = somWerk > 0 ? (perLine[ids[n]].werkMd / somWerk) : (1 / ids.length);
+                        perLine[ids[n]].komstMd += deelK * aandeel;
+                    }
+                }
+            }
+            var mdWerk = 0;
+            for (var id2 in perLine) { mdWerk += perLine[id2].werkMd; }
+
+            var result = {
+                mdWerk: mdWerk,
+                mdKomst: mdKomst,
+                mandagen: mdWerk + mdKomst,
+                dagCount: sim.dagCount,
+                blokCount: sim.blokCount,
+                perLine: perLine,
+                dagen: sim.dagen,
+                faseLines: built.faseLines
+            };
+            this._engineCache = { version: v, result: result };
+            return result;
+        },
+
+        /* ========================================================
+           V7.0.0 MATERIAAL-POOLING: ceil per PRODUCT over de hele
+           offerte (inkooprealiteit) i.p.v. ceil per lijn. Kost per
+           lijn = aandeel in het product-verbruik x pool-kost.
+           ======================================================== */
+        getProductPools: function() {
+            var v = StateManager.state._version;
+            if (this._poolCache && this._poolCache.version === v) return this._poolCache.pools;
+            var pools = {};
+            var secs = StateManager.getAllSectionsForConfig();
+            for (var i = 0; i < secs.length; i++) {
+                var ls = StateManager.getAllLinesForSection(secs[i].id);
+                for (var j = 0; j < ls.length; j++) {
+                    var id = ls[j].id, data = ls[j].data;
+                    var qty = StateManager.getQuantity(id);
+                    if (qty <= 0) continue;
+                    var bijdragen = [];
+                    if (data.product && data.verbruik) bijdragen.push({ p: data.product, v: data.verbruik });
+                    if (data.extraProducts) {
+                        for (var e = 0; e < data.extraProducts.length; e++) {
+                            bijdragen.push({ p: data.extraProducts[e].product, v: data.extraProducts[e].verbruik });
+                        }
+                    }
+                    for (var b = 0; b < bijdragen.length; b++) {
+                        var prod = PARAMS.PRODUCTS[bijdragen[b].p];
+                        if (!prod || !bijdragen[b].v) continue;
+                        if (!pools[bijdragen[b].p]) pools[bijdragen[b].p] = { needed: 0 };
+                        pools[bijdragen[b].p].needed += qty * bijdragen[b].v;
+                    }
+                }
+            }
+            for (var pk in pools) {
+                var pr = PARAMS.PRODUCTS[pk];
+                pools[pk].packs = Math.ceil(pools[pk].needed / pr.verpakking - 1e-9);
+                pools[pk].kost = pools[pk].packs * pr.prijs;
+            }
+            this._poolCache = { version: v, pools: pools };
+            return pools;
+        },
+
+        getLineMateriaal: function(lineId, qty) {
+            var line = PARAMS.LINES[lineId];
+            var pools = this.getProductPools();
+            var totaal = 0;
+            var bijdragen = [];
+            if (line.product && line.verbruik) bijdragen.push({ p: line.product, v: line.verbruik });
+            if (line.extraProducts) {
+                for (var e = 0; e < line.extraProducts.length; e++) {
+                    bijdragen.push({ p: line.extraProducts[e].product, v: line.extraProducts[e].verbruik });
+                }
+            }
+            for (var b = 0; b < bijdragen.length; b++) {
+                var pool = pools[bijdragen[b].p];
+                if (!pool || pool.needed <= 0) continue;
+                totaal += ((qty * bijdragen[b].v) / pool.needed) * pool.kost;
+            }
+            return totaal;
+        },
+
+        // V7.0.0: lijn-prijs = (werkMd + causale komstMd) x dagopbrengst + materiaal-aandeel.
+        // Som van de lijnen = exact het totaal (engine-consistent).
         calculateLine: function(lineId) {
             var line = PARAMS.LINES[lineId];
             var qty = StateManager.getQuantity(lineId);
-            if (!line || qty <= 0) { return { mandagen: 0, materiaal: 0, prijs: 0, arbeid: 0 }; }
+            if (!line || qty <= 0) { return { mandagen: 0, materiaal: 0, prijs: 0, arbeid: 0, werkMd: 0, komstMd: 0 }; }
 
-            /* V6.1.0: Speciale prijs-logica voor beton-dekvloer + citypomp basis */
-            if (line.specialPrice === 'beton_dichting') {
-                return this.calculateBetonLine(lineId, qty);
-            }
             if (line.specialPrice === 'citypomp_basis') {
                 return this.calculateCitypompBasisLine(lineId, qty);
             }
 
-            var dagcap = this.getEffectiveDagcap(line);
-            var mandagen = 0;
-            if (dagcap && dagcap > 0) { mandagen = qty / dagcap; }
+            var eng = this.getEngineResult();
+            var pl = eng.perLine[lineId] || { werkMd: 0, komstMd: 0 };
+            /* V7.0.3: tarief volgt het regime van DEZE lijn (mach-premie) */
+            var lijnRegime = this.resolveRegime(lineId);
+            var dagprijs = this.getDagopbrengst(lijnRegime === 'mach' ? 'mach' : 'handm');
 
-            var materiaal = 0;
-            if (line.product && line.verbruik) {
-                var product = PARAMS.PRODUCTS[line.product];
-                if (product) {
-                    var needed = qty * line.verbruik;
-                    var packs = Math.ceil(needed / product.verpakking);
-                    materiaal = packs * product.prijs;
-                }
-            }
-            /* V6.2.0: extraProducts voor combinatie-lijnen (bv. M30+Autex pakket) */
-            if (line.extraProducts && line.extraProducts.length) {
-                for (var ep = 0; ep < line.extraProducts.length; ep++) {
-                    var epc = line.extraProducts[ep];
-                    var extraProd = PARAMS.PRODUCTS[epc.product];
-                    if (extraProd && epc.verbruik) {
-                        var epNeeded = qty * epc.verbruik;
-                        var epPacks = Math.ceil(epNeeded / extraProd.verpakking);
-                        materiaal += epPacks * extraProd.prijs;
-                    }
-                }
+            /* Beton-dekvloer: special pricing (gevalideerde drainage-formule) blijft,
+               de causale komst-overhead van zijn werfdagen komt erbij. */
+            if (line.specialPrice === 'beton_dichting') {
+                var b = this.calculateBetonLine(lineId, qty);
+                var komstArb = pl.komstMd * dagprijs;
+                return {
+                    mandagen: pl.werkMd + pl.komstMd,
+                    materiaal: b.materiaal,
+                    arbeid: b.arbeid + komstArb,
+                    prijs: b.prijs + komstArb,
+                    werkMd: pl.werkMd, komstMd: pl.komstMd
+                };
             }
 
-            var dagprijs = this.getDagprijs();
-            var arbeid = mandagen * dagprijs;
-            return { mandagen: mandagen, materiaal: materiaal, prijs: arbeid + materiaal, arbeid: arbeid };
+            var materiaal = this.getLineMateriaal(lineId, qty);
+            var arbeid = (pl.werkMd + pl.komstMd) * dagprijs;
+            return {
+                mandagen: pl.werkMd + pl.komstMd,
+                materiaal: materiaal,
+                arbeid: arbeid,
+                prijs: arbeid + materiaal,
+                werkMd: pl.werkMd, komstMd: pl.komstMd
+            };
         },
 
         // V6.1.0: Beton-dekvloer berekening
@@ -3549,6 +4423,8 @@
             var mandagen = qty / dagcap;
             var materiaal, arbeid, prijs;
 
+            /* V7.0.0: floor-factor vervallen - komst-overhead komt causaal via de
+               blok-engine bovenop deze basis (zie calculateLine special-handling). */
             if (isCity) {
                 /* Citypomp: materiaal = beton-formule per m2 (drainage/2) x m2.
                    GEEN basis-toeslag hier - zit in aparte regel. */
@@ -3561,9 +4437,9 @@
             } else {
                 /* Manueel: inverse log curve = volledige prijs per m2 (materiaal+arbeid) */
                 var volledigePerM2 = this.betonManueelPerM2(qty);
-                prijs = volledigePerM2 * qty;
-                arbeid = prijs * 0.60;
-                materiaal = prijs * 0.40;
+                materiaal = volledigePerM2 * qty * 0.40;
+                arbeid = volledigePerM2 * qty * 0.60;
+                prijs = arbeid + materiaal;
             }
             return { mandagen: mandagen, materiaal: materiaal, prijs: prijs, arbeid: arbeid };
         },
@@ -3639,49 +4515,32 @@
             return total;
         },
 
-        // V6.0.0: Mandagen = PUUR de som van qty/dagcap per lijn.
-        // GEEN opslagen (werfoverhead/mob/afronding = VERWIJDERD).
-        // Breakdown toont per lijn de individuele mandagen.
-        calculateModifiers: function(baseMandagen) {
-            var aantalWerven = StateManager.state.aantalWerven || 1;
-            return {
-                base: baseMandagen,
-                totalMandagen: baseMandagen,
-                aantalWerven: aantalWerven,
-                /* backwards-compat velden (0 zodat breakdown ze verbergt) */
-                werfoverhead: 0,
-                mobToeslag: 0,
-                ruwTotaal: baseMandagen,
-                rondeBuffer: 0,
-                mobExtra: 0,
-                mobReasons: [],
-                seasonFactor: 1.0,
-                seasonLabel: '',
-                seasonDelta: 0
-            };
-        },
-
-        // V6.0.0: Per-lijn mandagen voor breakdown (gebruikt effectieve dagcap)
-        // V6.4.0 M1: state-based (breakdown toont alle ingevulde items, ook buiten zichtbare scope)
+        // V7.0.0: Per-lijn mandagen voor breakdown - rechtstreeks uit de blok-engine
+        // (werkMd + causale komstMd per lijn, regime-label, effectieve dagcap).
+        // Citypomp-forfait verschijnt niet (fantoom-mandag-bug V6.x gefixt).
         getMandagenPerLijn: function() {
+            var eng = this.getEngineResult();
             var sections = StateManager.getAllSectionsForConfig();
             var regels = [];
             for (var i = 0; i < sections.length; i++) {
                 var lines = StateManager.getAllLinesForSection(sections[i].id);
                 for (var j = 0; j < lines.length; j++) {
-                    var qty = StateManager.getQuantity(lines[j].id);
+                    var id = lines[j].id;
+                    var qty = StateManager.getQuantity(id);
                     if (qty <= 0) continue;
-                    var dagcap = this.getEffectiveDagcap(lines[j].data);
-                    if (!dagcap || dagcap <= 0) continue;
-                    var regime = this.getRegimeLabel(lines[j].data);
+                    if (lines[j].data.specialPrice === 'citypomp_basis') continue;
+                    var pl = eng.perLine[id];
+                    if (!pl) continue;
+                    var dagcap = this.getEffectiveDagcap(lines[j].data, id);
                     regels.push({
-                        lineId: lines[j].id,
+                        lineId: id,
                         label: lines[j].data.kort || lines[j].data.label,
                         qty: qty,
                         unit: lines[j].data.unit,
                         dagcap: dagcap,
-                        regime: regime,
-                        mandagen: qty / dagcap
+                        regime: this.getRegimeLabel(lines[j].data, id),
+                        mandagen: pl.werkMd,
+                        komstMd: pl.komstMd
                     });
                 }
             }
@@ -3689,35 +4548,42 @@
         },
 
         calculateTotal: function() {
-            /* V6.4.0 M1: state-based - prijs reageert op alle ingevulde quantities,
-               niet alleen op zichtbare scope. Hoofdstuk van de decoupling-fix. */
+            /* V6.4.0 M1: state-based - prijs reageert op alle ingevulde quantities.
+               V7.0.0: mandagen = blok-engine (werk + komsten), som lijnen = totaal. */
             var sections = StateManager.getAllSectionsForConfig();
             var totals = { mandagen: 0, materiaal: 0, arbeid: 0, prijs: 0 };
             for (var i = 0; i < sections.length; i++) {
                 var result = this.calculateSection(sections[i].id);
-                totals.mandagen += result.mandagen;
                 totals.materiaal += result.materiaal;
                 totals.arbeid += result.arbeid;
                 totals.prijs += result.prijs;
             }
 
-            // V3.3: basis dagomzet
-            var dagprijs = this.getDagprijs();
-            totals.dagprijs = dagprijs;
+            var eng = this.getEngineResult();
 
-            // V5.0.0: bereken modifiers op basis-mandagen
-            var mods = this.calculateModifiers(totals.mandagen);
-            totals.mandagen_basis = totals.mandagen;
-            totals.mandagen = mods.totalMandagen;
-            totals.mods = mods;
-
-            // V5.0.0: arbeid en prijs herberekenen met total mandagen
-            // (basis arbeid + extra mandagen * dagprijs)
-            var extraMandagen = mods.totalMandagen - mods.base;
-            var extraArbeid = extraMandagen * dagprijs;
+            /* V7.0.3: gewogen dagprijs over de lijnen (hand/mach-mix) - referentie
+               voor de model-relatieve marge-meter en het financieel overzicht */
+            var gewogenArb = 0;
+            for (var pid in eng.perLine) {
+                var plw = eng.perLine[pid];
+                var rg = this.resolveRegime(pid);
+                gewogenArb += (plw.werkMd + plw.komstMd) *
+                    this.getDagopbrengst(rg === 'mach' ? 'mach' : 'handm');
+            }
+            totals.dagprijs = eng.mandagen > 0
+                ? gewogenArb / eng.mandagen
+                : this.getDagopbrengst('handm');
+            totals.mandagen_basis = eng.mdWerk;
+            totals.mandagen = eng.mandagen;
+            totals.engine = {
+                mdWerk: eng.mdWerk,
+                mdKomst: eng.mdKomst,
+                dagCount: eng.dagCount,
+                blokCount: eng.blokCount,
+                kKomst: PARAMS.MANDAGEN.K_KOMST,
+                seizoen: PARAMS.MANDAGEN.SEIZOEN
+            };
             totals.arbeid_basis = totals.arbeid;
-            totals.arbeid += extraArbeid;
-            totals.prijs += extraArbeid;
 
             totals.dagomzet = totals.mandagen > 0 ? totals.prijs / totals.mandagen : 0;
             return totals;
@@ -3728,8 +4594,6 @@
         // Bron: DPM CLAUDE.md C13 input-validatie
         calculateValidations: function() {
             var config = PARAMS.CONFIGS[StateManager.state.selectedConfig];
-            var team = StateManager.state.selectedTeam;
-            var season = StateManager.state.selectedSeason;
             var flags = { rood: [], oranje: [], groen: [], info: [] };
 
             if (!config) return flags;
@@ -3820,7 +4684,7 @@
             var fix10 = StateManager.getQuantity('fix10s_st') || 0;
             var fix20 = StateManager.getQuantity('fix20t_st') || 0;
             if (fix10 + fix20 >= 30) {
-                flags.oranje.push('Fix-aantal >=30 (' + (fix10+fix20) +
+                flags.oranje.push('Fix-aantal ≥30 (' + (fix10+fix20) +
                     ' st): valideer na werfinspectie, kan mandagen overschatten.');
             }
 
@@ -3918,20 +4782,16 @@
                 breakEvenRatio: breakEvenRatio,
                 mandagen: mandagen,
                 werkuren: werkuren,
+                modelMargeMd: totals.dagprijs - (KPI.arbeid_uurloon * KPI.uren_per_dag),
                 schaalMin: KPI.schaal_min,
                 schaalMax: KPI.schaal_max
             };
         }
     };
     
-    // V3.0: Zone kleur helper voor dagomzet meter
-    function getZoneColor(val) {
-        return val >= 1800 ? 'var(--zone-excellent)' :
-            val >= 1200 ? 'var(--zone-good)' :
-            val >= 800  ? 'var(--zone-warning)' :
-                          'var(--zone-danger)';
-    }
-    
+    /* V7.0.0: dode dubbele getZoneColor (1800/1200/800) verwijderd -
+       de actieve zit op de var-toewijzing hoger in het bestand (1300/950/700). */
+
     /* ============================================================
        V3.1: INPUT NAVIGATIE HELPERS
        ============================================================ */
@@ -3992,6 +4852,8 @@
     var ViewRenderer = {
         
         formatNumber: function(num, decimals) {
+            /* V7.0.0: guard tegen Infinity/NaN (toonde voorheen letterlijk "EUR Infinity") */
+            if (typeof num !== 'number' || !isFinite(num)) num = 0;
             if (num === 0) return '0' + (decimals > 0 ? ',' + '00'.substring(0, decimals) : '');
             var parts = num.toFixed(decimals).split('.');
             parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -4086,7 +4948,7 @@
                 : '';
             var iMode = isStuks ? 'numeric' : 'decimal';
             
-            return '<div class="input-wrapper">' +
+            var html = '<div class="input-wrapper">' +
                 '<label for="input-' + lineId + '" class="sr-only">' + line.placeholder + '</label>' +
                 '<input type="text" ' +
                     'id="input-' + lineId + '" ' +
@@ -4100,8 +4962,43 @@
                 '<span class="unit-inside" aria-hidden="true">' + line.unit + '</span>' +
                 '<span class="label-inside" aria-hidden="true">' + line.label + '</span>' +
             '</div>';
+
+            /* V7.0.1: regime als volwaardig selectievak NAAST het invulveld,
+               in dezelfde stijl als de projectconfiguratie-selects (Wim 11/06).
+               Vrij togglebaar; auto = gedreven default per lijn-m2/product. */
+            if (line.dagcap_handm && line.dagcap_mach) {
+                var sel = StateManager.getRegime(lineId);
+                var resolved = BusinessLogic.resolveRegime(lineId) || 'handm';
+                var experimenteel = (line.product === '2k' || line.product === 'rb400');
+                var autoLabel = (resolved === 'mach' ? 'Machinaal' : 'Handmatig') + ' (auto)';
+                return '<div class="line-row">' + html +
+                    '<div class="input-wrapper select-wrapper regime-wrapper">' +
+                    '<label for="regime-' + lineId + '" class="sr-only">Regime voor ' + line.label + '</label>' +
+                    '<select id="regime-' + lineId + '" class="regime-select' +
+                        (sel === 'auto' ? ' placeholder-active' : '') + '" data-regime="' + lineId + '">' +
+                    '<option value="auto"' + (sel === 'auto' ? ' selected' : '') + '>' + autoLabel + '</option>' +
+                    '<option value="handm"' + (sel === 'handm' ? ' selected' : '') + '>Handmatig</option>' +
+                    '<option value="mach"' + (sel === 'mach' ? ' selected' : '') + '>Machinaal' +
+                        (experimenteel ? ' (testrun)' : '') + '</option>' +
+                    '</select>' +
+                    '</div></div>';
+            }
+            return html;
         },
         
+        /* V7.0.0: ververs auto-labels van regime-chips zonder re-render
+           (qty-wijziging kan de auto-default doen omslaan op de 20 m2-drempel) */
+        refreshRegimeChips: function() {
+            document.querySelectorAll('[data-regime]').forEach(function(sel) {
+                var lineId = sel.getAttribute('data-regime');
+                var resolved = BusinessLogic.resolveRegime(lineId) || 'handm';
+                var autoOpt = sel.querySelector('option[value="auto"]');
+                if (autoOpt) {
+                    autoOpt.textContent = (resolved === 'mach' ? 'Machinaal' : 'Handmatig') + ' (auto)';
+                }
+            });
+        },
+
         updateCardStates: function() {
             var config = PARAMS.CONFIGS[
                 StateManager.state.selectedConfig];
@@ -4131,6 +5028,15 @@
                     StateManager.toggleSection(sectionId);
                     var content = document.querySelector('[data-content="' + sectionId + '"]');
                     if (content) { content.classList.toggle('show'); }
+                });
+            });
+
+            /* V7.0.1: per-lijn regime-selects (naast invulveld) */
+            document.querySelectorAll('[data-regime]').forEach(function(sel) {
+                sel.addEventListener('change', function() {
+                    StateManager.setRegime(this.getAttribute('data-regime'), this.value);
+                    self.renderSections();
+                    self.updateSummary();
                 });
             });
             
@@ -4165,6 +5071,7 @@
                     UnitPositioner.update(this);
                     
                     self.updateCardStates();
+                    self.refreshRegimeChips();
                     self.updateSummary();
                 });
                 
@@ -4192,7 +5099,7 @@
                     scrollFieldIntoView(this);
                 });
                 
-                // V3.1: Enter key → volgende zichtbaar veld
+                // V3.1: Enter key -> volgende zichtbaar veld
                 input.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter') {
                         e.preventDefault();
@@ -4200,7 +5107,7 @@
                         if (nextInput) {
                             nextInput.focus();
                         } else {
-                            // Laatste veld → blur + scroll totaaloverzicht
+                            // Laatste veld -> blur + scroll totaaloverzicht
                             this.blur();
                             scrollToSummary();
                         }
@@ -4294,8 +5201,8 @@
                             '-component-unit-price">' +
                             '<span class="price-amount">'
                             + '€ ' + fmt(unitPrice, 2)
-                            + '/</span>' +
-                            '<span class="price-unit">'
+                            + '</span>' +
+                            '<span class="price-unit">/'
                             + c.unit + '</span></span>' +
                             '<span class=' +
                             '"summary-component-qty">' +
@@ -4315,7 +5222,7 @@
                 compSection.style.display = 'none';
             }
             
-            // Totaal prijs - V42.9 format (EUR zonder spatie)
+            // Totaal prijs - V7.0.4: EUR-symbool met spatie (was V42.9 zonder)
             document.getElementById('totalPrijs')
                 .textContent = '€ '
                 + fmt(totals.prijs, 2);
@@ -4353,6 +5260,9 @@
 
             // V3.0: Update financieel overzicht
             this.renderFinancials();
+
+            // V6.7.0: Prijs-analyse-grafiek (alleen indien ontgrendeld + zichtbaar)
+            if (typeof AnalyseView !== 'undefined') { AnalyseView.render(); }
         },
 
         // V5.0.0: Render validatie-banners (rood/oranje/groen/info)
@@ -4386,50 +5296,74 @@
         },
 
         // V5.0.0: Render mandagen-breakdown (basis + buffers + seizoen)
+        // V7.0.0: dagstructuur-breakdown uit de blok-engine.
+        // Toont: totaal md = werk + komsten | werfdagen + blokken | per lijn werk+komst+regime.
         renderMandagenBreakdown: function(totals) {
             var el = document.getElementById('mandagenBreakdown');
             if (!el) return;
-            if (!totals || totals.prijs <= 0 || !totals.mods) {
+            if (!totals || totals.prijs <= 0 || !totals.engine) {
                 el.classList.remove('show');
                 el.innerHTML = '';
                 return;
             }
-            var mods = totals.mods;
+            var eng = totals.engine;
             var fmt = this.formatNumber.bind(this);
             var html = '';
 
-            // V6.0.0: Totaal bovenaan = puur basis arbeid (md + uur)
             var urenPerDag = PARAMS.KPI.uren_per_dag || 8;
-            var totaalUur = mods.totalMandagen * urenPerDag;
             html += '<div class="mandagen-row total">'
-                + '<span class="label">Totaal mandagen (basis arbeid)</span>'
+                + '<span class="label">Mandagen (werk + komsten)</span>'
                 + '<span class="value">'
-                + fmt(mods.totalMandagen, 2) + ' md &nbsp;/&nbsp; '
-                + fmt(totaalUur, 1) + ' u</span></div>';
+                + fmt(eng.mdWerk, 2) + ' + ' + fmt(eng.mdKomst, 2) + ' = '
+                + fmt(totals.mandagen, 2) + ' md</span></div>';
 
-            // V6.0.0: Eronder uitsplitsing per lijn (md + uur)
+            /* dagstructuur-regel: het audit-anker van het blok-model */
+            html += '<div class="mandagen-row" style="margin-top:4px;'
+                + 'background:#eff6ff;border-left:3px solid #33b2d2;'
+                + 'padding:6px 8px;border-radius:4px;font-size:11px;">'
+                + '<span class="label" style="color:#1e3a5f;">'
+                + 'Dagstructuur: ' + eng.dagCount + ' werfdag'
+                + (eng.dagCount === 1 ? '' : 'en') + ' / ' + eng.blokCount
+                + ' blok' + (eng.blokCount === 1 ? '' : 'ken')
+                + ' (cure-keten) &times; ' + fmt(eng.kKomst, 2) + ' md/komst'
+                + (eng.seizoen && eng.seizoen !== 1
+                    ? ' &middot; seizoen &times;' + fmt(eng.seizoen, 2) : '')
+                + '</span>'
+                + '<span class="value" style="color:#1e3a5f;">'
+                + fmt(eng.mdKomst, 2) + ' md</span>'
+                + '</div>';
+
+            /* V7.0.1: fysieke aanwezigheid naast facturatie (nacalculatie-anker).
+               Machinale lijnen tellen als ploeg-dagen (efficientie naar klant);
+               route-vulbare rest wordt bewust niet aangerekend (0,3/komst-model). */
+            html += '<div class="mandagen-row" style="margin-top:2px;'
+                + 'padding:4px 8px;font-size:11px;opacity:0.6;">'
+                + '<span class="label">Ter info: ' + eng.dagCount + ' werfdagen fysiek; '
+                + 'machinale lijnen = ploeg-md (2 man); niet-aangerekende rest = '
+                + 'route-vulbaar (DPM)</span>'
+                + '<span class="value">nacalculatie</span></div>';
+
+            // Per lijn: werk-md + causale komst-md + regime
             var perLijn = BusinessLogic.getMandagenPerLijn();
             if (perLijn.length > 0) {
                 html += '<div class="mandagen-row" style="margin-top:8px;'
                     + 'border-top:1px solid var(--border-color);padding-top:8px;'
                     + 'opacity:0.7;font-size:11px;text-transform:uppercase;'
                     + 'letter-spacing:0.5px;">'
-                    + '<span class="label">Mandagen per lijn</span>'
-                    + '<span class="value">md / uur</span></div>';
+                    + '<span class="label">Mandagen per lijn (werk + komst)</span>'
+                    + '<span class="value">md / u werk</span></div>';
                 for (var i = 0; i < perLijn.length; i++) {
                     var r = perLijn[i];
-                    var uur = r.mandagen * urenPerDag;
+                    var uur = r.mandagen * urenPerDag;  /* effectieve werk-uren (komst staat apart in de md-split) */
                     var dagcapStr = r.dagcap % 1 === 0 ? r.dagcap.toString() : fmt(r.dagcap, 1);
-                    var regimeBadge = r.regime
-                        ? ' [' + r.regime + ']'
-                        : '';
+                    var regimeBadge = r.regime ? ' [' + r.regime + ']' : '';
                     html += '<div class="mandagen-row">'
                         + '<span class="label">' + r.label
                         + ' (' + fmt(r.qty, r.qty % 1 === 0 ? 0 : 2) + ' '
                         + r.unit + ' / ' + dagcapStr + regimeBadge + ')</span>'
                         + '<span class="value">'
-                        + fmt(r.mandagen, 2) + ' md &nbsp;/&nbsp; '
-                        + fmt(uur, 1) + ' u</span></div>';
+                        + fmt(r.mandagen, 2) + '+' + fmt(r.komstMd || 0, 2)
+                        + ' md &nbsp;/&nbsp; ' + fmt(uur, 1) + ' u werk</span></div>';
                 }
             }
 
@@ -4460,16 +5394,38 @@
                 'fin-meter-value');
             if (fill && valEl) {
                 var meterVal = fin.bruteMargePerMandag;
-                var range = fin.schaalMax - fin.schaalMin;
-                var pct = Math.max(0, Math.min(
-                    ((meterVal - fin.schaalMin) / range)
-                    * 100, 100));
+                var model = fin.modelMargeMd || 0;
+                /* V7.0.2: meter toont positie t.o.v. MODEL-verwachting (curve - loonkost) */
+                var pct = model > 0
+                    ? Math.max(0, Math.min(meterVal / model * 100, 100))
+                    : 0;
                 fill.style.width = pct + '%';
-                fill.style.background = getZoneColor(
-                    meterVal);
+                fill.style.background = getZoneColor(meterVal, model);
                 fill.className = 'meter-fill';
-                valEl.textContent = '€ '
-                    + fmt(meterVal, 0);
+                valEl.textContent = '€ ' + fmt(meterVal, 0)
+                    + (model > 0 ? ' (model: ' + fmt(model, 0) + ')' : '');
+                /* marge-vloer-vlag (beleids-stuursignaal, achter PIN) */
+                var vloer = (typeof MODEL_CONFIG !== 'undefined' && MODEL_CONFIG.MARGE_VLOER) || 0;
+                var vloerEl = document.getElementById('fin-vloer-vlag');
+                if (!vloerEl) {
+                    vloerEl = document.createElement('div');
+                    vloerEl.id = 'fin-vloer-vlag';
+                    vloerEl.style.cssText = 'font-size:11px;margin-top:4px;padding:5px 8px;'
+                        + 'border-radius:4px;display:none;';
+                    if (valEl.parentNode && valEl.parentNode.parentNode) {
+                        valEl.parentNode.parentNode.appendChild(vloerEl);
+                    }
+                }
+                if (vloer > 0 && meterVal > 0 && meterVal < vloer) {
+                    vloerEl.style.display = 'block';
+                    vloerEl.style.background = '#fff7ed';
+                    vloerEl.style.borderLeft = '3px solid #f59e0b';
+                    vloerEl.style.color = '#9a3412';
+                    vloerEl.textContent = 'Onder marge-vloer (€ ' + fmt(vloer, 0)
+                        + '/md): groot-werk-marktprijs - bewuste keuze (bezettingsvulling)?';
+                } else {
+                    vloerEl.style.display = 'none';
+                }
             }
             
             // Projectanalyse waterval
@@ -4607,6 +5563,483 @@
     };
     
     /* ============================================================
+       V6.7.0: PRIJS-ANALYSE (grafiek + curve-tuning) - achter PIN-slot
+       ============================================================
+       Hergebruikt de live BusinessLogic + PARAMS van de calculator.
+       Sweep schaalt het HUIDIGE project (echte quantities) proportioneel,
+       zodat het rode punt exact het ingevulde project is. */
+    var AnalyseView = {
+        unlocked: false,
+        plotlyOk: (typeof Plotly !== 'undefined'),
+
+        /* V7.0.0-defaults vastgelegd bij eerste load (= MODEL_CONFIG-waarden) */
+        DEFAULTS: {
+            F0: PARAMS.DAGOPBRENGST.F0,
+            F400_HAND: PARAMS.DAGOPBRENGST.F400_HAND,
+            F400_MACH: PARAMS.DAGOPBRENGST.F400_MACH,
+            M2_LO: PARAMS.DAGOPBRENGST.M2_LO,
+            M2_HI: PARAMS.DAGOPBRENGST.M2_HI,
+            K_KOMST: PARAMS.MANDAGEN.K_KOMST,
+            SEIZOEN: PARAMS.MANDAGEN.SEIZOEN
+        },
+
+        FIELD_MAP: [
+            ['apF0',      'DAGOPBRENGST', 'F0'],
+            ['apF400h',   'DAGOPBRENGST', 'F400_HAND'],
+            ['apF400m',   'DAGOPBRENGST', 'F400_MACH'],
+            ['apM2Lo',    'DAGOPBRENGST', 'M2_LO'],
+            ['apM2Hi',    'DAGOPBRENGST', 'M2_HI'],
+            ['apKKomst',  'MANDAGEN',     'K_KOMST'],
+            ['apSeizoen', 'MANDAGEN',     'SEIZOEN']
+        ],
+
+        DEFAULT_KEYS: {
+            F0: 'DAGOPBRENGST', F400_HAND: 'DAGOPBRENGST', F400_MACH: 'DAGOPBRENGST',
+            M2_LO: 'DAGOPBRENGST', M2_HI: 'DAGOPBRENGST',
+            K_KOMST: 'MANDAGEN', SEIZOEN: 'MANDAGEN'
+        },
+
+        /* V7.0.0: ingebakken kalibratie-ankers (echte offertes) voor "herijk op ankers".
+           De doelprijzen staan in MODEL_CONFIG.ANKERS; deze scenario's zijn de regelsets. */
+        ANKER_SCENARIOS: {
+            micro: {
+                config: 'E06',
+                quantities: {
+                    afbraak_gipspleister: 2, fluaat_wand_1: 4, primer_wanden: 4,
+                    kim_wandvloer: 4, '1k_w2_wanden': 2, '1k_w2_vloer': 2,
+                    '2k_wanden': 2, '2k_vloer': 2
+                }
+            },
+            groot: {
+                config: 'E07',
+                quantities: {
+                    verwijder_cement: 40, frezen_wanden: 10, afbraak_inbouw: 1,
+                    afbraak_puin: 1, droogleggen: 54, fix10s_st: 10,
+                    fluaat_wand_1: 118, kim_wandvloer: 61, kim_wandwand: 21,
+                    doorvoer_klein: 2, '1k_w2_wanden': 118, '1k_w2_vloer': 54,
+                    '2k_wanden': 118, '2k_vloer': 54, pleister_wanden: 118,
+                    beton_vloer_dekvloer: 54
+                }
+            }
+        },
+
+        init: function() {
+            var self = this;
+            if (!this.plotlyOk) {
+                var fb = document.getElementById('analyse-chart-fallback');
+                var ch = document.getElementById('analyse-chart');
+                if (fb) fb.style.display = 'block';
+                if (ch) ch.style.display = 'none';
+            }
+            this.fillFields();
+
+            /* Param-inputs -> live PARAMS + hertekenen + calculator herberekenen */
+            this.FIELD_MAP.forEach(function(f) {
+                var el = document.getElementById(f[0]);
+                if (!el) return;
+                el.addEventListener('input', function() {
+                    self.syncFromFields();
+                    self.flagTuning();
+                    ViewRenderer.updateSummary();
+                });
+            });
+
+            var resetBtn = document.getElementById('analyseReset');
+            if (resetBtn) resetBtn.addEventListener('click', function() {
+                self.resetParams();
+            });
+
+            ['analyseShowV65', 'analyseShowDefault'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.addEventListener('change', function() { self.render(); });
+            });
+
+            var radios = document.querySelectorAll('input[name="analyseMetric"]');
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].addEventListener('change', function() { self.render(); });
+            }
+
+            /* V6.9.0: actieve-curve weergeven + leg-vast knop */
+            this.showActiveCurve();
+            var vastlegBtn = document.getElementById('vastlegBtn');
+            if (vastlegBtn) vastlegBtn.addEventListener('click', function() {
+                self.legVastAlsVersie();
+            });
+            /* V7.0.0: herijk-op-ankers knop */
+            var herijkBtn = document.getElementById('herijkBtn');
+            if (herijkBtn) herijkBtn.addEventListener('click', function() {
+                self.herijkOpAnkers();
+            });
+        },
+
+        // V7.0.0: toon de actieve model-versie (audit-anker uit MODEL_CONFIG)
+        showActiveCurve: function() {
+            var el = document.getElementById('analyse-active-curve');
+            if (el) {
+                el.textContent = 'Actief model: ' + MODEL_CONFIG._modelVersie
+                    + ' (vastgelegd ' + MODEL_CONFIG._vastgelegd + ')';
+            }
+        },
+
+        /* V7.0.0: HERIJK OP ANKERS - de twee ankerprijzen (MODEL_CONFIG.ANKERS) liggen
+           vast; deze functie draait de ingebakken anker-scenario's door de blok-engine
+           en lost F0/F400 opnieuw op. Gebruik na wijziging van K, seizoen of dagcaps. */
+        herijkOpAnkers: function() {
+            var st = StateManager.state;
+            var saved = {
+                config: st.selectedConfig,
+                quantities: st.quantities,
+                regimes: st.regimes
+            };
+            var self = this;
+            function meet(scenario) {
+                st.selectedConfig = scenario.config;
+                st.quantities = scenario.quantities;
+                st.regimes = {};
+                st._version++;
+                var totals = BusinessLogic.calculateTotal();
+                return {
+                    md: totals.mandagen,
+                    materiaal: totals.materiaal,
+                    uniek: BusinessLogic.getTotaalBehandeldM2()
+                };
+            }
+            try {
+                StateManager._mute = true;
+                var micro = meet(this.ANKER_SCENARIOS.micro);
+                var groot = meet(this.ANKER_SCENARIOS.groot);
+            } finally {
+                st.selectedConfig = saved.config;
+                st.quantities = saved.quantities;
+                st.regimes = saved.regimes;
+                st._version++;
+                StateManager._mute = false;
+            }
+            var doelMicro = MODEL_CONFIG.ANKERS.micro.doel;
+            var doelGroot = MODEL_CONFIG.ANKERS.groot.doel;
+            if (micro.md <= 0 || groot.md <= 0) return null;
+            var d = PARAMS.DAGOPBRENGST;
+            /* F0 analytisch: micro-anker is volledig handmatig en ligt op het vlakke stuk */
+            var F0 = (doelMicro - micro.materiaal) / micro.md;
+            if (!isFinite(F0) || F0 <= 0) {
+                var errEl0 = document.getElementById('vastlegStatus');
+                if (errEl0) {
+                    errEl0.textContent = 'Herijken mislukt: ongeldig micro-anker.';
+                    errEl0.className = 'vastleg-status err';
+                }
+                return null;
+            }
+            var oudF0 = d.F0, oudF400h = d.F400_HAND;
+            d.F0 = Math.round(F0 * 100) / 100;
+            /* V7.0.3: F400_HAND via bisectie op het groot-anker (auto-regime-mix);
+               F400_MACH is een beleidsveld en blijft staan. */
+            var st2 = StateManager.state;
+            var saved2 = { config: st2.selectedConfig, quantities: st2.quantities, regimes: st2.regimes };
+            var lo = 300, hi = 2500, mid;
+            try {
+                StateManager._mute = true;
+                for (var it = 0; it < 50; it++) {
+                    mid = (lo + hi) / 2;
+                    d.F400_HAND = mid;
+                    st2.selectedConfig = this.ANKER_SCENARIOS.groot.config;
+                    st2.quantities = this.ANKER_SCENARIOS.groot.quantities;
+                    st2.regimes = {};
+                    st2._version++;
+                    var tot = BusinessLogic.calculateTotal().prijs;
+                    if (tot > doelGroot) { hi = mid; } else { lo = mid; }
+                }
+            } finally {
+                st2.selectedConfig = saved2.config;
+                st2.quantities = saved2.quantities;
+                st2.regimes = saved2.regimes;
+                st2._version++;
+                StateManager._mute = false;
+            }
+            d.F400_HAND = Math.round(mid * 100) / 100;
+            StateManager.bump();
+            this.fillFields();
+            this.flagTuning();
+            ViewRenderer.updateSummary();
+            this.render();
+            var statusEl = document.getElementById('vastlegStatus');
+            if (statusEl) {
+                statusEl.textContent = 'Herijkt: F0 ' + Math.round(oudF0) + ' → ' + Math.round(d.F0)
+                    + ' | F400-hand ' + Math.round(oudF400h) + ' → ' + Math.round(d.F400_HAND)
+                    + ' (F400-mach = beleidsveld, blijft ' + Math.round(d.F400_MACH) + ').';
+                statusEl.className = 'vastleg-status ok';
+            }
+            return { F0: d.F0, F400_HAND: d.F400_HAND };
+        },
+
+        // V7.0.0: genereer nieuw HTML-bestand met het huidige (getunede) model
+        // vastgelegd in het MODEL_CONFIG blok + nieuwe versie-stempel. Download.
+        legVastAlsVersie: function() {
+            var statusEl = document.getElementById('vastlegStatus');
+            function setStatus(msg, cls) {
+                if (!statusEl) return;
+                statusEl.textContent = msg;
+                statusEl.className = 'vastleg-status ' + (cls || '');
+            }
+            var versieRaw = (document.getElementById('vastlegVersie').value || '').trim();
+            var notitie = (document.getElementById('vastlegNotitie').value || '').trim();
+            if (!versieRaw) { setStatus('Geef eerst een versie-naam (bv. V7.0.1).', 'err'); return; }
+            /* normaliseer + valideer Vx.y.z (anders breken toekomstige bumps) */
+            var versie = versieRaw.charAt(0).toUpperCase() === 'V' ? versieRaw : 'V' + versieRaw;
+            if (!/^V\d+\.\d+\.\d+$/.test(versie)) {
+                setStatus('Versie moet Vx.y.z zijn (bv. V7.0.1) - anders breken latere versie-bumps.', 'err');
+                return;
+            }
+
+            var d = new Date();
+            var pad = function(n) { return (n < 10 ? '0' : '') + n; };
+            var datum = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+
+            /* nieuw MODEL_CONFIG blok uit huidige (live) PARAMS */
+            var cure = PARAMS.MANDAGEN.CURE;
+            var stempel = datum + (notitie ? ' - ' + notitie.replace(/"/g, "'") : '');
+            var newBlock =
+                '/* ===MODEL-CONFIG-START===\n' +
+                '       ' + versie + ': AFGEBAKEND MODEL-CONFIG BLOK - vastgelegd via tuning-UI.\n' +
+                '       Blok-engine prijsmodel: curve + K + cure-matrix + ankers. */\n' +
+                '    var MODEL_CONFIG = {\n' +
+                '        F0: ' + PARAMS.DAGOPBRENGST.F0 + ',\n' +
+                '        F400_HAND: ' + PARAMS.DAGOPBRENGST.F400_HAND + ',\n' +
+                '        F400_MACH: ' + PARAMS.DAGOPBRENGST.F400_MACH + ',\n' +
+                '        M2_LO: ' + PARAMS.DAGOPBRENGST.M2_LO + ',\n' +
+                '        M2_HI: ' + PARAMS.DAGOPBRENGST.M2_HI + ',\n' +
+                '        K_KOMST: ' + PARAMS.MANDAGEN.K_KOMST + ',\n' +
+                '        SEIZOEN: ' + PARAMS.MANDAGEN.SEIZOEN + ',\n' +
+                '        CURE: ' + JSON.stringify(cure) + ',\n' +
+                '        ANKERS: ' + JSON.stringify(MODEL_CONFIG.ANKERS) + ',\n' +
+                '        _modelVersie: "' + versie + '",\n' +
+                '        _vastgelegd: "' + stempel + '"\n' +
+                '    };\n' +
+                '    /* ===MODEL-CONFIG-END=== */';
+
+            setStatus('Bezig met genereren...', '');
+            fetch(window.location.href).then(function(r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.text();
+            }).then(function(src) {
+                var blockRe = /\/\* ===MODEL-CONFIG-START===[\s\S]*?===MODEL-CONFIG-END=== \*\//;
+                if (!blockRe.test(src)) throw new Error('MODEL_CONFIG blok niet gevonden in bron.');
+                var out = src.replace(blockRe, newBlock);
+                /* versie-strings bumpen - V7.0.0: meta-description nu ook (was vergeten in V6.9.0) */
+                out = out.replace(/AQP Dichting Calculator V\d+\.\d+\.\d+/g, 'AQP Dichting Calculator ' + versie);
+                out = out.replace(/Aquaproved Dichting Calculator V\d+\.\d+\.\d+/g, 'Aquaproved Dichting Calculator ' + versie);
+                out = out.replace(/Vecon - V\d+\.\d+\.\d+/g, 'Vecon - ' + versie);
+                out = out.replace(/AQP DICHTING CALCULATOR V\d+\.\d+\.\d+/g, 'AQP DICHTING CALCULATOR ' + versie);
+                /* download */
+                var fname = 'AQP_Dichting_Calculator_' + versie.replace(/\./g, '_') + '_ASCII.html';
+                var blob = new Blob([out], { type: 'text/html' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url; a.download = fname;
+                document.body.appendChild(a); a.click();
+                document.body.removeChild(a);
+                setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+                setStatus('Gedownload: ' + fname + '. Plaats in apps/dichting/.', 'ok');
+            }).catch(function(e) {
+                setStatus('Genereren mislukt (' + e.message + '). Op lokaal file:// '
+                    + 'blokkeert de browser fetch - open de gehoste versie, of geef '
+                    + 'mij de model-waarden door.', 'err');
+            });
+        },
+
+        fillFields: function() {
+            this.FIELD_MAP.forEach(function(f) {
+                var el = document.getElementById(f[0]);
+                if (el) el.value = PARAMS[f[1]][f[2]];
+            });
+        },
+
+        syncFromFields: function() {
+            var self = this;
+            this.FIELD_MAP.forEach(function(f) {
+                var el = document.getElementById(f[0]);
+                if (!el) return;
+                var v = parseFloat(el.value);
+                if (!isNaN(v) && isFinite(v)) PARAMS[f[1]][f[2]] = v;
+                else PARAMS[f[1]][f[2]] = self.DEFAULTS[f[2]];
+            });
+            /* V7.0.0: engine-cache invalideren (tuning wijzigt K/seizoen -> dagstructuur) */
+            StateManager.bump();
+        },
+
+        resetParams: function() {
+            var d = this.DEFAULTS, keys = this.DEFAULT_KEYS;
+            for (var k in d) { PARAMS[keys[k]][k] = d[k]; }
+            StateManager.bump();
+            this.fillFields();
+            this.flagTuning();
+            ViewRenderer.updateSummary();
+        },
+
+        isTuned: function() {
+            var d = this.DEFAULTS, keys = this.DEFAULT_KEYS;
+            for (var k in d) { if (PARAMS[keys[k]][k] !== d[k]) return true; }
+            return false;
+        },
+
+        flagTuning: function() {
+            var warn = document.getElementById('analyse-tuning-warn');
+            if (warn) warn.style.display = this.isTuned() ? 'block' : 'none';
+        },
+
+        /* Bereken totalen voor een geschaalde versie van het huidige project.
+           factor schaalt alle quantities; restore na afloop.
+           applyKomst === false -> ghost-curve zonder komst-overhead (K=0). */
+        simulateScaled: function(factor, applyKomst) {
+            var st = StateManager.state;
+            var saved = st.quantities;
+            var scaled = {};
+            for (var id in saved) { scaled[id] = saved[id] * factor; }
+
+            var savedK = PARAMS.MANDAGEN.K_KOMST;
+            var totals, uniek;
+            try {
+                StateManager._mute = true;
+                st.quantities = scaled;
+                st._version++;
+                if (applyKomst === false) PARAMS.MANDAGEN.K_KOMST = 0;
+                totals = BusinessLogic.calculateTotal();
+                uniek = BusinessLogic.getTotaalBehandeldM2();
+            } finally {
+                PARAMS.MANDAGEN.K_KOMST = savedK;
+                st.quantities = saved;
+                st._version++;
+                StateManager._mute = false;
+            }
+            return { prijs: totals.prijs, mandagen: totals.mandagen, uniek: uniek };
+        },
+
+        currentUniek: function() {
+            return BusinessLogic.getTotaalBehandeldM2();
+        },
+
+        buildSweep: function(applyFloor) {
+            /* Schaal huidig project zodat uniek-m2 van 1..200 loopt. */
+            var curUniek = this.currentUniek();
+            if (curUniek <= 0) return null;
+            var pts = [];
+            for (var t = 1; t <= 200; t += 1) {
+                var factor = t / curUniek;
+                var r = this.simulateScaled(factor, applyFloor);
+                pts.push({ t: t, prijs: r.prijs, mandagen: r.mandagen, perm2: r.prijs / t });
+            }
+            return pts;
+        },
+
+        buildSweepDefault: function(metric) {
+            /* Sweep met DEFAULT-curve (tijdelijk swappen). */
+            var d = this.DEFAULTS, keys = this.DEFAULT_KEYS, save = {};
+            for (var k in d) { save[k] = PARAMS[keys[k]][k]; PARAMS[keys[k]][k] = d[k]; }
+            var sweep = this.buildSweep(true);
+            for (var k2 in save) { PARAMS[keys[k2]][k2] = save[k2]; }
+            return sweep;
+        },
+
+        render: function() {
+            /* V7.0.0: debounce - sweep (200 punten x engine) niet per toetsaanslag */
+            var self = this;
+            clearTimeout(this._renderTimer);
+            this._renderTimer = setTimeout(function() { self._renderNow(); }, 150);
+        },
+
+        _renderNow: function() {
+            if (!this.unlocked) return;
+            var card = document.getElementById('card-analyse');
+            if (!card || card.classList.contains('locked')) return;
+            if (!this.plotlyOk) return;
+
+            var metricEl = document.querySelector('input[name="analyseMetric"]:checked');
+            var metric = metricEl ? metricEl.value : 'prijs';
+            var yKey = metric === 'perm2' ? 'perm2' : (metric === 'mandagen' ? 'mandagen' : 'prijs');
+            var yTitle = metric === 'perm2' ? '€ / m²' : (metric === 'mandagen' ? 'mandagen' : '€ (excl BTW)');
+
+            var sweep = this.buildSweep(true);
+            var chartEl = document.getElementById('analyse-chart');
+            if (!sweep) {
+                Plotly.purge(chartEl);
+                chartEl.innerHTML = '<div class="analyse-fallback">'
+                    + 'Vul eerst een project in (config + quantities) om de '
+                    + 'curve te tonen.</div>';
+                return;
+            }
+
+            var traces = [];
+            traces.push({
+                x: sweep.map(function(d){return d.t;}),
+                y: sweep.map(function(d){return d[yKey];}),
+                mode: 'lines', name: 'huidige curve',
+                line: { width: 3, color: '#33b2d2' }
+            });
+
+            if (document.getElementById('analyseShowV65').checked) {
+                var s65 = this.buildSweep(false);
+                traces.push({
+                    x: s65.map(function(d){return d.t;}),
+                    y: s65.map(function(d){return d[yKey];}),
+                    mode: 'lines', name: 'zonder komsten (K=0)',
+                    line: { width: 2, color: '#33b2d2', dash: 'dash' }, opacity: 0.5
+                });
+            }
+
+            if (document.getElementById('analyseShowDefault').checked && this.isTuned()) {
+                var sDef = this.buildSweepDefault(metric);
+                if (sDef) traces.push({
+                    x: sDef.map(function(d){return d.t;}),
+                    y: sDef.map(function(d){return d[yKey];}),
+                    mode: 'lines', name: 'actieve versie',
+                    line: { width: 2, color: '#94a3b8', dash: 'dot' }, opacity: 0.7
+                });
+            }
+
+            /* Huidig project = rood punt (echte quantities, factor 1) */
+            var curUniek = this.currentUniek();
+            if (curUniek > 0 && curUniek <= 200) {
+                var cur = this.simulateScaled(1, true);
+                var yVal = yKey === 'perm2' ? (cur.prijs / curUniek) : (yKey === 'mandagen' ? cur.mandagen : cur.prijs);
+                traces.push({
+                    x: [curUniek], y: [yVal], mode: 'markers', name: 'huidig project',
+                    marker: { color: '#ef4444', size: 12, symbol: 'diamond',
+                        line: { color: 'white', width: 2 } },
+                    hovertemplate: 'huidig: %{y:.0f}<extra></extra>'
+                });
+            }
+
+            var dark = document.body.classList.contains('dark-mode');
+            var layout = {
+                margin: { l: 60, r: 16, t: 10, b: 40 },
+                legend: { orientation: 'h', y: -0.2, font: { size: 10 } },
+                hovermode: 'x unified',
+                xaxis: { title: 'uniek oppervlak (m²)', gridcolor: dark ? '#333' : '#eef' },
+                yaxis: { title: yTitle, gridcolor: dark ? '#333' : '#eef' },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                font: { size: 11, color: dark ? '#ddd' : '#333' }
+            };
+            Plotly.react(chartEl, traces, layout, { displayModeBar: false, responsive: true });
+        },
+
+        onUnlock: function() {
+            this.unlocked = true;
+            this.fillFields();
+            this.flagTuning();
+            this.showActiveCurve();
+            this.render();
+        },
+
+        onLock: function() {
+            this.unlocked = false;
+            /* V7.0.0: TUNING-LEAK-FIX - bij vergrendelen gaan getunede parameters
+               TERUG naar de vastgelegde versie. Een experiment kan zo nooit
+               ongemerkt in een offerte belanden (V6.7.0-V6.9.0 had dit gat). */
+            if (this.isTuned()) { this.resetParams(); }
+        }
+    };
+
+    /* ============================================================
        INIT
        ============================================================ */
     function init() {
@@ -4630,20 +6063,7 @@
             ViewRenderer.renderSections();
         });
 
-        // V6.0.0: Regime override (auto / handm / mach) - coating dagcap-switch
-        var regimeSel = document.getElementById('regimeSelect');
-        if (regimeSel) {
-            regimeSel.addEventListener('change', function() {
-                StateManager.state.regimeOverride = this.value;
-                /* Visuele indicatie dat override actief is */
-                if (this.value === 'auto') {
-                    this.classList.add('placeholder-active');
-                } else {
-                    this.classList.remove('placeholder-active');
-                }
-                ViewRenderer.updateSummary();
-            });
-        }
+        /* V7.0.1: globale regime-select verwijderd - regime per lijn (select naast invulveld) */
 
         // V6.0.0: Context-pills (seizoen + team + werven) VERWIJDERD uit UI.
         // Mandagen = puur basis arbeid zonder opslagen.
@@ -4667,12 +6087,6 @@
             scopeSelect.disabled = true;
             scopeSelect.classList.add('dormant-select');
 
-            // V6.0.0: Reset regime override naar auto
-            var regimeSel = document.getElementById('regimeSelect');
-            if (regimeSel) {
-                regimeSel.value = 'auto';
-                regimeSel.classList.add('placeholder-active');
-            }
             
             document.getElementById('configInfo').className = 'config-info';
             document.getElementById('sectionsContainer').innerHTML = '';
@@ -4701,6 +6115,34 @@
             document.getElementById('theme-icon').innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
         }
         
+        /* V7.0.0: AUTOSAVE-RESTORE - hervat de offerte na reload/tab-kill op de werf */
+        if (StateManager.restore()) {
+            var cfgSel = document.getElementById('configSelect');
+            cfgSel.value = StateManager.state.selectedConfig;
+            cfgSel.classList.remove('placeholder-active');
+            var scpSel = document.getElementById('scopeSelect');
+            scpSel.value = StateManager.state.selectedScope;
+            scpSel.disabled = false;
+            scpSel.classList.remove('dormant-select');
+            var ctx = document.getElementById('contextSelectors');
+            if (ctx) ctx.classList.add('show');
+            ViewRenderer.renderConfigInfo();
+            ViewRenderer.renderSections();
+            ViewRenderer.updateSummary();
+        }
+
+        /* V7.0.0: service worker voor echte offline-werking (kelders zonder bereik).
+           Stil falen op file:// of oudere browsers - tool blijft volledig werken. */
+        try {
+            if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+                navigator.serviceWorker.register('sw.js').catch(function() {});
+            }
+        } catch (e) {}
+
+        // V6.7.0: Prijs-analyse init (listeners + param-velden)
+        // VOOR initPINSession: bij auto-unlock moet AnalyseView klaar zijn.
+        AnalyseView.init();
+
         // V3.0: PIN session + scenario slider init
         initPINSession();
         initPINAndScenario();
@@ -4731,6 +6173,13 @@
             var card = document.getElementById(
                 'card-financial');
             if (card) card.classList.add('locked');
+            /* V6.7.0: analyse-card mee vergrendelen */
+            var analyseCard = document.getElementById(
+                'card-analyse');
+            if (analyseCard) analyseCard.classList.add('locked');
+            var mdSec = document.getElementById('mandagenSection');
+            if (mdSec) mdSec.classList.add('locked');
+            if (typeof AnalyseView !== 'undefined') AnalyseView.onLock();
             document.getElementById(
                 'lock-icon-closed').style.display = '';
             document.getElementById(
@@ -4796,6 +6245,12 @@
         var card = document.getElementById(
             'card-financial');
         if (card) card.classList.remove('locked');
+        /* V6.7.0: analyse-card mee ontgrendelen */
+        var analyseCard = document.getElementById(
+            'card-analyse');
+        if (analyseCard) analyseCard.classList.remove('locked');
+        var mdSec = document.getElementById('mandagenSection');
+        if (mdSec) mdSec.classList.remove('locked');
         document.getElementById(
             'lock-icon-closed').style.display = 'none';
         document.getElementById(
@@ -4804,6 +6259,8 @@
             'fin-lock').classList.add('unlocked');
         // Re-trigger render
         ViewRenderer.renderFinancials();
+        /* V6.7.0: analyse-grafiek tekenen na unlock */
+        if (typeof AnalyseView !== 'undefined') AnalyseView.onUnlock();
     }
     
     function initPINAndScenario() {
@@ -4929,15 +6386,14 @@
         var valEl = document.getElementById(
             'fin-meter-value');
         if (fill && valEl) {
-            var range = fin.schaalMax - fin.schaalMin;
-            var mp = Math.max(0, Math.min(
-                ((adjPerDag - fin.schaalMin) / range)
-                * 100, 100));
+            var model = fin.modelMargeMd || 0;
+            var mp = model > 0
+                ? Math.max(0, Math.min(adjPerDag / model * 100, 100))
+                : 0;
             fill.style.width = mp + '%';
-            fill.style.background = getZoneColor(
-                adjPerDag);
-            valEl.textContent = '€ '
-                + fmt(adjPerDag, 0);
+            fill.style.background = getZoneColor(adjPerDag, model);
+            valEl.textContent = '€ ' + fmt(adjPerDag, 0)
+                + (model > 0 ? ' (model: ' + fmt(model, 0) + ')' : '');
         }
     }
     
